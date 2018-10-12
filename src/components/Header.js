@@ -4,10 +4,10 @@ import {
   NavLink,
   HashRouter, Link
 } from "react-router-dom";
-import Home from "../pages/Home";
-import Projects from "../pages/Projects";
-import Contact from "../pages/Contact";
-import '../style/header.css';
+import Home from "./Home";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import '../Style/header.css';
 
 class Header extends Component {
   constructor() {
