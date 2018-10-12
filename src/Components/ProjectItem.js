@@ -58,14 +58,28 @@ const Bubble = styled.div`
     }
 `
 
-const Title = styled.h1`
+const Title = styled.h3`
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     @media (max-width: 1200px) {
         margin-left: 10px;
         font-size: 1em;
     }
+`
+
+const Body = styled.h6`
+    color: white;
+    font-size: 12px;
+    @media (max-width: 1200px) {
+        margin-left: 10px;
+        font-size: 1em;
+    }
+`
+
+const TechList = styled.p`
+    color: white;
+    font-size: 14px;
 `
 
 const Button = styled.div`
@@ -108,13 +122,14 @@ const generateLink = (url) => () => {
     window.open(finalURL, '_blank');
 }
 
-const ProjectItem = ({ size, color, gridArea, title, url, github }) => {
+const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) => {
   return (
     <Bubble size={size} color={color} gridArea={gridArea}>
         <Title>{title}</Title>
+        <Body>{body}</Body>
+        <TechList>{tech}</TechList>
         <Container>
             <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
-            { github ? <Button style={{ marginLeft: "10px" }} color={color} icon={Github}><img width="20" src={Github} onClick={generateLink(url)}></img></Button> : <div></div> }
         </Container>
     </Bubble>
   )
