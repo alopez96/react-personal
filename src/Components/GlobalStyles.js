@@ -12,10 +12,10 @@ export const Container = styled.div`
 `
 
 export const Card = styled.div`
-    width: 80%;
-    height: 80%;
+    width: 77%;
+    height: auto;
     background-color: white;
-    padding: 35px 60px 0 60px;
+    padding: 50px 50px 35px 50px;
     border-radius: 8px;
     background-image: url(${props => props.image.normal}), linear-gradient(-45deg, ${props => props.theme.gradient.from} 0%, ${props => props.theme.gradient.to} 100%);
     background-position: ${props => props.center ? "bottom right" : "bottom center"};

@@ -1,1 +1,1 @@
-export const SMALL = 700;
+export const SMALL = 800;

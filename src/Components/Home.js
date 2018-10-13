@@ -69,7 +69,7 @@ export default class Home extends Component {
                 <NavBar index="0" />
                 <Header>HI I’M ARTURO LOPEZ</Header>
                 <SubHeader>I’m a Computer Science Student at University of California, Santa Cruz.</SubHeader>
-                <Button to="/aboutMe">Learn more</Button>
+                <Button to="/about">Learn more</Button>
                 <ThemeChooserContainer>
 
 
