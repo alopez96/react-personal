@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../Style/home.css';
 import styled from 'styled-components';
 import NavBar from './NavBar';
 import { Container, Card, Button } from './GlobalStyles';
