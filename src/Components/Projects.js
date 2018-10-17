@@ -50,8 +50,6 @@ const Projects = (props) => {
                     gridArea="lt0"
                     title="Robofriends"
                     url="https://eager-swirles-8b12c3.netlify.com/"
-                    body="Enter a name to search for Robot name. React practice."
-                    tech="ReactJS | Clarify API | npm"
                     />
                 <ProjectItem
                     size={13}
@@ -59,8 +57,6 @@ const Projects = (props) => {
                     gridArea="lm"
                     title="JUMP'N"
                     url="https://alopez96.github.io/"
-                    body="Landing page for personal startup idea."
-                    tech="HTML5 | CSS3 | Bootstrap | Netlify"
                     />
                 <ProjectItem
                     size={13}
@@ -68,7 +64,6 @@ const Projects = (props) => {
                     gridArea="mm"
                     title="My Resume"
                     url=""
-                    tech="Latex"
                     />
                 <ProjectItem
                     size={13}
@@ -77,7 +72,6 @@ const Projects = (props) => {
                     title="This site"
                     url=""
                     body=""
-                    tech="ReactJS | ReactRouter | npm | node.js"
                     />
                 <ProjectItem
                     size={13}
@@ -85,8 +79,6 @@ const Projects = (props) => {
                     gridArea="rm0"
                     title="Game Up"
                     url=""
-                    body="Android app to connect gamers."
-                    tech="Android Studio | Java | Firebase"
                     />
                 <ProjectItem
                     size={13}
@@ -94,7 +86,7 @@ const Projects = (props) => {
                     gridArea="rb"
                     title="MakeUp Artist"
                     url="https://socer-a512d.appspot.com/Avalos"
-                    tech="VueJS | Web2py | Python | Google App Engine"
+                    // tech="VueJS | Web2py | Python | Google App Engine"
                     />
                 <ProjectItem
                     size={13}
@@ -102,7 +94,6 @@ const Projects = (props) => {
                     gridArea="lb0"
                     title="Soccer Pick Up"
                     url="https://socer-a512d.appspot.com/soccer"
-                    tech="VueJS | Web2py | Python | Google App Engine"
                     />
             </Grid>
 

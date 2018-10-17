@@ -76,29 +76,24 @@ const About = (props) => {
                 </div>
             <Text className="about-text">
               <p>
-                  I discovered my passion for Science and Technology at a young age.
-                  Growing up, I always questioned how things worked and how they were designed. As a senior in high school,
-                  I took a Physics course that introduced me to the field of Engineering.
-                  During this time, I also began to wonder how my phone and technology worked. I was fascinated by the fact
-                  that I can touch a button, or screen and it would respond.
-                  I went on to community college, at <a href="https://www.santarosa.edu/" target="_blank">Santa Rosa Junior College</a>
-                  where I found a combination of my interests, and passion: <strong>Computer Science</strong>.
+                I discovered my passion for Science and Technology at a young age.
+                Growing up, I always questioned how things worked and how they were built. As a senior in high school,
+                I took a Physics course that introduced me to the field of Engineering.
+                During this time, I also began to wonder how my phone and the school computers worked. I was fascinated by the fact
+                that I press a key or screen, and it would respond.
+                I went on to <a href="https://www.santarosa.edu/" target="_blank">Santa Rosa Junior College</a>
+                where I found a combination of my interests, and passion: <strong>Computer Science</strong>.
                 </p>
                 <p>
-                  Community College, was also the time when I saw most of my friends drop out of school, and resort to a labor job
-                  in the vineyards, and after each quarter more and more dropped out.
-                  Many young adults and teenagers that grow up seeing this
+                  Community College, was also the time when I saw most of my friends drop out of school.
+                  Many young teenagers that grow up seeing this
                   as the only option, limit themselves and their goals after high school.
-                </p>
-                <p>
                   I want to help younger generations from low income communities expand their opportunities and their dreams,
-                  by helping them find their passion in tech, education, and STEM, and unltimately giving them resources
-                  to pursue their goals.
-                   <strong>Today, I am looking for ways to expand my
-                   opportunities in my computer science and software engineering, as a developer and programmer, and I am also
-                   looking for ways to give to my community.</strong>
-                   I am a student at <a href="https://www.ucsc.edu/" target="_blank">Univerversity of California, Santa Cruz</a>
-                   where I will be graduating with my <strong>Computer Science</strong> degree in 2019.
+                  by helping them find their passion in tech, education, and STEM.
+                  Today, I am looking for ways to expand my
+                  opportunities in computer science and <strong>software engineering</strong>.
+                  I am a student at <a href="https://www.ucsc.edu/" target="_blank">Univerversity of California, Santa Cruz</a>
+                  where I will be graduating with my Computer Science degree in 2019.
                 </p>
             </Text>
         </Content>
