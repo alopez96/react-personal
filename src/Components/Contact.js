@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, Card } from './GlobalStyles'
 import styled from 'styled-components'
 import NavBar from './NavBar';
 import Github from './logos/github.png';
@@ -9,14 +8,14 @@ import Twitter from './logos/twitter.png';
 import { SMALL } from '../ScreenSizes';
 
 const Rect = styled.div`
-    background-image: linear-gradient(-45deg, ${props => props.theme.contactGradient.from} 0%, ${props => props.theme.contactGradient.to} 100%);
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     transform: rotate(-45deg);
     display: flex;
+    margin-top:100px;
+    background-color: #AC3B61;
     justify-content: center;
     @media (max-width: ${SMALL}px) {
-        position: absolute;
         width: 105vw;
         height: 400px;
         transform: rotate(-10deg) skew(-10deg);
@@ -71,9 +70,8 @@ const openLink = (url) => () => {
 
 const Contact = (props) => {
   return (
-    <Container>
-      <Card image="">
-        <NavBar index="3" />
+      <div>
+        <NavBar index="3"/>
         <Center>
             <Rect>
                 <Content>
@@ -93,8 +91,7 @@ const Contact = (props) => {
                 </Content>
             </Rect>
         </Center>
-      </Card>
-    </Container>
+      </div>
   )
 }
 

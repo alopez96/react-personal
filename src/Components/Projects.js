@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, Card } from './GlobalStyles'
 import NavBar from './NavBar';
 import ProjectItem from './ProjectItem';
 import styled from 'styled-components'
@@ -40,8 +39,7 @@ const Grid = styled.div`
 
 const Projects = (props) => {
   return (
-    <Container>
-        <Card image="">
+        <div image="">
             <NavBar index="2"/>
             <Grid>
                 <ProjectItem
@@ -97,8 +95,7 @@ const Projects = (props) => {
                     />
             </Grid>
 
-        </Card>
-    </Container>
+        </div>
   )
 }
 

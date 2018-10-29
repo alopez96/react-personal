@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Card } from './GlobalStyles';
 import NavBar from './NavBar';
 import styled from 'styled-components';
 import {SMALL} from '../ScreenSizes';
@@ -22,7 +21,7 @@ const Header = styled.h1`
 
 const Text = styled.p`
     color: white;
-    max-width: 400px;
+    max-width: 600px;
     width: 90%;
     text-align: center;
     text-shadow: 0 2px 6px rgba(0,0,0,.5);
@@ -63,19 +62,10 @@ const Background = styled.div`
 
 const About = (props) => {
   return (
-    <Container>
-      <Card image="" center>
+    <div>
         <NavBar index="1"/>
-        <Content>
-            <Header>About me</Header>
-            <div>
-                  {/* <div>
-                      <img src="./static/images/srjc.jpg" alt="Card image cap"/>
-                      <img src="./static/images/ucsc.png" alt="Card image cap"/>
-                </div> */}
-                </div>
-            <Text className="about-text">
-              <p>
+            <Text>
+              <p class="about-text">
                 I discovered my passion for Science and Technology at a young age.
                 Growing up, I always questioned how things worked and how they were built. As a senior in high school,
                 I took a Physics course that introduced me to the field of Engineering.
@@ -96,10 +86,7 @@ const About = (props) => {
                   where I will be graduating with my Computer Science degree in 2019.
                 </p>
             </Text>
-        </Content>
-        <Background />
-      </Card>
-    </Container>
+    </div>
   )
 }
 
