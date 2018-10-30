@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import NavBar from './NavBar';
-import { SMALL } from '../ScreenSizes';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import NavBar from './NavBar'
+import { SMALL } from '../ScreenSizes'
 
 const Header = styled.h1`
-    color: #123C69;
+    color: #f7f6f0;
     margin: 0;
     font-size: 3.5em;
     @media (max-width: ${SMALL}px) {

@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import Github from './logos/github.png';
-import Open from './logos/open.png';
-import { SMALL } from '../ScreenSizes';
+import React from 'react'
+import styled from 'styled-components'
+import Github from './logos/github.png'
+import Open from './logos/open.png'
+import { SMALL } from '../ScreenSizes'
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};

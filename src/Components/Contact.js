@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import NavBar from './NavBar';
-import Github from './logos/github.png';
-import Gmail from './logos/email2.png';
-import Twitter from './logos/twitter.png';
+import NavBar from './NavBar'
+import Github from './logos/github.png'
+import Gmail from './logos/email2.png'
+import Twitter from './logos/twitter.png'
 
-import { SMALL } from '../ScreenSizes';
+import { SMALL } from '../ScreenSizes'
 
 const Rect = styled.div`
     width: 500px;
@@ -13,7 +13,7 @@ const Rect = styled.div`
     transform: rotate(-45deg);
     display: flex;
     margin-top:100px;
-    background-color: #AC3B61;
+    background-image: linear-gradient(to left, #DA7B93, #2E151B);
     justify-content: center;
     @media (max-width: ${SMALL}px) {
         width: 105vw;
@@ -65,7 +65,6 @@ const openLink = (url) => () => {
     }else{
         window.open(url, '_blank');
     }
-
 }
 
 const Contact = (props) => {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import styled, {ThemeProvider} from 'styled-components'
-import { Link } from 'react-router-dom';
-import { SMALL } from '../ScreenSizes';
-import Hamburger from './logos/hamburger.png';
-import Github from './logos/github.png';
+import { Link } from 'react-router-dom'
+import { SMALL } from '../ScreenSizes'
+import Hamburger from './logos/hamburger.png'
+import Github from './logos/github.png'
 import Close from './logos/close_dark.svg'
 
 const Logo = styled.h1`
@@ -12,7 +12,7 @@ const Logo = styled.h1`
     font-weight: bold;
     padding-bottom: 5px;
     float: left;
-    color: #AC3B61;
+    color: #dcdcdc;
     &:before {
         content: " ";
         position: absolute;
@@ -30,7 +30,7 @@ const List = styled.ul`
     transition: opacity 500ms;
     visibility: visible;
     opacity: 1;
-    color: ${props => props.theme.textNormal};
+    color: #dcdcdc;
 
 `
 
@@ -61,6 +61,7 @@ const ListItem = styled.li`
         text-transform: uppercase;
     }
     &:hover {
+      color: #DA7B93;
       &:before {
           width: 100%;
       }

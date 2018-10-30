@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import NavBar from './NavBar';
-import styled from 'styled-components';
-import {SMALL} from '../ScreenSizes';
+import React, { Component } from 'react'
+import NavBar from './NavBar'
+import styled from 'styled-components'
+import {SMALL} from '../ScreenSizes'
 
 
 const Content = styled.div`
