@@ -31,7 +31,6 @@ const List = styled.ul`
     visibility: visible;
     opacity: 1;
     color: #dcdcdc;
-
 `
 
 const ListItem = styled.li`
@@ -61,7 +60,7 @@ const ListItem = styled.li`
         text-transform: uppercase;
     }
     &:hover {
-      color: #DA7B93;
+      color: white;
       &:before {
           width: 100%;
       }
@@ -72,8 +71,6 @@ const StyleLink = styled(Link)`
     text-decoration: none;
     color: inherit;
 `
-
-
 
 export default class NavBar extends Component {
   render() {

@@ -9,7 +9,7 @@ class Header extends Component {
   constructor() {
     super()
     this.state = {
-      h1: 'header',
+      h1: 'header'
     }
   }
   render(){
