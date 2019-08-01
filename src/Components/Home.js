@@ -39,7 +39,7 @@ export default class Home extends Component {
       <div>
           <NavBar index="0" />
           <Header>HI I’M ARTURO LOPEZ</Header>
-          <SubHeader>I’m a Computer Science Student at University of California, Santa Cruz.</SubHeader>
+          <SubHeader>I’m a passionate about tech and learning.</SubHeader>
         </div>
     )
   }

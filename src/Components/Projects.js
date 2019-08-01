@@ -48,6 +48,8 @@ const Projects = (props) => {
                     gridArea="lt0"
                     title="Robofriends"
                     url="https://eager-swirles-8b12c3.netlify.com/"
+                    github="https://github.com/alopez96/react-robofriends"
+                    tech="React"
                     />
                 <ProjectItem
                     size={13}
@@ -55,42 +57,51 @@ const Projects = (props) => {
                     gridArea="lm"
                     title="JUMP'N"
                     url="https://alopez96.github.io/"
+                    github="https://github.com/alopez96/jumpn"
+                    tech="HTML | CSS"
                     />
                 <ProjectItem
                     size={13}
                     color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="mm"
-                    title="My Resume"
-                    url=""
+                    title="Workers' Dinner"
+                    url="https://workersdinner.surge.sh"
+                    github="https://github.com/alopez96/workers-dinner"
+                    tech="HTML | CSS"
                     />
                 <ProjectItem
                     size={13}
                     color={{from: "#40AFF4", to: "#3FFA87"}}
                     gridArea="rt"
-                    title="This site"
-                    url=""
-                    body=""
+                    title="Personal Website"
+                    url="https://arturolopez.me/"
+                    github="https://github.com/alopez96/arturo-personal"
+                    tech="HTML | CSS"
                     />
                 <ProjectItem
                     size={13}
                     color={{from: "#8967E8", to: "#612DB5"}}
                     gridArea="rm0"
-                    title="Game Up"
-                    url=""
+                    title="Start Page"
+                    url="http://arturo-start.surge.sh/"
+                    github="https://github.com/alopez96/startpage"
+                    tech="React"
                     />
                 <ProjectItem
                     size={13}
                     color={{from: "#B9FA3F", to: "#5AD0A7"}}
                     gridArea="rb"
-                    title="MakeUp Artist"
+                    title="Make-up Artist"
                     url="https://socer-a512d.appspot.com/Avalos"
-                    // tech="VueJS | Web2py | Python | Google App Engine"
+                    github="https://github.com/alopez96/avalos-web2py"
+                    tech="VueJS | Web2py"
                     />
                 <ProjectItem
                     size={13}
                     color={{from: "#F4AF40", to: "#F4D15C"}}
                     gridArea="lb0"
                     title="Soccer Pick Up"
+                    tech="VueJS | Web2py"
                     url="https://socer-a512d.appspot.com/soccer"
                     />
             </Grid>

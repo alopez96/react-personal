@@ -129,6 +129,7 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) =
         <TechList>{tech}</TechList>
         <Container>
             <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
+            <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button>
         </Container>
     </Bubble>
   )

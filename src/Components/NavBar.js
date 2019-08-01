@@ -6,24 +6,6 @@ import Hamburger from './logos/hamburger.png'
 import Github from './logos/github.png'
 import Close from './logos/close_dark.svg'
 
-const Logo = styled.h1`
-    font-size: 1.5em;
-    position: relative;
-    font-weight: bold;
-    padding-bottom: 5px;
-    float: left;
-    color: #dcdcdc;
-    &:before {
-        content: " ";
-        position: absolute;
-        bottom: 0;
-        left: 15px;
-        width: 60px;
-        height: 3px;
-        border-radius: 20px;
-        background-color: ${props => props.theme.textDark};;
-    }
-`
 
 const List = styled.ul`
     list-style: none;
@@ -76,11 +58,9 @@ export default class NavBar extends Component {
   render() {
     return (
       <div>
-        <Logo>AL</Logo>
         <List>
             <StyleLink to="/contact" ><ListItem>Contact</ListItem></StyleLink>
             <StyleLink to="/projects" ><ListItem>Projects</ListItem></StyleLink>
-            <StyleLink to="/about" ><ListItem>About</ListItem></StyleLink>
             <StyleLink to="/home" ><ListItem >Home</ListItem></StyleLink>
         </List>
       </div>

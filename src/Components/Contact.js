@@ -83,10 +83,10 @@ const Contact = (props) => {
                         <img width="30" src={Gmail}/>
                         <P>alopez96@ucsc.edu</P>
                     </ListItem>
-                    <ListItem onClick={openLink('https://twitter.com/arturolopezucsc')}>
+                    {/* <ListItem onClick={openLink('https://twitter.com/arturolopezucsc')}>
                         <img width="30" src={Twitter}/>
                         <P>arturolopezucsc</P>
-                    </ListItem>
+                    </ListItem> */}
                 </Content>
             </Rect>
         </Center>
