@@ -10,8 +10,6 @@ const List = styled.ul`
     visibility: visible;
     opacity: 1;
     color: #dcdcdc;
-    right: 5rem;
-    top: 2rem;    margin-bottom: 5rem;
 `
 
 const ListItem = styled.li`
