@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import Home from './Components/Home';
-import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
-import { AnimatedSwitch } from 'react-router-transition';
+import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
-import { SMALL } from './ScreenSizes';
-import { ThemeProvider } from 'styled-components';
 
 const darkTheme = {
   dark: true,
@@ -46,7 +43,7 @@ class Main extends Component {
         <Router>
         <div>
           <hr />
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/projects" component={Projects} />
         </div>

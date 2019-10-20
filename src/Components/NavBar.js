@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
-import styled, {ThemeProvider} from 'styled-components'
-import { Link } from 'react-router-dom'
-import { SMALL } from '../ScreenSizes'
-import Hamburger from './logos/hamburger.png'
-import Github from './logos/github.png'
-import Close from './logos/close_dark.svg'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { SMALL } from '../ScreenSizes';
 
 
 const List = styled.ul`
@@ -13,6 +10,8 @@ const List = styled.ul`
     visibility: visible;
     opacity: 1;
     color: #dcdcdc;
+    right: 5rem;
+    top: 2rem;    margin-bottom: 5rem;
 `
 
 const ListItem = styled.li`
@@ -61,7 +60,7 @@ export default class NavBar extends Component {
         <List>
             <StyleLink to="/contact" ><ListItem>Contact</ListItem></StyleLink>
             <StyleLink to="/projects" ><ListItem>Projects</ListItem></StyleLink>
-            <StyleLink to="/home" ><ListItem >Home</ListItem></StyleLink>
+            <StyleLink to="/" ><ListItem >Home</ListItem></StyleLink>
         </List>
       </div>
     )

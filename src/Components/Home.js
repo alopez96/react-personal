@@ -24,21 +24,12 @@ const SubHeader = styled.p`
     }
 `
 
-const ThemeChooserContainer = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-`
-
 export default class Home extends Component {
   render() {
     return (
       <div>
           <NavBar index="0" />
-          <Header>HI I’M ARTURO LOPEZ</Header>
+          <Header>HI, I'M ARTURO LOPEZ</Header>
           <SubHeader>I’m a passionate about tech and learning.</SubHeader>
         </div>
     )
