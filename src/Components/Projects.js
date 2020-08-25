@@ -56,7 +56,7 @@ const Projects = (props) => {
                     color={{from: "#F44040", to: "#713FFA"}}
                     gridArea="lm"
                     title="JUMP'N"
-                    url="https://alopez96.github.io/"
+                    url="https://jumpin.netlify.app/"
                     github="https://github.com/alopez96/jumpn"
                     tech="HTML | CSS"
                     />
@@ -86,15 +86,6 @@ const Projects = (props) => {
                     url="http://arturo-start.surge.sh/"
                     github="https://github.com/alopez96/startpage"
                     tech="React"
-                    />
-                <ProjectItem
-                    size={13}
-                    color={{from: "#B9FA3F", to: "#5AD0A7"}}
-                    gridArea="rb"
-                    title="Make-up Artist"
-                    url="https://socer-a512d.appspot.com/Avalos"
-                    github="https://github.com/alopez96/avalos-web2py"
-                    tech="VueJS | Web2py"
                     />
                 <ProjectItem
                     size={13}

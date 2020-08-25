@@ -10,7 +10,7 @@ const List = styled.ul`
     visibility: visible;
     opacity: 1;
     color: #dcdcdc;
-    margin-top: 4rem;
+    padding-top: 4rem;
 `
 
 const ListItem = styled.li`

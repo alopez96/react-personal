@@ -42,8 +42,6 @@ class App extends Component {
       <div className="App">
         <Router>
         <div>
-        {/* <NavBar index="0" /> */}
-          <hr />
           <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/projects" component={Projects} />

@@ -6,14 +6,15 @@
   min-height: 100vh;
 }
 
-.App-header {
+.home-section{
   /* background-color: #805a5a; */
   /* background-color: #2E151B; */
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
+  margin-left: 10rem;
 }
 
 .App-link {
