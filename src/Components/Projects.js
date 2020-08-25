@@ -65,7 +65,7 @@ const Projects = (props) => {
                     color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="mm"
                     title="Workers' Dinner"
-                    url="https://workersdinner.surge.sh"
+                    url="https://workers-dinner.surge.sh/"
                     github="https://github.com/alopez96/workers-dinner"
                     tech="HTML | CSS"
                     />

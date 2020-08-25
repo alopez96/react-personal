@@ -10,20 +10,20 @@ const List = styled.ul`
     visibility: visible;
     opacity: 1;
     color: #dcdcdc;
+    margin-top: 4rem;
 `
 
 const ListItem = styled.li`
     float: right;
     cursor: pointer;
-    margin-left: 40px;
+    margin-right: 2rem;
     text-decoration: none;
     position: relative;
     &:before {
         content: "";
         position: absolute;
-        bottom: -5px;
         left: 0;
-        margin-top: 10px;
+        margin: 10rem;
         width: ${props => props.index ? "100%" : "0%"};
         height: 3px;
         background-color: ${props => props.theme.textDark};
@@ -48,7 +48,7 @@ const ListItem = styled.li`
 
 const StyleLink = styled(Link)`
     text-decoration: none;
-    color: inherit;
+    color: inherit; 
 `
 
 export default class NavBar extends Component {
@@ -56,9 +56,15 @@ export default class NavBar extends Component {
     return (
       <div>
         <List>
-            <StyleLink to="/contact" ><ListItem>Contact</ListItem></StyleLink>
-            <StyleLink to="/projects" ><ListItem>Projects</ListItem></StyleLink>
-            <StyleLink to="/" ><ListItem >Home</ListItem></StyleLink>
+            <StyleLink to="/contact" >
+              <ListItem>Contact</ListItem>
+            </StyleLink>
+            <StyleLink to="/projects" >
+              <ListItem>Projects</ListItem>
+            </StyleLink>
+            <StyleLink to="/" >
+              <ListItem >Home</ListItem>
+            </StyleLink>
         </List>
       </div>
     )

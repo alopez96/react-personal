@@ -3,6 +3,7 @@ import Home from './Components/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
+import NavBar from './Components/NavBar'
 
 const darkTheme = {
   dark: true,
@@ -14,7 +15,7 @@ const darkTheme = {
     from: "#8650FF",
     to: "#33249D"
   },
-  textNormal: "#FFFFFF",
+  textNormal: "#FFFFFF",  
   textColored: "#D0C9FF",
   textDark: "#786EBC",
 }
@@ -35,20 +36,19 @@ const lightTheme = {
 }
 
 
-class Main extends Component {
+class App extends Component {
   render() {
     return (
       <div className="App">
-      <header className="App-header">
         <Router>
         <div>
+        {/* <NavBar index="0" /> */}
           <hr />
           <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/projects" component={Projects} />
         </div>
       </Router>
-    </header>
     </div>
     );
   }
@@ -56,4 +56,4 @@ class Main extends Component {
 
 
 
-export default withRouter(Main);
+export default withRouter(App);

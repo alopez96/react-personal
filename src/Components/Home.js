@@ -28,9 +28,11 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-          <NavBar index="0" />
+        <NavBar index="0" />
+          <div className='App-header'>
           <Header>HI, I'M ARTURO LOPEZ</Header>
           <SubHeader>I’m a passionate about tech and learning.</SubHeader>
+          </div>
         </div>
     )
   }
