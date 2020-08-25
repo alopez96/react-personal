@@ -114,13 +114,6 @@ const openLink = (url) => () => {
     window.open(url, '_blank');
 }
 
-const generateLink = (url) => () => {
-    let name = url.replace("https://antonwy.github.io/", "");
-    let finalURL = `https://github.com/Antonwy/${name}`;
-    console.log(finalURL);
-    window.open(finalURL, '_blank');
-}
-
 const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) => {
   return (
     <Bubble size={size} color={color} gridArea={gridArea}>

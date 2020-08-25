@@ -8,15 +8,15 @@
 }
 
 .home-section{
-  /* background-color: #805a5a; */
   /* background-color: #2E151B; */
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  /* text-align: center; */
-  width: 20vw;
+  text-align: center;
+  width: 100vw;
+  /* width: 20vw; */
 }
 
 .App-link {
