@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import NavBar from './NavBar'
 import { SMALL } from '../ScreenSizes'
+import about from './../Text'
 
 const Header = styled.h1`
     color: #f7f6f0;
@@ -30,8 +31,8 @@ export default class Home extends Component {
       <div>
         <NavBar index="0" />
           <div className='home-section'>
-          <Header>HI, I'M ARTURO LOPEZ</Header>
-          <SubHeader>I’m a passionate about tech and learning.</SubHeader>
+          <Header>{about.header}</Header>
+          <SubHeader>{about.sub_header}</SubHeader>
           </div>
         </div>
     )
