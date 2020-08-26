@@ -4,26 +4,35 @@ import { Link } from 'react-router-dom';
 import { SMALL } from '../ScreenSizes';
 
 
-const List = styled.ul`
-    list-style: none;
+const List = styled.div`
     transition: opacity 500ms;
     visibility: visible;
+    top: 1rem;
+    right: 2rem;
     opacity: 1;
     color: #dcdcdc;
     padding-top: 1rem;
+    display: flex;
+    position: fixed;
+    @media (max-width: ${SMALL}px) {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: inherit;
+      right: inherit;
+  }
 `
 
-const ListItem = styled.li`
+const ListItem = styled.div`
     float: right;
     cursor: pointer;
     margin-right: 2rem;
     text-decoration: none;
     position: relative;
     &:before {
-        content: "";
+        // content: "";
         position: absolute;
         left: 0;
-        margin: 10rem 0rem 0rem 0rem;
         width: ${props => props.index ? "100%" : "0%"};
         height: 3px;
         background-color: ${props => props.theme.textDark};
@@ -32,7 +41,7 @@ const ListItem = styled.li`
     @media (max-width: ${SMALL}px) {
         float: none;
         margin: auto;
-        text-align: center;
+        // text-align: center;
         margin: 20px 0;
         font-size: 1.25em;
         font-weight: bolder;
@@ -56,15 +65,15 @@ export default class NavBar extends Component {
     return (
       <div>
         <List>
-            <StyleLink to="/contact" >
-              <ListItem>Contact</ListItem>
-            </StyleLink>
-            <StyleLink to="/projects" >
-              <ListItem>Projects</ListItem>
-            </StyleLink>
-            <StyleLink to="/" >
-              <ListItem >Home</ListItem>
-            </StyleLink>
+          <StyleLink to="/" >
+            <ListItem >Home</ListItem>
+          </StyleLink>
+          <StyleLink to="/projects" >
+            <ListItem>Projects</ListItem>
+          </StyleLink>
+          <StyleLink to="/contact" >
+            <ListItem>Contact</ListItem>
+          </StyleLink>
         </List>
       </div>
     )
