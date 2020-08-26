@@ -6,14 +6,16 @@ import { SMALL } from '../ScreenSizes'
 
 const Rect = styled.div`
     width: 40vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
-    margin-top: 10rem;
+    margin-top: 2rem;
+    align-items:center;
     background-image: linear-gradient(to top, #2E151B, #8650FF);
     justify-content: center;
     @media (max-width: ${SMALL}px) {
-        width: 105vw;
-        height: 50vh;
+        width: 100vw;
+        height: 80vh;
+        margin-top: 0rem;
         transform: rotate(-10deg) skew(-10deg);
     }
 `
@@ -30,7 +32,7 @@ const Content = styled.div`
 
 const Center = styled.div`
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +41,6 @@ const Center = styled.div`
 const Button = styled.div`
     width: 4rem;
     height: 4rem;
-    // border-radius: 50%;
     padding: 2rem 4rem 2rem 4rem;
     font-size: 1.4rem;
     background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
@@ -73,7 +74,7 @@ const Contact = (props) => {
             <Rect>
                 <Content>
                     <fieldset id="contact" className="ba b--transparent ph0 mh0">
-                    <div className="mt6">
+                    <div className="">
                     <label className="db fw6 lh-copy f6" htmlFor="name">Name *</label>
                     <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-80" 
                     type="text"
