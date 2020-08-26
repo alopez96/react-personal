@@ -9,7 +9,7 @@ const Rect = styled.div`
     height: 100vh;
     display: flex;
     margin-top: 10rem;
-    background-image: linear-gradient(to top, #53b8c5, #2E151B);
+    background-image: linear-gradient(to top, #2E151B, #8650FF);
     justify-content: center;
     @media (max-width: ${SMALL}px) {
         width: 105vw;
@@ -108,7 +108,7 @@ const Contact = (props) => {
                         className="b ph3 pv2 ba b--black bg-transparent pointer f6 dib">Send</p>
                     </div>
                     } */}
-                    <Button color={{from: "#53b8c5", to: "#2E151B"}}>Send</Button>
+                    <Button color={{from: "#2E151B", to: "#8650FF"}}>Send</Button>
                     
                 </fieldset>
                 </Content>
