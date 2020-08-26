@@ -40,7 +40,6 @@ const Grid = styled.div`
 const Projects = (props) => {
   return (
         <div>
-            <NavBar index="2"/>
             <Grid  className="projects">
                 <ProjectItem
                     title="Allies Pro Services LLC"

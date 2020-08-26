@@ -42,7 +42,8 @@ class App extends Component {
       <div className="App">
         <Router>
         <div>
-          <Route exact path="/" component={Home} />
+        <NavBar index="0" />
+          <Route exact path="/" render={(props) => <Home {...props} theme={lightTheme}/>} />
           <Route path="/contact" component={Contact} />
           <Route path="/projects" component={Projects} />
         </div>

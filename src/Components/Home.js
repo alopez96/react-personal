@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import NavBar from './NavBar'
 import { SMALL } from '../ScreenSizes'
 import about from './../Text'
 
@@ -25,19 +24,18 @@ const SubHeader = styled.p`
     }
 `
 
-export default class Home extends Component {
-  render() {
+function Home ({theme}) {
     return (
       <div>
-        <NavBar index="0" />
           <div className='home-section'>
             <div className='home-text'>
           <Header>{about.header}</Header>
-          <SubHeader>{about.sub_header}</SubHeader>
+          <SubHeader theme={theme}>{about.sub_header}</SubHeader>
           </div>
           {/* <button>Test</button> */}
           </div>
         </div>
     )
-  }
 }
+
+export default Home;

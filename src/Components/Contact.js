@@ -69,7 +69,6 @@ const openLink = (url) => () => {
 const Contact = (props) => {
   return (
       <div>
-        <NavBar index="3"/>
         <Center>
             <Rect>
                 <Content>
