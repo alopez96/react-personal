@@ -31,8 +31,11 @@ export default class Home extends Component {
       <div>
         <NavBar index="0" />
           <div className='home-section'>
+            <div className='home-text'>
           <Header>{about.header}</Header>
           <SubHeader>{about.sub_header}</SubHeader>
+          </div>
+          {/* <button>Test</button> */}
           </div>
         </div>
     )

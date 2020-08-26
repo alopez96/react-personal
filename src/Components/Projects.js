@@ -39,9 +39,9 @@ const Grid = styled.div`
 
 const Projects = (props) => {
   return (
-        <div image="">
+        <div>
             <NavBar index="2"/>
-            <Grid>
+            <Grid  className="projects">
                 <ProjectItem
                     size={13}
                     color={{from: "#4040F4", to: "#713FFA"}}
@@ -95,6 +95,7 @@ const Projects = (props) => {
                     tech="VueJS | Web2py"
                     url="https://socer-a512d.appspot.com/soccer"
                     />
+                    
             </Grid>
 
         </div>
