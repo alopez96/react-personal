@@ -10,7 +10,8 @@ const Header = styled.h1`
     font-size: 3.5em;
     @media (max-width: ${SMALL}px) {
         font-size: 2em;
-        text-align: center;
+        width: 70vw;
+        margin: 0 auto 0 auto;
     }
 `
 
@@ -19,9 +20,8 @@ const SubHeader = styled.p`
     margin-left: 5px;
     margin-top: 20px;
     @media (max-width: ${SMALL}px) {
-        text-align: center;
         width: 70%;
-        margin: 20px auto 0 auto;
+        margin: 2rem auto 0 auto;
     }
 `
 

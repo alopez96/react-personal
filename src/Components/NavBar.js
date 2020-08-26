@@ -41,8 +41,7 @@ const ListItem = styled.div`
     @media (max-width: ${SMALL}px) {
         float: none;
         margin: auto;
-        // text-align: center;
-        margin: 20px 0;
+        margin: 2rem 0 0 0;
         font-size: 1.25em;
         font-weight: bolder;
         text-transform: uppercase;
