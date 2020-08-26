@@ -10,7 +10,8 @@ const Rect = styled.div`
     display: flex;
     margin-top: 2rem;
     align-items:center;
-    background-image: linear-gradient(to top, #2E151B, #8650FF);
+    // background-image: linear-gradient(to top, #2E151B, #8650FF);
+    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     justify-content: center;
     @media (max-width: ${SMALL}px) {
         width: 100vw;
@@ -66,11 +67,11 @@ const openLink = (url) => () => {
     }
 }
 
-const Contact = (props) => {
+function Contact ({ theme }) {
   return (
       <div>
         <Center>
-            <Rect>
+            <Rect color={theme.contactGradient}>
                 <Content>
                     <fieldset id="contact" className="ba b--transparent ph0 mh0">
                     <div className="">
@@ -108,7 +109,7 @@ const Contact = (props) => {
                         className="b ph3 pv2 ba b--black bg-transparent pointer f6 dib">Send</p>
                     </div>
                     } */}
-                    <Button color={{from: "#2E151B", to: "#8650FF"}}>Send</Button>
+                    <Button color={theme.contactGradient}>Send</Button>
                     
                 </fieldset>
                 </Content>

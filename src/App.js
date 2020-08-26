@@ -36,21 +36,20 @@ const lightTheme = {
 }
 
 
-class App extends Component {
-  render() {
+function App(){
+  
     return (
       <div className="App">
         <Router>
         <div>
         <NavBar index="0" />
           <Route exact path="/" render={(props) => <Home {...props} theme={lightTheme}/>} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/contact" render={(props) => <Contact {...props} theme={darkTheme}/>} />
           <Route path="/projects" component={Projects} />
         </div>
       </Router>
     </div>
     );
-  }
 }
 
 

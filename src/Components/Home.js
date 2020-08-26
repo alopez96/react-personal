@@ -5,6 +5,7 @@ import about from './../Text'
 
 const Header = styled.h1`
     color: #f7f6f0;
+    // color: ${props => props.theme.textColored};
     margin: 0;
     font-size: 3.5em;
     @media (max-width: ${SMALL}px) {
@@ -29,7 +30,7 @@ function Home ({theme}) {
       <div>
           <div className='home-section'>
             <div className='home-text'>
-          <Header>{about.header}</Header>
+          <Header theme={theme}>{about.header}</Header>
           <SubHeader theme={theme}>{about.sub_header}</SubHeader>
           </div>
           {/* <button>Test</button> */}
