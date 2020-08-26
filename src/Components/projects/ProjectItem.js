@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Github from './logos/github.png'
-import Open from './logos/open.png'
-import { SMALL } from '../ScreenSizes'
+import Open from './../logos/open.png'
+import { SMALL } from '../../ScreenSizes'
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
@@ -123,7 +122,7 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) =
         <TechList>{tech}</TechList>
         <Container>
             <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
-            <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button>
+            {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
         </Container>
     </Bubble>
   )
