@@ -13,7 +13,7 @@ const Rect = styled.div`
     justify-content: center;
     @media (max-width: ${SMALL}px) {
         width: 105vw;
-        height: 400px;
+        height: 50vh;
         transform: rotate(-10deg) skew(-10deg);
     }
 `
@@ -72,9 +72,8 @@ const Contact = (props) => {
         <Center>
             <Rect>
                 <Content>
-                    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                    <legend className="f1 fw6 ph0 mh0">Contact</legend>
-                    <div className="mt3">
+                    <fieldset id="contact" className="ba b--transparent ph0 mh0">
+                    <div className="mt6">
                     <label className="db fw6 lh-copy f6" htmlFor="name">Name *</label>
                     <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-80" 
                     type="text"
