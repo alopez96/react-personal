@@ -23,7 +23,7 @@ const ListItem = styled.li`
         content: "";
         position: absolute;
         left: 0;
-        margin: 10rem;
+        margin: 10rem 0rem 0rem 0rem;
         width: ${props => props.index ? "100%" : "0%"};
         height: 3px;
         background-color: ${props => props.theme.textDark};

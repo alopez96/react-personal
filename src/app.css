@@ -1,6 +1,4 @@
 .App {
-  /* text-align: center; */
-  /* background-color: #3d262c; */
   background-color: #53b8c5;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -8,23 +6,19 @@
 }
 
 .home-section{
-  /* background-color: #2E151B; */
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
 }
 
 .home-text{
-  /* background-color: #2E151B; */
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  /* text-align: center; */
   width: 50vw;
 }
 
