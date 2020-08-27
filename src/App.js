@@ -13,8 +13,8 @@ const lightTheme = {
     from: "#D9D9FF"
   },
   contactGradient: {
-    from: "#17252A",
-    to: "#17252A"
+    to: "#2B7A78",
+    from: "#17252A"
   },
   textPrimary: "#FEFFFF",
   textSecondary: "#17252A",
@@ -28,11 +28,11 @@ const darkTheme = {
     from: "#434343"
   },
   contactGradient: {
-    from: "#8650FF",
-    to: "#33249D"
+    to: "#8650FF",
+    from: "#33249D"
   },
   textPrimary: "#FFFFFF",
-  textSecondary: "#DEF2F1",
+  textSecondary: "#8650FF",
   backgroundColor: "#353535"
 }
 
@@ -46,7 +46,7 @@ const AppDiv = styled.div`
 
 function App() {
 
-  const [theme, setTheme] = useState(lightTheme)
+  const [theme, setTheme] = useState(darkTheme)
 
   const updateTheme = () => {
     if(theme == lightTheme){

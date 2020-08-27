@@ -73,7 +73,7 @@ function NavBar ({ theme, updateTheme }) {
           <ListItem>
           <div class="ui toggle checkbox">
           <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-          <label style={{color:theme.textSecondary}}>Dark Mode</label>
+          <label style={{color:theme.textPrimary}}>Dark Mode</label>
           </div>
           </ListItem>
         </Toogle>
