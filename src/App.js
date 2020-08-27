@@ -6,6 +6,21 @@ import Contact from './Components/Contact';
 import NavBar from './Components/NavBar';
 import styled from 'styled-components';
 
+const lightTheme = {
+  dark: false,
+  gradient: {
+    to: "#FFFFFF",
+    from: "#D9D9FF"
+  },
+  contactGradient: {
+    from: "#17252A",
+    to: "#17252A"
+  },
+  textPrimary: "#FEFFFF",
+  textSecondary: "#17252A",
+  backgroundColor: "#3AAFA9"
+}
+
 const darkTheme = {
   dark: true,
   gradient: {
@@ -16,26 +31,9 @@ const darkTheme = {
     from: "#8650FF",
     to: "#33249D"
   },
-  textNormal: "#FFFFFF",  
-  textColored: "#D0C9FF",
-  textDark: "#786EBC",
-  backgroundColor: "#4D3636"
-}
-
-const lightTheme = {
-  dark: false,
-  gradient: {
-    to: "#FFFFFF",
-    from: "#D9D9FF"
-  },
-  contactGradient: {
-    from: "#4F6CD3",
-    to: "#5667A2"
-  },
-  textNormal: "#434343",
-  textColored: "#FEFFFF",
-  textDark: "#17252A",
-  backgroundColor: "#3AAFA9"
+  textPrimary: "#FFFFFF",
+  textSecondary: "#DEF2F1",
+  backgroundColor: "#353535"
 }
 
 const AppDiv = styled.div`

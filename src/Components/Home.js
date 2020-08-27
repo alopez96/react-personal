@@ -4,8 +4,7 @@ import { SMALL } from '../ScreenSizes'
 import about from './../Text'
 
 const Header = styled.h1`
-    color: #f7f6f0;
-    // color: ${props => props.theme.textColored};
+    color: ${props => props.theme.textPrimary};
     margin: 0;
     font-size: 3.5em;
     @media (max-width: ${SMALL}px) {
@@ -16,7 +15,7 @@ const Header = styled.h1`
 `
 
 const SubHeader = styled.p`
-    color: ${props => props.theme.textDark};
+    color: ${props => props.theme.textSecondary};
     margin-left: 5px;
     margin-top: 20px;
     @media (max-width: ${SMALL}px) {

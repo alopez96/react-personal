@@ -35,7 +35,7 @@ const ListItem = styled.div`
     margin-right: 2rem;
     text-decoration: none;
     position: relative;
-    color: ${props => props.theme.textDark};
+    color: ${props => props.theme.textSecondary};
     &:before {
         // content: "";
         position: absolute;
@@ -73,7 +73,7 @@ function NavBar ({ theme, updateTheme }) {
           <ListItem>
           <div class="ui toggle checkbox">
           <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-          <label>Dark Mode</label>
+          <label style={{color:theme.textSecondary}}>Dark Mode</label>
           </div>
           </ListItem>
         </Toogle>

@@ -9,8 +9,6 @@ const Rect = styled.div`
     display: flex;
     margin-top: 2rem;
     align-items:center;
-    // background-image: linear-gradient(to top, #2E151B, #8650FF);
-    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     justify-content: center;
     @media (max-width: ${SMALL}px) {
         width: 100vw;
@@ -22,6 +20,7 @@ const Rect = styled.div`
 
 const Content = styled.div`
     display: flex;
+    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,8 +69,10 @@ function Contact ({ theme }) {
   return (
       <div>
         <Center>
-            <Rect color={theme.contactGradient}>
-                <Content>
+            <Rect>
+                <Content color={theme.contactGradient}>
+                    <article className="w-100 w-50-m w-25-l mw6 shadow-5 center">
+                    <main className="pa4">
                     <fieldset id="contact" className="ba b--transparent ph0 mh0">
                     <div className="">
                     <label className="db fw6 lh-copy f6" htmlFor="name">Name *</label>
@@ -111,6 +112,8 @@ function Contact ({ theme }) {
                     <Button color={theme.contactGradient}>Send</Button>
                     
                 </fieldset>
+                </main>
+                </article>
                 </Content>
             </Rect>
         </Center>
