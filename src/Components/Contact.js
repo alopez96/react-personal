@@ -76,7 +76,7 @@ function Contact ({ theme }) {
                     <fieldset id="contact" className="ba b--transparent ph0 mh0">
                     <div className="">
                     <label className="db fw6 lh-copy f6" htmlFor="name">Name *</label>
-                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-80" 
+                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white white w-80" 
                     type="text"
                     name="name"
                     id="name"
@@ -85,7 +85,7 @@ function Contact ({ theme }) {
                     </div>
                     <div className="mt3">
                     <label className="db fw6 lh-copy f6" htmlFor="email-address">Your Email *</label>
-                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-80" 
+                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white white w-80" 
                     type="email" 
                     name="email-address"  
                     id="email-address"
@@ -94,7 +94,7 @@ function Contact ({ theme }) {
                     </div>
                     <div className="mv3">
                     <label className="db fw6 lh-copy f6" htmlFor="text">Your Message *</label>
-                    <textarea className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-80" rows={4}
+                    <textarea className="pa2 input-reset ba bg-transparent hover-bg-black hover-white white w-80" rows={4}
                     type="text" 
                     name="text"  
                     id="text"
