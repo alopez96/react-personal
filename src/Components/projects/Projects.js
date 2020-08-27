@@ -100,7 +100,7 @@ const Projects = (props) => {
                     title="Start Page"
                     size={13}
                     color={{from: "#8967E8", to: "#612DB5"}}
-                    gridArea="rb"
+                    gridArea="lb0"
                     url="http://arturo-start.surge.sh/"
                     // github="https://github.com/alopez96/startpage"
                     tech="Customized startpage inspired by reddit r/startpages."

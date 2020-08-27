@@ -22,11 +22,10 @@
 }
 
 .projects{
-  min-height: 70vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  padding-top: 10vh;
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
   text-align: center;
   width: 100vw;
 }
