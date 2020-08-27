@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/projects/Projects';
 import Contact from './Components/Contact';
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar';
+import styled from 'styled-components';
 
 const darkTheme = {
   dark: true,
@@ -18,6 +19,7 @@ const darkTheme = {
   textNormal: "#FFFFFF",  
   textColored: "#D0C9FF",
   textDark: "#786EBC",
+  backgroundColor: "#4D3636"
 }
 
 const lightTheme = {
@@ -28,27 +30,48 @@ const lightTheme = {
   },
   contactGradient: {
     from: "#4F6CD3",
-    to: "#9FF5BB"
+    to: "#5667A2"
   },
   textNormal: "#434343",
   textColored: "#5270D2",
   textDark: "#5667A2",
+  backgroundColor: "#A3E3EC"
 }
 
+const AppDiv = styled.div`
+  background-color: ${props => props.theme.backgroundColor};
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+`
 
-function App(){
+
+function App() {
+
+  const [isDark, setisDark] = useState(false)
+  var theme;
+
+  //handle theme change
+  useEffect(() => {
+    if(isDark){
+      theme = darkTheme 
+    }
+    else{
+      theme = lightTheme
+    }
+  }, [isDark]);
   
     return (
-      <div className="App">
+      <AppDiv theme={lightTheme}>
         <Router>
         <div>
-        <NavBar index="0" />
+        <NavBar index="0" theme={lightTheme} />
           <Route exact path="/" render={(props) => <Home {...props} theme={lightTheme}/>} />
-          <Route path="/contact" render={(props) => <Contact {...props} theme={darkTheme}/>} />
+          <Route path="/contact" render={(props) => <Contact {...props} theme={lightTheme}/>} />
           <Route path="/projects" component={Projects} />
         </div>
       </Router>
-    </div>
+    </AppDiv>
     );
 }
 

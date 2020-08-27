@@ -29,13 +29,13 @@ const ListItem = styled.div`
     margin-right: 2rem;
     text-decoration: none;
     position: relative;
+    color: ${props => props.theme.textDark};
     &:before {
         // content: "";
         position: absolute;
         left: 0;
         width: ${props => props.index ? "100%" : "0%"};
         height: 3px;
-        background-color: ${props => props.theme.textDark};
         transition: width 500ms;
     }
     @media (max-width: ${SMALL}px) {
@@ -59,22 +59,24 @@ const StyleLink = styled(Link)`
     color: inherit; 
 `
 
-export default class NavBar extends Component {
-  render() {
+function NavBar ({ theme }) {
+  console.log('navbar', theme)
     return (
       <div>
         <List>
           <StyleLink to="/" >
-            <ListItem >Home</ListItem>
+            <ListItem theme={theme}>Home</ListItem>
           </StyleLink>
           <StyleLink to="/projects" >
-            <ListItem>Projects</ListItem>
+            <ListItem theme={theme}>Projects</ListItem>
           </StyleLink>
           <StyleLink to="/contact" >
-            <ListItem>Contact</ListItem>
+            <ListItem theme={theme}>Contact</ListItem>
           </StyleLink>
         </List>
       </div>
     )
-  }
 }
+
+
+export default NavBar;
