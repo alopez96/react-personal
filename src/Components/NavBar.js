@@ -8,6 +8,10 @@ const Toogle = styled.div`
   left: 2rem;
   float: left;
   position: absolute;
+  @media (max-width: ${SMALL}px) {
+    top: 0;
+    font-size: 0.2em;
+  }
 `
 
 const List = styled.div`
@@ -66,7 +70,6 @@ const StyleLink = styled(Link)`
 `
 
 function NavBar ({ theme, updateTheme }) {
-  console.log('navbar', theme)
     return (
       <div>
         <Toogle>

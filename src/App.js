@@ -46,7 +46,7 @@ const AppDiv = styled.div`
 
 function App() {
 
-  const [theme, setTheme] = useState(darkTheme)
+  const [theme, setTheme] = useState(lightTheme)
 
   const updateTheme = () => {
     if(theme == lightTheme){
