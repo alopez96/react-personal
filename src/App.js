@@ -33,9 +33,9 @@ const lightTheme = {
     to: "#5667A2"
   },
   textNormal: "#434343",
-  textColored: "#5270D2",
-  textDark: "#5667A2",
-  backgroundColor: "#A3E3EC"
+  textColored: "#FEFFFF",
+  textDark: "#17252A",
+  backgroundColor: "#3AAFA9"
 }
 
 const AppDiv = styled.div`
@@ -48,26 +48,23 @@ const AppDiv = styled.div`
 
 function App() {
 
-  const [isDark, setisDark] = useState(false)
-  var theme;
+  const [theme, setTheme] = useState(lightTheme)
 
-  //handle theme change
-  useEffect(() => {
-    if(isDark){
-      theme = darkTheme 
+  const updateTheme = () => {
+    if(theme == lightTheme){
+      setTheme(darkTheme)
+    } else {
+      setTheme(lightTheme)
     }
-    else{
-      theme = lightTheme
-    }
-  }, [isDark]);
+  }
   
     return (
-      <AppDiv theme={lightTheme}>
+      <AppDiv theme={theme}>
         <Router>
         <div>
-        <NavBar index="0" theme={lightTheme} />
-          <Route exact path="/" render={(props) => <Home {...props} theme={lightTheme}/>} />
-          <Route path="/contact" render={(props) => <Contact {...props} theme={lightTheme}/>} />
+        <NavBar index="0" theme={theme} updateTheme={updateTheme}/>
+          <Route exact path="/" render={(props) => <Home {...props} theme={theme}/>} />
+          <Route path="/contact" render={(props) => <Contact {...props} theme={theme}/>} />
           <Route path="/projects" component={Projects} />
         </div>
       </Router>
