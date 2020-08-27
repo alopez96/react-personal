@@ -48,7 +48,8 @@ const Projects = (props) => {
                     gridArea="lt0"
                     url="https://www.alliesproservices.com/"
                     // github="https://github.com/alopez96/react-robofriends"
-                    tech="React"
+                    tech="Business Website for Allies Pro Services."
+                    // tech="Web Design, UI/UX Design | React Development | Responsive/ Mobile Friendly"
                     />
                 <ProjectItem
                     title="Brendas' Jumpies"
@@ -57,7 +58,16 @@ const Projects = (props) => {
                     gridArea="lm"
                     url="https://brendasjumpies.com/"
                     // github="https://github.com/alopez96/jumpn"
-                    tech="React"
+                    tech="Business website for Brendas' Jumpies."
+                />
+                <ProjectItem
+                    title="Face Detection App"
+                    size={13}
+                    color={{from: "#3FC8FA", to: "#4040F4"}}
+                    gridArea="mm"
+                    url="https://face-recognition-reactjs.herokuapp.com/"
+                    // github="https://github.com/alopez96/jumpn"
+                    tech="Web application to detect faces in an image."
                 />
                 <ProjectItem
                     title="JUMP'N"
@@ -66,46 +76,35 @@ const Projects = (props) => {
                     gridArea="lm"
                     url="https://jumpin.netlify.app/"
                     // github="https://github.com/alopez96/jumpn"
-                    tech="HTML | CSS"
+                    tech="Landing page for personal startup idea."
                     />
                 <ProjectItem
                     title="Workers' Dinner"
                     size={13}
                     color={{from: "#3FC8FA", to: "#4040F4"}}
-                    gridArea="mm"
+                    gridArea="rt"
                     url="https://workers-dinner.surge.sh/"
-                    github="https://github.com/alopez96/workers-dinner"
-                    tech="HTML | CSS"
+                    // github="https://github.com/alopez96/workers-dinner"
+                    tech="Landing page for Workers' Dinner event at UCSC."
                     />
                 <ProjectItem
                     title="My Personal Website"
                     size={13}
                     color={{from: "#40AFF4", to: "#3FFA87"}}
-                    gridArea="rt"
+                    gridArea="rm0"
                     url="https://arturolopez.me/"
-                    github="https://github.com/alopez96/arturo-personal"
-                    tech="HTML | CSS"
+                    // github="https://github.com/alopez96/arturo-personal"
+                    tech="Second website to showcase experience and skills."
                     />
                 <ProjectItem
                     title="Start Page"
                     size={13}
                     color={{from: "#8967E8", to: "#612DB5"}}
-                    gridArea="rm0"
+                    gridArea="rb"
                     url="http://arturo-start.surge.sh/"
-                    github="https://github.com/alopez96/startpage"
-                    tech="React"
+                    // github="https://github.com/alopez96/startpage"
+                    tech="Customized startpage inspired by reddit r/startpages."
                     />
-
-                    {/* <ProjectItem
-                    size={13}
-                    color={{from: "#4040F4", to: "#713FFA"}}
-                    gridArea="lt0"
-                    title="Robofriends"
-                    url="https://eager-swirles-8b12c3.netlify.com/"
-                    github="https://github.com/alopez96/react-robofriends"
-                    tech="React"
-                    /> */}
-                    
             </Grid>
 
         </div>
