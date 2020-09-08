@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { SMALL } from '../../ScreenSizes'
 
 const Grid = styled.div`
-    width: 100%;
+   width: 100%;
     height: 80%;
     display: grid;
     grid-template-areas:
@@ -73,7 +73,7 @@ const Projects = (props) => {
                     title="JUMP'N"
                     size={13}
                     color={{from: "#F44040", to: "#713FFA"}}
-                    gridArea="lm"
+                    gridArea="rm0"
                     url="https://jumpin.netlify.app/"
                     // github="https://github.com/alopez96/jumpn"
                     tech="Landing page for personal startup idea."
@@ -91,7 +91,7 @@ const Projects = (props) => {
                     title="My Personal Website"
                     size={13}
                     color={{from: "#40AFF4", to: "#3FFA87"}}
-                    gridArea="rm0"
+                    gridArea="rb"
                     url="https://arturolopez.me/"
                     // github="https://github.com/alopez96/arturo-personal"
                     tech="Second website to showcase experience and skills."
