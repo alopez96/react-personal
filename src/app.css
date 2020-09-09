@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .home-text{
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -23,32 +23,17 @@
 }
 
 @media (max-width: 450px) {
+  .home-section{
+    height: 50vh;
+  }
+
   .home-text{
     width: 100vw;
-    min-height: 50vh;
   }
   .projects{
     padding-top: 0rem;
     height: inherit;
   }
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.router a{
-  color: #c9af98;
 }
 
 .about-text{

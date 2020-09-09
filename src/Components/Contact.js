@@ -3,16 +3,30 @@ import styled from 'styled-components'
 
 import { SMALL } from '../ScreenSizes'
 
+const Center = styled.div`
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: ${SMALL}px) {
+        justify-content: center;
+        align-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+`
+
 const Rect = styled.div`
     width: 40vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     margin-top: 2rem;
     align-items:center;
     justify-content: center;
     @media (max-width: ${SMALL}px) {
         width: 100vw;
-        height: 80vh;
+        height: 20vh;
         margin-top: 0rem;
         transform: rotate(-10deg) skew(-10deg);
     }
@@ -27,14 +41,6 @@ const Content = styled.div`
     @media (max-width: ${SMALL}px) {
         transform: skew(10deg) rotate(10deg);
     }
-`
-
-const Center = styled.div`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `
 
 const Button = styled.div`
