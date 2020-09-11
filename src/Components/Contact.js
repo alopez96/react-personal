@@ -27,7 +27,7 @@ const Rect = styled.div`
     @media (max-width: ${SMALL}px) {
         width: 100vw;
         height: 20vh;
-        margin-top: 0rem;
+        margin-top: -6rem;
         transform: rotate(-10deg) skew(-10deg);
     }
 `

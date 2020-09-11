@@ -24,7 +24,8 @@
 
 @media (max-width: 450px) {
   .home-section{
-    height: 50vh;
+    height: inherit;
+    margin-top: 4rem;
   }
 
   .home-text{
