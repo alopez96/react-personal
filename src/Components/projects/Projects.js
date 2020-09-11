@@ -32,7 +32,6 @@ const Grid = styled.div`
         flex-wrap: wrap;
         justify-content: center;
         padding: 0px;
-        margin-top: 20px;
         overflow: auto;
     }
 `
@@ -70,7 +69,7 @@ const Projects = (props) => {
                     tech="Web application to detect faces in an image."
                 />
                 <ProjectItem
-                    title="JUMP'N"
+                    title="JUMP'N Website"
                     size={13}
                     color={{from: "#F44040", to: "#713FFA"}}
                     gridArea="rm0"
@@ -88,7 +87,7 @@ const Projects = (props) => {
                     tech="Landing page for Workers' Dinner event at UCSC."
                     />
                 <ProjectItem
-                    title="My Personal Website"
+                    title="Personal Website"
                     size={13}
                     color={{from: "#40AFF4", to: "#3FFA87"}}
                     gridArea="rb"
