@@ -23,7 +23,7 @@ const Bubble = styled.div`
         height: ${props => `${props.size + 1}vw`};
         border-radius: 10%;
         background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-        z-index: -1;
+        // z-index: -1;
         opacity: .2;
     }
      @media (max-width: 1200px) {
@@ -45,11 +45,9 @@ const Bubble = styled.div`
         height: 70px;
         min-height: 50px;
         border-radius: 5px;
-        background-color: red;
         grid-area: none;
         flex-direction: row;
-        justify-content: start;
-        margin: 10px 0;
+        justify-content: space-between;
         &:before {
             display: none;
         }
@@ -61,7 +59,7 @@ const Title = styled.h3`
     font-size: 16px;
     font-weight: bold;
     @media (max-width: 1200px) {
-        margin-left: 10px;
+        margin-left: 0.5rem;
         font-size: 1em;
     }
 `
@@ -78,6 +76,9 @@ const Body = styled.h6`
 const TechList = styled.p`
     color: white;
     font-size: 14px;
+    @media (max-width: ${SMALL}px) {
+        margin: 1rem;
+    }
 `
 
 const Button = styled.div`
