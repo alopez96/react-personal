@@ -25,7 +25,6 @@
 @media (max-width: 450px) {
   .home-section{
     height: inherit;
-    margin-top: 4rem;
   }
 
   .home-text{
