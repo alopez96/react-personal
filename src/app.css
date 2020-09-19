@@ -24,7 +24,13 @@
 
 @media (max-width: 450px) {
   .home-section{
-    height: 20vh;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    overflow: auto;
   }
 
   .home-text{
