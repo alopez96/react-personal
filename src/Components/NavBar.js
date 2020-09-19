@@ -27,7 +27,7 @@ const List = styled.div`
     @media (max-width: ${SMALL}px) {
       flex-direction: column;
       align-items: center;
-      position: relative;
+      position: static;
       top: inherit;
       right: inherit;
   }
@@ -49,7 +49,7 @@ const ListItem = styled.div`
         transition: width 500ms;
     }
     @media (max-width: ${SMALL}px) {
-        float: none;
+        // float: none;
         margin: auto;
         margin: 2rem 0 0 0;
         font-size: 1.25em;
