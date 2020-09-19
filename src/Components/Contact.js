@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Github from './logos/github.png';
+import Gmail from './logos/email2.png';
+import Twitter from './logos/twitter.png';
 
 import { SMALL } from '../ScreenSizes'
 
@@ -15,6 +18,10 @@ const Center = styled.div`
         height: 100vh;
         width: 100vw;
     }
+`
+
+const Header = styled.h1`
+    color: white;
 `
 
 const Rect = styled.div`
@@ -38,9 +45,25 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10rem;
     @media (max-width: ${SMALL}px) {
         transform: skew(10deg) rotate(10deg);
     }
+`
+
+
+const ListItem = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+`
+
+const P = styled.a`
+    color: white;
+    margin-left: 20px;
+    font-size: 15px;
+    cursor: pointer;
 `
 
 const Button = styled.div`
@@ -77,49 +100,19 @@ function Contact ({ theme }) {
         <Center>
             <Rect>
                 <Content color={theme.contactGradient}>
-                    <article className="w-100 w-50-m w-25-l mw6 shadow-5 center">
-                    <main className="pa4">
-                    <fieldset id="contact" className="ba b--transparent ph0 mh0">
-                    <div className="">
-                    <label className="db fw6 lh-copy f6" htmlFor="name">Name *</label>
-                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white white w-80" 
-                    type="text"
-                    name="name"
-                    id="name"
-                    // onChange = { e => setName(e.target.value) }
-                    />
-                    </div>
-                    <div className="mt3">
-                    <label className="db fw6 lh-copy f6" htmlFor="email-address">Your Email *</label>
-                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white white w-80" 
-                    type="email" 
-                    name="email-address"  
-                    id="email-address"
-                    // onChange = { e => setEmail(e.target.value) }
-                    />
-                    </div>
-                    <div className="mv3">
-                    <label className="db fw6 lh-copy f6" htmlFor="text">Your Message *</label>
-                    <textarea className="pa2 input-reset ba bg-transparent hover-bg-black hover-white white w-80" rows={4}
-                    type="text" 
-                    name="text"  
-                    id="text"
-                    // onChange = { e => setmessage(e.target.value) } 
-                    />
-                    </div>
-                    {/* {(name < 1 || email < 1 || message < 1) ? <div className='lh-copy mt3'>* is required</div> 
-                    :
-                    <div className="lh-copy mt3">
-                        <p 
-                        // onClick={() => onSubmitClick()} 
-                        className="b ph3 pv2 ba b--black bg-transparent pointer f6 dib">Send</p>
-                    </div>
-                    } */}
-                    <Button color={theme.contactGradient}>Send</Button>
+                <Header>Contact</Header>
+                <ListItem onClick={openLink('alopez96gucsc.edu')}>
+                        <img width="30" src={Gmail}/>
+                        <P>alopez96ucsc.edu</P>
+                    </ListItem>
+                    <ListItem onClick={openLink('https://github.com/alopez96')}>
+                        <img width="30" src={Github}/>
+                        <P>alopez96</P>
+                    </ListItem>
                     
-                </fieldset>
-                </main>
-                </article>
+                                        
+                    {/* <Button color={theme.contactGradient}>Send</Button> */}
+                
                 </Content>
             </Rect>
         </Center>
