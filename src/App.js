@@ -42,6 +42,11 @@ const AppDiv = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 100vh;
+
+  @media (max-width: 450px) {
+    height: 100vh;
+    min-height: inherit;
+  }
 `
 
 
