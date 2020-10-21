@@ -101,10 +101,10 @@ function Contact ({ theme }) {
             <Rect>
                 <Content color={theme.contactGradient}>
                 <Header>Contact</Header>
-                <ListItem onClick={openLink('alopez96gucsc.edu')}>
+                {/* <ListItem onClick={openLink('alopez96gucsc.edu')}>
                         <img width="30" src={Gmail}/>
-                        <P>alopez96ucsc.edu</P>
-                    </ListItem>
+                        <P></P>
+                    </ListItem> */}
                     <ListItem onClick={openLink('https://github.com/alopez96')}>
                         <img width="30" src={Github}/>
                         <P>alopez96</P>

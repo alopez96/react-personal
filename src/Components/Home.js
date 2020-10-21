@@ -22,15 +22,26 @@ const SubHeader = styled.p`
     }
 `
 
+const Btn = styled.button` 
+    width: 10rem;
+    border: none;
+    background-color: black;
+    color: white;
+`
+
+const goContact = () => {
+    console.log('contact')
+}
+
 function Home ({theme}) {
     return (
       <div>
           <div className='home-section'>
             <div className='home-text'>
-          <Header theme={theme}>{about.header}</Header>
-          <SubHeader theme={theme}>{about.sub_header}</SubHeader>
+            <Header theme={theme}>{about.header}</Header>
+            <SubHeader theme={theme}>{about.sub_header}</SubHeader>
+            <Btn onClick={() => goContact}>Test</Btn>
           </div>
-          {/* <button>Test</button> */}
           </div>
         </div>
     )

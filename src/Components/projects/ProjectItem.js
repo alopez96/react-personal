@@ -23,7 +23,7 @@ const Bubble = styled.div`
         height: ${props => `${props.size + 1}vw`};
         border-radius: 10%;
         background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-        // z-index: -1;
+        z-index: -2;
         opacity: .2;
     }
      @media (max-width: 1200px) {
@@ -111,6 +111,7 @@ const Container = styled.div`
 `
 
 const openLink = (url) => () => {
+    console.log("clicked")
     window.open(url, '_blank');
 }
 

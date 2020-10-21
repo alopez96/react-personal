@@ -50,15 +50,15 @@ const Projects = (props) => {
                     tech="Business Website for Allies Pro Services."
                     // tech="Web Design, UI/UX Design | React Development | Responsive/ Mobile Friendly"
                     />
-                <ProjectItem
+                {/* <ProjectItem
                     title="Brendas' Jumpies"
                     size={13}
                     color={{from: "#F44040", to: "#713FFA"}}
-                    gridArea="lm"
+                    gridArea="lb0"
                     url="https://brendasjumpies.com/"
                     // github="https://github.com/alopez96/jumpn"
                     tech="Business website for Brendas' Jumpies."
-                />
+                /> */}
                 <ProjectItem
                     title="Face Detection App"
                     size={13}
@@ -86,7 +86,7 @@ const Projects = (props) => {
                     // github="https://github.com/alopez96/workers-dinner"
                     tech="Landing page for Workers' Dinner event at UCSC."
                     />
-                <ProjectItem
+                {/* <ProjectItem
                     title="Personal Website"
                     size={13}
                     color={{from: "#40AFF4", to: "#3FFA87"}}
@@ -94,12 +94,12 @@ const Projects = (props) => {
                     url="https://arturolopez.me/"
                     // github="https://github.com/alopez96/arturo-personal"
                     tech="Second website to showcase experience and skills."
-                    />
+                    /> */}
                 <ProjectItem
                     title="Start Page"
                     size={13}
                     color={{from: "#8967E8", to: "#612DB5"}}
-                    gridArea="lb0"
+                    gridArea="lm"
                     url="http://arturo-start.surge.sh/"
                     // github="https://github.com/alopez96/startpage"
                     tech="Customized startpage inspired by reddit r/startpages."
