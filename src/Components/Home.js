@@ -6,7 +6,7 @@ import about from './../Text'
 const Header = styled.h1`
     color: ${props => props.theme.textPrimary};
     margin: 0;
-    font-size: 3.5em;
+    font-size: 3em;
     @media (max-width: ${SMALL}px) {
         font-size: 2em;
         margin: 0 auto 0 auto;

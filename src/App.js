@@ -16,10 +16,10 @@ const lightTheme = {
     to: "#2B7A78",
     from: "#17252A"
   },
-  textPrimary: "#FEFFFF",
-  textSecondary: "#17252A",
-  backgroundColor: "#3AAFA9"
-  // backgroundColor: "#DEF2F1"
+  textPrimary: "rgb(61, 61, 61)",
+  textSecondary: "rgb(61, 61, 61)",
+  // backgroundColor: "#3AAFA9"
+  backgroundColor: "#DEF2F1"
 }
 
 const darkTheme = {
