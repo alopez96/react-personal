@@ -4,7 +4,7 @@ import Github from './logos/github.png';
 import Gmail from './logos/email2.png';
 import Twitter from './logos/twitter.png';
 
-import { SMALL } from '../ScreenSizes'
+import { SMALL } from '../variables/ScreenSizes'
 
 const Center = styled.div`
     width: 100vw;

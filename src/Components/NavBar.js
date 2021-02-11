@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SMALL } from '../ScreenSizes';
+import { SMALL } from '../variables/ScreenSizes';
 
 const Toogle = styled.div`
   top: 1rem;
@@ -85,7 +85,10 @@ function NavBar ({ theme, updateTheme }) {
             <ListItem theme={theme}>Home</ListItem>
           </StyleLink>
           <StyleLink to="/projects" >
-            <ListItem theme={theme}>Projects</ListItem>
+            <ListItem theme={theme}>Experience</ListItem>
+          </StyleLink>
+          <StyleLink to="/projects" >
+            <ListItem theme={theme}>Leadership</ListItem>
           </StyleLink>
           <StyleLink to="/contact" >
             <ListItem theme={theme}>Contact</ListItem>

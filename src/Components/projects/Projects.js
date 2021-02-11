@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../NavBar'
 import ProjectItem from './ProjectItem'
 import styled from 'styled-components'
-import { SMALL } from '../../ScreenSizes'
+import { SMALL } from '../../variables/ScreenSizes'
 
 const Grid = styled.div`
    width: 100%;
@@ -41,14 +41,14 @@ const Projects = (props) => {
         <div>
             <Grid  className="projects">
                 <ProjectItem
-                    title="Allies Pro Services LLC"
-                    size={13}
+                    title="Full Stack Web Development"
+                    size={20}
                     color={{from: "#4040F4", to: "#713FFA"}}
                     gridArea="lt0"
                     url="https://www.alliesproservices.com/"
                     // github="https://github.com/alopez96/react-robofriends"
-                    tech="Business Website for Allies Pro Services."
-                    // tech="Web Design, UI/UX Design | React Development | Responsive/ Mobile Friendly"
+                    // tech="Business Website for Allies Pro Services."
+                    tech="React, Node, Express, MongoDB, MySQL, Web Design, Responsive Design"
                     />
                 {/* <ProjectItem
                     title="Brendas' Jumpies"
@@ -61,7 +61,7 @@ const Projects = (props) => {
                 /> */}
                 <ProjectItem
                     title="Face Detection App"
-                    size={13}
+                    size={20}
                     color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="mm"
                     url="https://face-recognition-reactjs.herokuapp.com/"
@@ -69,22 +69,22 @@ const Projects = (props) => {
                     tech="Web application to detect faces in an image."
                 />
                 <ProjectItem
-                    title="JUMP'N Website"
-                    size={13}
-                    color={{from: "#F44040", to: "#713FFA"}}
+                    title="Data Engineer"
+                    size={20}
+                    color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="rm0"
-                    url="https://jumpin.netlify.app/"
-                    // github="https://github.com/alopez96/jumpn"
-                    tech="Landing page for personal startup idea."
+                    url="https://workers-dinner.surge.sh/"
+                    // github="https://github.com/alopez96/workers-dinner"
+                    tech="PySpark, SQL, AWS"
                     />
                 <ProjectItem
-                    title="Workers' Dinner"
-                    size={13}
+                    title="Analytics Tester"
+                    size={20}
                     color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="rt"
                     url="https://workers-dinner.surge.sh/"
                     // github="https://github.com/alopez96/workers-dinner"
-                    tech="Landing page for Workers' Dinner event at UCSC."
+                    tech="SQL testing, Automation, Parameterization"
                     />
                 {/* <ProjectItem
                     title="Personal Website"
@@ -96,8 +96,8 @@ const Projects = (props) => {
                     tech="Second website to showcase experience and skills."
                     /> */}
                 <ProjectItem
-                    title="Start Page"
-                    size={13}
+                    title="Web Developer"
+                    size={20}
                     color={{from: "#8967E8", to: "#612DB5"}}
                     gridArea="lm"
                     url="http://arturo-start.surge.sh/"

@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SMALL } from '../ScreenSizes'
-import about from './../Text'
+import { SMALL } from '../variables/ScreenSizes'
+import about from '../variables/Text'
+
+// split the about string for new line characters
+const sub_header_split = about.sub_header.split('\n').map(str => <p>{str}</p>);
 
 const Header = styled.h1`
     color: ${props => props.theme.textPrimary};
@@ -39,7 +42,7 @@ function Home ({theme}) {
           <div className='home-section'>
             <div className='home-text'>
             <Header theme={theme}>{about.header}</Header>
-            <SubHeader theme={theme}>{about.sub_header}</SubHeader>
+            <SubHeader theme={theme}>{sub_header_split}</SubHeader>
             <Btn onClick={() => goContact}>Test</Btn>
           </div>
           </div>

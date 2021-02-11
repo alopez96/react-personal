@@ -5,37 +5,7 @@ import Projects from './Components/projects/Projects';
 import Contact from './Components/Contact';
 import NavBar from './Components/NavBar';
 import styled from 'styled-components';
-
-const lightTheme = {
-  dark: false,
-  gradient: {
-    to: "#FFFFFF",
-    from: "#D9D9FF"
-  },
-  contactGradient: {
-    to: "#2B7A78",
-    from: "#17252A"
-  },
-  textPrimary: "rgb(61, 61, 61)",
-  textSecondary: "rgb(61, 61, 61)",
-  // backgroundColor: "#3AAFA9"
-  backgroundColor: "#DEF2F1"
-}
-
-const darkTheme = {
-  dark: true,
-  gradient: {
-    to: "#252525",
-    from: "#434343"
-  },
-  contactGradient: {
-    to: "#8650FF",
-    from: "#33249D"
-  },
-  textPrimary: "#FFFFFF",
-  textSecondary: "#8650FF",
-  backgroundColor: "#353535"
-}
+import { lightTheme, darkTheme } from './variables/Theme';
 
 const AppDiv = styled.div`
   background-color: ${props => props.theme.backgroundColor};
