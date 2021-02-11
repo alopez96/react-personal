@@ -62,7 +62,7 @@ const Projects = (props) => {
                 <ProjectItem
                     title="Face Detection App"
                     size={20}
-                    color={{from: "#3FC8FA", to: "#4040F4"}}
+                    color={{from: "#F44040", to: "#4040F4"}}
                     gridArea="mm"
                     url="https://face-recognition-reactjs.herokuapp.com/"
                     // github="https://github.com/alopez96/jumpn"
@@ -80,7 +80,7 @@ const Projects = (props) => {
                 <ProjectItem
                     title="Analytics Tester"
                     size={20}
-                    color={{from: "#3FC8FA", to: "#4040F4"}}
+                    color={{from: "#3FFA87", to: "#4040F4"}}
                     gridArea="rt"
                     url="https://workers-dinner.surge.sh/"
                     // github="https://github.com/alopez96/workers-dinner"

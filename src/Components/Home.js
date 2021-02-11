@@ -28,15 +28,18 @@ const SubHeader = styled.p`
 const Btn = styled.button` 
     width: 10rem;
     border: none;
-    background-color: black;
-    color: white;
+    background-color: #8650FF;
+    color: #fff;
 `
+
+
 
 const goContact = () => {
     console.log('contact')
 }
 
-function Home ({theme}) {
+function Home ({ theme }) {
+    console.log('props theme', theme.btnColor)
     return (
       <div>
           <div className='home-section'>

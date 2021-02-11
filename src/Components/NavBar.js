@@ -57,7 +57,7 @@ const ListItem = styled.div`
         text-transform: uppercase;
     }
     &:hover {
-      color: white;
+      color: ${props => props.theme.btnColor};
       &:before {
           width: 100%;
       }
