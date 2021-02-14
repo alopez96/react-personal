@@ -113,6 +113,7 @@ const PdfBtn = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
     transition: box-shadow .5s, transform .5s;
     &:hover {
         transform: scale(1.1);
@@ -148,9 +149,10 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) =
             <TechList>{tech_split}</TechList>
             <Container>
                 {url.length === 0 ?
-                <Button color={color}><img width="20" src={Open} onClick={openLink(resume)}></img></Button>
+                <PdfBtn onClick={openLink(resume)} color={color}>View resume</PdfBtn>
                 :
-                <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
+                <PdfBtn onClick={openLink(url)} color={color}>View website</PdfBtn>
+                // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
                 }
                 {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
             </Container>

@@ -66,10 +66,10 @@ const Projects = (props) => {
                     gridArea="mm"
                     url="https://www.alliesproservices.com/"
                     // github="https://github.com/alopez96/jumpn"
-                    tech="Business webiste for client; React, Node, Express, SQL"
+                    tech="React, Node, Express, SQL"
                 />
                 <ProjectItem
-                    title="Data Engineer"
+                    title="Software Developer"
                     size={20}
                     color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="rm0"
