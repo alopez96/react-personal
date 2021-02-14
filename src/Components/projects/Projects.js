@@ -45,7 +45,7 @@ const Projects = (props) => {
                     size={20}
                     color={{from: "#4040F4", to: "#713FFA"}}
                     gridArea="lt0"
-                    url="https://www.alliesproservices.com/"
+                    url=""
                     // github="https://github.com/alopez96/react-robofriends"
                     // tech="Business Website for Allies Pro Services."
                     tech="Technical Lead on Test Team; Software Developer on Dev Team"
@@ -60,13 +60,13 @@ const Projects = (props) => {
                     tech="Business website for Brendas' Jumpies."
                 /> */}
                 <ProjectItem
-                    title="Face Detection App"
+                    title="Allies Pro Services"
                     size={20}
                     color={{from: "#F44040", to: "#4040F4"}}
                     gridArea="mm"
-                    url="https://face-recognition-reactjs.herokuapp.com/"
+                    url="https://www.alliesproservices.com/"
                     // github="https://github.com/alopez96/jumpn"
-                    tech="Web application to detect faces in an image."
+                    tech="Business webiste for client; React, Node, Express, SQL"
                 />
                 <ProjectItem
                     title="Data Engineer"
