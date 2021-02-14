@@ -73,7 +73,7 @@ const Projects = (props) => {
                     size={20}
                     color={{from: "#3FC8FA", to: "#4040F4"}}
                     gridArea="rm0"
-                    url="https://workers-dinner.surge.sh/"
+                    url=""
                     // github="https://github.com/alopez96/workers-dinner"
                     tech="Developed ETL logic with PySpark"
                     />

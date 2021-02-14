@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Open from './../logos/open.png'
 import { SMALL } from '../../variables/ScreenSizes'
+import resume from './../../Assests/resume.pdf'
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
@@ -82,7 +83,26 @@ const TechList = styled.p`
 `
 
 const Button = styled.div`
-    width: 36px;
+    width: 40px;
+    height: 40px;
+    border-radius: 23px;
+    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .5s, transform .5s;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    }
+`
+
+const PdfBtn = styled.div`
+    width: 150px;
     height: 36px;
     border-radius: 23px;
     background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
@@ -127,7 +147,11 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) =
             <Body>{body}</Body>
             <TechList>{tech_split}</TechList>
             <Container>
+                {url.length === 0 ?
+                <Button color={color}><img width="20" src={Open} onClick={openLink(resume)}></img></Button>
+                :
                 <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
+                }
                 {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
             </Container>
         </Bubble>
