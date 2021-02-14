@@ -116,17 +116,22 @@ const openLink = (url) => () => {
 }
 
 const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) => {
-  return (
-    <Bubble size={size} color={color} gridArea={gridArea}>
-        <Title>{title}</Title>
-        <Body>{body}</Body>
-        <TechList>{tech}</TechList>
-        <Container>
-            <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
-            {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
-        </Container>
-    </Bubble>
-  )
+
+    // split the about string for new line characters
+    const tech_split = tech.split(';').map(str => <p>{str}</p>);
+
+
+    return (
+        <Bubble size={size} color={color} gridArea={gridArea}>
+            <Title>{title}</Title>
+            <Body>{body}</Body>
+            <TechList>{tech_split}</TechList>
+            <Container>
+                <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
+                {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
+            </Container>
+        </Bubble>
+    )
 }
 
 export default ProjectItem

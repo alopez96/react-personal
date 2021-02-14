@@ -41,14 +41,14 @@ const Projects = (props) => {
         <div>
             <Grid  className="projects">
                 <ProjectItem
-                    title="Full Stack Web Development"
+                    title="Tech Analyst @ Accenture"
                     size={20}
                     color={{from: "#4040F4", to: "#713FFA"}}
                     gridArea="lt0"
                     url="https://www.alliesproservices.com/"
                     // github="https://github.com/alopez96/react-robofriends"
                     // tech="Business Website for Allies Pro Services."
-                    tech="React, Node, Express, MongoDB, MySQL, Web Design, Responsive Design"
+                    tech="Technical Lead on Test Team; Software Developer on Dev Team"
                     />
                 {/* <ProjectItem
                     title="Brendas' Jumpies"
@@ -75,16 +75,16 @@ const Projects = (props) => {
                     gridArea="rm0"
                     url="https://workers-dinner.surge.sh/"
                     // github="https://github.com/alopez96/workers-dinner"
-                    tech="PySpark, SQL, AWS"
+                    tech="Developed ETL logic with PySpark"
                     />
                 <ProjectItem
                     title="Analytics Tester"
                     size={20}
                     color={{from: "#3FFA87", to: "#4040F4"}}
                     gridArea="rt"
-                    url="https://workers-dinner.surge.sh/"
+                    url=""
                     // github="https://github.com/alopez96/workers-dinner"
-                    tech="SQL testing, Automation, Parameterization"
+                    tech="SQL Testing and Automation"
                     />
                 {/* <ProjectItem
                     title="Personal Website"
@@ -96,13 +96,13 @@ const Projects = (props) => {
                     tech="Second website to showcase experience and skills."
                     /> */}
                 <ProjectItem
-                    title="Web Developer"
+                    title="The Asher House Website"
                     size={20}
                     color={{from: "#8967E8", to: "#612DB5"}}
                     gridArea="lm"
-                    url="http://arturo-start.surge.sh/"
+                    url="https://www.asherhousewellness.com/"
                     // github="https://github.com/alopez96/startpage"
-                    tech="Customized startpage inspired by reddit r/startpages."
+                    tech="Liquid, HTML, CSS, and Javascript"
                     />
             </Grid>
 
