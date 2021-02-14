@@ -41,14 +41,14 @@ const Projects = (props) => {
         <div>
             <Grid  className="projects">
                 <ProjectItem
-                    title="Tech Analyst @ Accenture"
+                    title="Software Developer @ Accenture"
                     size={20}
                     color={{from: "#4040F4", to: "#713FFA"}}
                     gridArea="lt0"
                     url=""
                     // github="https://github.com/alopez96/react-robofriends"
                     // tech="Business Website for Allies Pro Services."
-                    tech="Technical Lead on Test Team; Software Developer on Dev Team"
+                    tech="Developed Data Engineering logic with PySpark"
                     />
                 {/* <ProjectItem
                     title="Brendas' Jumpies"
@@ -60,31 +60,22 @@ const Projects = (props) => {
                     tech="Business website for Brendas' Jumpies."
                 /> */}
                 <ProjectItem
-                    title="Allies Pro Services"
-                    size={20}
-                    color={{from: "#F44040", to: "#4040F4"}}
-                    gridArea="mm"
-                    url="https://www.alliesproservices.com/"
-                    // github="https://github.com/alopez96/jumpn"
-                    tech="React, Node, Express, SQL"
-                />
-                <ProjectItem
-                    title="Software Developer"
-                    size={20}
-                    color={{from: "#3FC8FA", to: "#4040F4"}}
-                    gridArea="rm0"
-                    url=""
-                    // github="https://github.com/alopez96/workers-dinner"
-                    tech="Developed ETL logic with PySpark"
-                    />
-                <ProjectItem
-                    title="Analytics Tester"
+                    title="Analytics Tester @ Accenture"
                     size={20}
                     color={{from: "#3FFA87", to: "#4040F4"}}
                     gridArea="rt"
                     url=""
                     // github="https://github.com/alopez96/workers-dinner"
-                    tech="SQL Testing and Automation"
+                    tech="Technical Lead; SQL Testing and Automation"
+                    />
+                <ProjectItem
+                    title="Arturo Creates Business"
+                    size={20}
+                    color={{from: "#8967E8", to: "#612DB5"}}
+                    gridArea="lm"
+                    url="https://arturocreates.com/"
+                    // github="https://github.com/alopez96/workers-dinner"
+                    tech="Web and Mobile Consulting"
                     />
                 {/* <ProjectItem
                     title="Personal Website"
@@ -98,12 +89,21 @@ const Projects = (props) => {
                 <ProjectItem
                     title="The Asher House Website"
                     size={20}
-                    color={{from: "#8967E8", to: "#612DB5"}}
-                    gridArea="lm"
+                    color={{from: "#3FC8FA", to: "#4040F4"}}
+                    gridArea="rm0"
                     url="https://www.asherhousewellness.com/"
                     // github="https://github.com/alopez96/startpage"
                     tech="Liquid, HTML, CSS, and Javascript"
                     />
+                <ProjectItem
+                    title="Allies Pro Services Website"
+                    size={20}
+                    color={{from: "#F44040", to: "#4040F4"}}
+                    gridArea="mm"
+                    url="https://www.alliesproservices.com/"
+                    // github="https://github.com/alopez96/jumpn"
+                    tech="React, Node, Express, SQL"
+                />
             </Grid>
 
         </div>

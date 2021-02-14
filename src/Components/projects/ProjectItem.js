@@ -29,7 +29,7 @@ const Bubble = styled.div`
     }
      @media (max-width: 1200px) {
         width: 48%;
-        height: 70px;
+        height: 200px;
         min-height: 50px;
         border-radius: 5px;
         background-color: red;
@@ -43,7 +43,7 @@ const Bubble = styled.div`
     }
     @media (max-width: ${SMALL}px) {
         width: 100%;
-        height: 70px;
+        height: 200px;
         min-height: 50px;
         border-radius: 5px;
         grid-area: none;
