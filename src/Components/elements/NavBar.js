@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
@@ -62,14 +62,6 @@ const StyleLink = styled(Link)`
 function NavBar ({ theme, updateTheme }) {
     return (
       <div>
-        {/* <Toogle>
-          <ListItem>
-          <div class="ui toggle checkbox">
-          <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-          <label style={{color:theme.toogleColor}}>Dark Mode</label>
-          </div>
-          </ListItem>
-        </Toogle> */}
         <List>
           <StyleLink to="/" >
             <ListItem theme={theme}>Home</ListItem>
@@ -77,7 +69,7 @@ function NavBar ({ theme, updateTheme }) {
           <StyleLink to="/projects" >
             <ListItem theme={theme}>Experience</ListItem>
           </StyleLink>
-          <StyleLink to="/projects" >
+          <StyleLink to="/leadership" >
             <ListItem theme={theme}>Leadership</ListItem>
           </StyleLink>
           <StyleLink to="/contact" >
