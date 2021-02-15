@@ -77,14 +77,14 @@ const StyleLink = styled(Link)`
 function NavBar ({ theme, updateTheme }) {
     return (
       <div>
-        <Toogle>
+        {/* <Toogle>
           <ListItem>
           <div class="ui toggle checkbox">
           <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
           <label style={{color:theme.toogleColor}}>Dark Mode</label>
           </div>
           </ListItem>
-        </Toogle>
+        </Toogle> */}
         <List>
           <StyleLink to="/" >
             <ListItem theme={theme}>Home</ListItem>
@@ -98,6 +98,12 @@ function NavBar ({ theme, updateTheme }) {
           <StyleLink to="/contact" >
             <ListItem theme={theme}>Contact</ListItem>
           </StyleLink>
+          <ListItem>
+          <div class="ui toggle checkbox">
+          <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
+          <label style={{color:theme.toogleColor}}>Dark Mode</label>
+          </div>
+          </ListItem>
         </List>
       </div>
     )
