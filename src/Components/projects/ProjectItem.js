@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Open from '../logos/open.png'
 import { SMALL } from '../../variables/ScreenSizes'
-import resume from '../../assets/resume.pdf'
+import resume from '../../assets/resume-new.pdf'
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
@@ -136,14 +136,19 @@ const Container = styled.div`
 `
 
 const openLink = (url) => () => {
-    console.log("clicked")
+    console.log("clicked", url)
     window.open(url, '_blank');
+    // return false was recommended by stackoverflow
+    // it means, do not take the default option
+    return false;
 }
 
 const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) => {
 
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
+
+    console.log('resume', resume)
 
 
     return (

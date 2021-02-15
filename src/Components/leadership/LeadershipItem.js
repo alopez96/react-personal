@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Open from '../logos/open.png'
 import { SMALL } from '../../variables/ScreenSizes'
-import resume from '../../assets/resume.pdf'
+
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
@@ -153,7 +153,7 @@ const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, github}
             <TechList>{tech_split}</TechList>
             <Container>
                 {url.length === 0 ?
-                <PdfBtn onClick={openLink(resume)} color={color}>View resume</PdfBtn>
+                <PdfBtn onClick={openLink()} color={color}>View resume</PdfBtn>
                 :
                 <PdfBtn onClick={openLink(url)} color={color}>View website</PdfBtn>
                 // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
