@@ -15,7 +15,7 @@ const Bubble = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1px;
+    padding: 0 5px;
     &:before {
         content: "";
         position: absolute;
@@ -80,25 +80,6 @@ const TechList = styled.p`
     font-size: 14px;
     @media (max-width: ${SMALL}px) {
         margin: 1rem;
-    }
-`
-
-const Button = styled.div`
-    width: 40px;
-    height: 40px;
-    border-radius: 23px;
-    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow .5s, transform .5s;
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 3px 6px rgba(0,0,0,.16);
     }
 `
 

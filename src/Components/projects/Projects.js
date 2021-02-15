@@ -55,7 +55,7 @@ const Projects = (props) => {
                 url=""
                 // github="https://github.com/alopez96/react-robofriends"
                 // tech="Business Website for Allies Pro Services."
-                tech="Developed Data Engineering logic with PySpark"
+                tech="Data Engineer & PySpark developer"
                 />
             {/* <ProjectItem
                 title="Brendas' Jumpies"
@@ -73,16 +73,16 @@ const Projects = (props) => {
                 gridArea="rt"
                 url=""
                 // github="https://github.com/alopez96/workers-dinner"
-                tech="Co-Lead; SQL Testing and Automation"
+                tech="Co-Lead | SQL Testing & Automation"
                 />
             <ProjectItem
-                title="Arturo Creates Business"
+                title="Web and Mobile Freelance"
                 size={20}
                 color={{from: "#8967E8", to: "#612DB5"}}
                 gridArea="lm"
                 url="https://arturocreates.com/"
                 // github="https://github.com/alopez96/workers-dinner"
-                tech="Web and Mobile Freelancing; Design, Develop, Test, Launch Software applications"
+                tech="Design, Develop, Test, Launch Software applications"
                 />
             {/* <ProjectItem
                 title="Personal Website"
@@ -94,15 +94,24 @@ const Projects = (props) => {
                 tech="Second website to showcase experience and skills."
                 /> */}
             <ProjectItem
-                title="The Asher House Website"
+                title="Computer Science BS"
+                size={20}
+                color={{from: "#F44040", to: "#4040F4"}}
+                gridArea="mm"
+                url=""
+                // github="https://github.com/alopez96/jumpn"
+                tech="University of California, Santa Cruz"
+            />
+            <ProjectItem
+                title="Software Developer @ Realtime"
                 size={20}
                 color={{from: "#3FC8FA", to: "#4040F4"}}
                 gridArea="rm0"
-                url="https://www.asherhousewellness.com/"
+                url=""
                 // github="https://github.com/alopez96/startpage"
-                tech="Web Consulting Project; Tech stack: Liquid, HTML, CSS, JavaScript"
+                tech="React and Android developer"
                 />
-            <ProjectItem
+            {/* <ProjectItem
                 title="Allies Pro Services Website"
                 size={20}
                 color={{from: "#F44040", to: "#4040F4"}}
@@ -110,7 +119,7 @@ const Projects = (props) => {
                 url="https://www.alliesproservices.com/"
                 // github="https://github.com/alopez96/jumpn"
                 tech="Web Consulting Project; Tech stack: React, Node, Express, SQL, Stripe API"
-            />
+            /> */}
         </Grid>
         </div>
   )
