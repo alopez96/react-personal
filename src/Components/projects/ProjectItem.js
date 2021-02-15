@@ -48,6 +48,7 @@ const Bubble = styled.div`
         border-radius: 5px;
         grid-area: none;
         flex-direction: row;
+        margin: 10px 0;
         justify-content: space-between;
         &:before {
             display: none;

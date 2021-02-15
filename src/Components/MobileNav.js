@@ -100,7 +100,7 @@ function MobileNav ({ theme, updateTheme }) {
 
     const toogleNav = (value) => { 
         console.log('pressed toogle', value)
-        setisNavOpen(!value) 
+        setisNavOpen(!value)
     }
 
     return (

@@ -24,13 +24,13 @@ const Grid = styled.div`
         overflow: auto;
     }
     @media (max-width: ${SMALL}px) {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         padding: 0px;
-        margin: 0;
+        margin-top: 20px;
         overflow: auto;
     }
 `
@@ -38,8 +38,8 @@ const Space = styled.div`
     width: 100%;
     height: 100px;
     @media (max-width: ${SMALL}px) {
-        height: 5px;
-        margin-bottom: 45px;
+        height: 1px;
+        margin-bottom: 60px;
     }
 `
 
