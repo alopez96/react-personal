@@ -76,6 +76,24 @@ const StyleLink = styled(Link)`
     color: inherit; 
 `
 
+const NavPage = styled.div`
+    background-color: ${props => props.theme.backgroundColor};
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 4;
+`
+
+const Label = styled.label`
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+`
+
 function MobileNav ({ theme, updateTheme }) {
 
     const [isNavOpen, setisNavOpen] = useState(false)
@@ -88,12 +106,12 @@ function MobileNav ({ theme, updateTheme }) {
     return (
       <div>
         {isNavOpen?
-        <div className='full-page'>
+        <NavPage theme={theme}>
         <List>
             <ListItem>
                 <div class="ui toggle checkbox">
                 <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-                <label style={{color:theme.textPrimary}}>Dark Mode</label>
+                <Label theme={theme}>Dark Mode</Label>
                 </div>
             </ListItem>
             <StyleLink to="/">
@@ -109,7 +127,7 @@ function MobileNav ({ theme, updateTheme }) {
             <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Contact</ListItem>
             </StyleLink>
         </List>
-        </div>
+        </NavPage>
         : <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
         }
       </div>
