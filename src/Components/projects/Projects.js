@@ -38,9 +38,9 @@ const Grid = styled.div`
 `
 const Space = styled.div`
     width: 100%;
-    height: 10vh;
+    height: 200px;
     @media (max-width: ${SMALL}px) {
-        height: 6vh;
+        height: 50px;
     }
 `
 
