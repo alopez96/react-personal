@@ -11,7 +11,8 @@ const lightTheme = {
     textPrimary: "rgb(61, 61, 61)",
     textSecondary: "rgb(61, 61, 61)",
     backgroundColor: "#DEF2F1",
-    btnColor: 'black'
+    btnColor: 'black',
+    toogleColor: 'black',
 }
   
 const darkTheme = {
@@ -27,7 +28,8 @@ const darkTheme = {
     textPrimary: "#FFFFFF",
     textSecondary: "#8650FF",
     backgroundColor: "#12100E",
-    btnColor: 'white'
+    btnColor: 'white',
+    toogleColor: 'white',
 }
 
 
