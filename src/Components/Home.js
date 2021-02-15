@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { SMALL } from '../variables/ScreenSizes'
 import about from '../variables/Text'
-import arturo from './../Assests/arturo-circle.png'
+import arturo from './../assets/arturo-circle.png'
 
 // split the about string for new line characters
 const sub_header_split = about.sub_header.split('\n').map(str => <p>{str}</p>);

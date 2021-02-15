@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '../NavBar'
 import ProjectItem from './ProjectItem'
 import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'

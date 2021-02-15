@@ -1,9 +1,9 @@
 import React, { Component, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SMALL } from '../variables/ScreenSizes';
-import burger from '../Assests/burger.svg';
-import burgerWhite from '../Assests/burger-white.svg';
+import { SMALL } from '../../variables/ScreenSizes';
+import burger from '../../assets/burger.svg';
+import burgerWhite from '../../assets/burger-white.svg';
 
 const Toogle = styled.div`
   top: 1rem;

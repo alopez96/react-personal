@@ -1,23 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SMALL } from '../variables/ScreenSizes';
-
-const Toogle = styled.div`
-  top: 1rem;
-  left: 2rem;
-  float: left;
-  position: absolute;
-  @media (max-width: ${SMALL}px) {
-    float: none;
-    position: static;
-    display: flex;
-    align-self: center;
-    text-align:center;
-    margin: auto;
-    width: 50%;
-  }
-`
+import { SMALL } from '../../variables/ScreenSizes';
+import Toggle from './toogle/Toggle';
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -99,10 +84,7 @@ function NavBar ({ theme, updateTheme }) {
             <ListItem theme={theme}>Contact</ListItem>
           </StyleLink>
           <ListItem>
-          <div class="ui toggle checkbox">
-          <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-          <label style={{color:theme.toogleColor}}>Dark Mode</label>
-          </div>
+            <Toggle/>
           </ListItem>
         </List>
       </div>
