@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Github from './logos/github.png';
-import Gmail from './logos/email2.png';
 import Twitter from './logos/twitter.png';
+import { Icon } from 'semantic-ui-react'
 
 import { SMALL } from '../variables/ScreenSizes'
 
@@ -32,8 +32,8 @@ const Rect = styled.div`
     align-items:center;
     justify-content: center;
     @media (max-width: ${SMALL}px) {
-        width: 100vw;
-        height: 20vh;
+        width: 100%;
+        height: 60vh;
         margin-top: -6rem;
         transform: rotate(-10deg) skew(-10deg);
     }
@@ -45,9 +45,11 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10rem;
+    padding: 100px;
     @media (max-width: ${SMALL}px) {
         transform: skew(10deg) rotate(10deg);
+        width: 100%;
+        margin: 0;
     }
 `
 
@@ -56,34 +58,15 @@ const ListItem = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
+    font-size: 32px;
 `
 
 const P = styled.a`
-    color: white;
-    margin-left: 20px;
-    font-size: 15px;
+    margin-left: 10px;
+    font-size: 20px;
     cursor: pointer;
-`
-
-const Button = styled.div`
-    width: 4rem;
-    height: 4rem;
-    padding: 2rem 4rem 2rem 4rem;
-    font-size: 1.4rem;
-    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow .5s, transform .5s;
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 3px 6px rgba(0,0,0,.16);
-    }
 `
 
 const openLink = (url) => () => {
@@ -106,8 +89,16 @@ function Contact ({ theme }) {
                         <P></P>
                     </ListItem> */}
                     <ListItem onClick={openLink('https://github.com/alopez96')}>
-                        <img width="30" src={Github}/>
-                        <P>alopez96</P>
+                        <Icon name='github' />
+                        {/* <P>alopez96</P> */}
+                    </ListItem>
+
+                    <ListItem onClick={openLink('https://www.linkedin.com/in/rturolopez/')}>
+                        <Icon name='linkedin' />
+                    </ListItem>
+
+                    <ListItem onClick={openLink('https://arturocreates.com/#contact')}>
+                        <Icon name='mail' />
                     </ListItem>
                     
                                         
