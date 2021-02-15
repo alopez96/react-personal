@@ -4,22 +4,8 @@ import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
 import burger from '../../assets/burger.svg';
 import burgerWhite from '../../assets/burger-white.svg';
+import Toggle from './Toggle';
 
-const Toogle = styled.div`
-  top: 1rem;
-  left: 2rem;
-  float: left;
-  position: absolute;
-  @media (max-width: ${SMALL}px) {
-    float: none;
-    position: static;
-    display: flex;
-    align-self: center;
-    text-align:center;
-    margin: auto;
-    width: 50%;
-  }
-`
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -89,10 +75,31 @@ const NavPage = styled.div`
 `
 
 const Label = styled.label`
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-`
+  color: ${(props) => props.theme.toogleColor};
+  font-size: 16px;
+  margin-left: -20px;
+  margin-top: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    position: relative;
+    &:before {
+        width: ${props => props.index ? "100%" : "0%"};
+    }
+    @media (max-width: ${SMALL}px) {
+        margin: auto;
+        margin: 10px 0;
+        font-size: 1.25em;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    &:hover {
+      color: ${props => props.theme.btnColor};
+      &:before {
+          width: 100%;
+      }
+    }
+` 
 
 const CloseBtn = styled.div`
     color: ${props => props.theme.textSecondary};
@@ -123,10 +130,7 @@ function MobileNav ({ theme, updateTheme }) {
         <NavPage theme={theme}>
         <List>
             <ListItem>
-                <div class="ui toggle checkbox">
-                <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-                <Label theme={theme}>Dark Mode</Label>
-                </div>
+                <Toggle theme={theme} updateTheme={updateTheme}/>
             </ListItem>
             <StyleLink to="/">
                 <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Home</ListItem>

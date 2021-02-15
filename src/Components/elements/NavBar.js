@@ -105,9 +105,6 @@ function NavBar ({ theme, updateTheme }) {
           <ListItem>
             <Toggle theme={theme} updateTheme={updateTheme}/>
           </ListItem>
-          <Label theme={theme}>
-            Dark Mode
-          </Label>
         </List>
       </div>
     )
