@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
 
 const Grid = styled.div`
-   width: 100%;
-    height: 80%;
     display: grid;
     grid-template-areas:
     'lt lt0 lt1 mt mt0 mt1 rt rt0 rt1'
@@ -38,7 +36,7 @@ const Grid = styled.div`
 `
 const Space = styled.div`
     width: 100%;
-    height: 200px;
+    height: 100px;
     @media (max-width: ${SMALL}px) {
         height: 50px;
     }
@@ -46,8 +44,9 @@ const Space = styled.div`
 
 const Projects = (props) => {
   return (
+      <div>
+          <Space/>
         <Grid  className="projects">
-            <Space/>
             <ProjectItem
                 title="Software Developer @ Accenture"
                 size={20}
@@ -113,6 +112,7 @@ const Projects = (props) => {
                 tech="Web Consulting Project; Tech stack: React, Node, Express, SQL, Stripe API"
             />
         </Grid>
+        </div>
   )
 }
 
