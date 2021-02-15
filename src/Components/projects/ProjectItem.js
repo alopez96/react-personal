@@ -33,11 +33,10 @@ const Bubble = styled.div`
         height: 200px;
         min-height: 50px;
         border-radius: 5px;
-        background-color: red;
         grid-area: none;
         flex-direction: row;
         justify-content: start;
-        margin: 10px 0;
+        margin: 10px;
         &:before {
             display: none;
         }

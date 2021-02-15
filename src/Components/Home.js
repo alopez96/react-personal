@@ -39,7 +39,13 @@ const Image = styled.img`
     height: 300px;
     object-fit: contain;
     border-radius: 50%;
-    border: 5px solid rgb(61, 61, 61);
+    border: 3px solid rgb(61, 61, 61);
+    // ipad size
+    @media (max-width: 700px) {
+        width: 200px;
+        height: 200px;
+    }
+
     @media (max-width: ${SMALL}px) {
         width: 150px;
         height: 150px;

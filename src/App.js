@@ -35,6 +35,7 @@ function App() {
   //handle change in width
   useEffect(() => {
     // update isMobile bool
+    console.log('changing width', width)
     setisMobile( width < 500 )
   }, [width]);
   
