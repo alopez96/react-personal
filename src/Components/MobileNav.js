@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../variables/ScreenSizes';
+import burgerGray from '../Assests/burger.svg';
 
 const Toogle = styled.div`
   top: 1rem;
@@ -74,7 +75,12 @@ const StyleLink = styled(Link)`
     color: inherit; 
 `
 
-function NavBar ({ theme, updateTheme }) {
+function MobileNav ({ theme, updateTheme }) {
+
+    const [isNavOpen, setisNavOpen] = useState(false)
+
+    const toogleNav = (value) => { setisNavOpen(!value) }
+
     return (
       <div>
         <Toogle>
@@ -85,23 +91,38 @@ function NavBar ({ theme, updateTheme }) {
           </div>
           </ListItem>
         </Toogle>
+        {isNavOpen?
+        <div className='full-page'>
         <List>
-          <StyleLink to="/" >
+            <StyleLink to="/" >
             <ListItem theme={theme}>Home</ListItem>
-          </StyleLink>
-          <StyleLink to="/projects" >
+            </StyleLink>
+            <StyleLink to="/projects" >
             <ListItem theme={theme}>Experience</ListItem>
-          </StyleLink>
-          <StyleLink to="/projects" >
+            </StyleLink>
+            <StyleLink to="/projects" >
             <ListItem theme={theme}>Leadership</ListItem>
-          </StyleLink>
-          <StyleLink to="/contact" >
+            </StyleLink>
+            <StyleLink to="/contact" >
             <ListItem theme={theme}>Contact</ListItem>
-          </StyleLink>
+            </StyleLink>
         </List>
+        </div>
+        : <Burger toogleNav={toogleNav}/>
+        }
       </div>
     )
 }
 
 
-export default NavBar;
+function Burger({isNavOpen, toogleNav}) {
+
+    return(
+    <div className='open-btn' onClick={()=>toogleNav(isNavOpen)}>
+            <img src={burgerGray} alt='nav icon'/>
+        </div>
+    )
+}
+
+
+export default MobileNav;

@@ -75,7 +75,7 @@ const Projects = (props) => {
                     gridArea="lm"
                     url="https://arturocreates.com/"
                     // github="https://github.com/alopez96/workers-dinner"
-                    tech="Web and Mobile Consulting"
+                    tech="Web and Mobile Freelancing; Design, Develop, Test, Launch"
                     />
                 {/* <ProjectItem
                     title="Personal Website"
@@ -93,7 +93,7 @@ const Projects = (props) => {
                     gridArea="rm0"
                     url="https://www.asherhousewellness.com/"
                     // github="https://github.com/alopez96/startpage"
-                    tech="Liquid, HTML, CSS, and JavaScript"
+                    tech="Web Consulting Project; Liquid, HTML, CSS, and JavaScript"
                     />
                 <ProjectItem
                     title="Allies Pro Services Website"
@@ -102,7 +102,7 @@ const Projects = (props) => {
                     gridArea="mm"
                     url="https://www.alliesproservices.com/"
                     // github="https://github.com/alopez96/jumpn"
-                    tech="React, Node, Express, SQL"
+                    tech="Web Consulting Project; React, Node, Express, SQL"
                 />
             </Grid>
 
