@@ -9,8 +9,13 @@ const Toogle = styled.div`
   float: left;
   position: absolute;
   @media (max-width: ${SMALL}px) {
-    top: 0;
-    font-size: 0.2em;
+    float: none;
+    position: static;
+    display: flex;
+    align-self: center;
+    text-align:center;
+    margin: auto;
+    width: 50%;
   }
 `
 
