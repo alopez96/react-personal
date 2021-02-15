@@ -3,34 +3,48 @@ import styled from 'styled-components'
 import { SMALL } from '../variables/ScreenSizes'
 import about from '../variables/Text'
 import arturo from './../assets/arturo-circle.png'
+import { Link } from 'react-router-dom';
 
 // split the about string for new line characters
 const sub_header_split = about.sub_header.split('\n').map(str => <p>{str}</p>);
 
 const Header = styled.h1`
     color: ${props => props.theme.textPrimary};
-    margin: 0;
     font-size: 2em;
     @media (max-width: ${SMALL}px) {
-        font-size: 2em;
-        margin: 0 auto 0 auto;
+        text-transform: uppercase;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 `
 
 const SubHeader = styled.p`
     color: ${props => props.theme.textSecondary};
-    margin-left: 5px;
     margin-top: 20px;
     @media (max-width: ${SMALL}px) {
-        margin: 2rem auto 0 auto;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 `
 
 const Btn = styled.button` 
-    width: 10rem;
+    width: 50%;
     border: none;
     background-color: #8650FF;
     color: #fff;
+    font-size: 20px;
+    padding: 10px 5px;
+    @media (max-width: ${SMALL}px) {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    :hover{
+        color: white;
+        text-decoration: none;
+    }
 `
 
 const Image = styled.img` 
@@ -54,6 +68,14 @@ const Image = styled.img`
     }
 `
 
+const StyleLink = styled(Link)`
+    text-decoration: none;
+    color: inherit;
+    :hover{
+        color: white;
+        text-decoration: none;
+    }
+`
 
 
 const goContact = () => {
@@ -68,7 +90,7 @@ function Home ({ theme }) {
             <div className='home-text'>
             <Header theme={theme}>{about.header}</Header>
             <SubHeader theme={theme}>{sub_header_split}</SubHeader>
-            <Btn onClick={() => goContact}>Test</Btn>
+            <Btn onClick={() => goContact()}> <StyleLink to="/projects" >View my experience</StyleLink></Btn>
           </div>
           </div>
           <Image src={arturo}/>
