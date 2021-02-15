@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Home from './components/Home';
+import Home from './Components/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
-import Projects from './components/projects/Projects';
-import Contact from './components/Contact';
-import NavBar from './components/elements/NavBar';
-import MobileNav from './components/elements/MobileNav';
+import Projects from './Components/projects/Projects';
+import Contact from './Components/Contact';
+import NavBar from './Components/elements/NavBar';
+import MobileNav from './Components/elements/MobileNav';
 import styled from 'styled-components';
 import { lightTheme, darkTheme } from './variables/Theme';
 
