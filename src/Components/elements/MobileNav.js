@@ -134,7 +134,7 @@ function MobileNav ({ theme, updateTheme }) {
             <StyleLink to="/projects" >
             <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Experience</ListItem>
             </StyleLink>
-            <StyleLink to="/projects" >
+            <StyleLink to="/leadership" >
             <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Leadership</ListItem>
             </StyleLink>
             <StyleLink to="/contact" >

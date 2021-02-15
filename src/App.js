@@ -46,12 +46,17 @@ function App() {
   }
 
   const updateTheme = () => {
+    // console.log('update theme', theme)
     if(theme == lightTheme){
       setTheme(darkTheme)
     } else {
       setTheme(lightTheme)
     }
   }
+
+  useEffect(()=>{
+    console.log('theme updated', theme)
+  }, [theme])
   
     return (
       <AppDiv theme={theme}>

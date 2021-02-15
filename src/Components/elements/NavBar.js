@@ -59,6 +59,33 @@ const StyleLink = styled(Link)`
     color: inherit; 
 `
 
+const Label = styled.label`
+  color: ${(props) => props.theme.toogleColor};
+  font-size: 16px;
+  margin-left: -20px;
+  margin-top: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    position: relative;
+    &:before {
+        width: ${props => props.index ? "100%" : "0%"};
+    }
+    @media (max-width: ${SMALL}px) {
+        margin: auto;
+        margin: 10px 0;
+        font-size: 1.25em;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    &:hover {
+      color: ${props => props.theme.btnColor};
+      &:before {
+          width: 100%;
+      }
+    }
+` 
+
 function NavBar ({ theme, updateTheme }) {
     return (
       <div>
@@ -78,6 +105,9 @@ function NavBar ({ theme, updateTheme }) {
           <ListItem>
             <Toggle theme={theme} updateTheme={updateTheme}/>
           </ListItem>
+          <Label theme={theme}>
+            Dark Mode
+          </Label>
         </List>
       </div>
     )
