@@ -119,6 +119,9 @@ const PdfBtn = styled.div`
         transform: scale(1.1);
         box-shadow: 0 3px 6px rgba(0,0,0,.16);
     }
+    @media (max-width: ${SMALL}px) {
+        width: 120px;
+    }
 `
 
 const Container = styled.div`

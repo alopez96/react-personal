@@ -66,7 +66,7 @@ const Projects = (props) => {
                     gridArea="rt"
                     url=""
                     // github="https://github.com/alopez96/workers-dinner"
-                    tech="Technical Lead; SQL Testing and Automation"
+                    tech="Co-Lead; SQL Testing and Automation"
                     />
                 <ProjectItem
                     title="Arturo Creates Business"
@@ -93,7 +93,7 @@ const Projects = (props) => {
                     gridArea="rm0"
                     url="https://www.asherhousewellness.com/"
                     // github="https://github.com/alopez96/startpage"
-                    tech="Liquid, HTML, CSS, and Javascript"
+                    tech="Liquid, HTML, CSS, and JavaScript"
                     />
                 <ProjectItem
                     title="Allies Pro Services Website"
