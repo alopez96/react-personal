@@ -94,6 +94,20 @@ const Label = styled.label`
     border-radius: 5px;
 `
 
+const CloseBtn = styled.div`
+    color: ${props => props.theme.textSecondary};
+    font-weight: 600;
+    @media (max-width: ${SMALL}px) {
+        
+    }
+    &:hover {
+      color: ${props => props.theme.btnColor};
+      &:before {
+          width: 100%;
+      }
+    }
+`
+
 function MobileNav ({ theme, updateTheme }) {
 
     const [isNavOpen, setisNavOpen] = useState(false)
@@ -126,6 +140,7 @@ function MobileNav ({ theme, updateTheme }) {
             <StyleLink to="/contact" >
             <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Contact</ListItem>
             </StyleLink>
+            <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} className='pointer'>X</CloseBtn> 
         </List>
         </NavPage>
         : <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
