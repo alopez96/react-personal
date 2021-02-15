@@ -90,7 +90,7 @@ function Home ({ theme }) {
             <div className='home-text'>
             <Header theme={theme}>{about.header}</Header>
             <SubHeader theme={theme}>{sub_header_split}</SubHeader>
-            <Btn onClick={() => goContact()}> <StyleLink to="/projects" >View my experience</StyleLink></Btn>
+            <Btn onClick={() => goContact()}> <StyleLink to="/projects" >See my work</StyleLink></Btn>
           </div>
           </div>
           <Image src={arturo}/>

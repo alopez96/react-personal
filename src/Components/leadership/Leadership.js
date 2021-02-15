@@ -42,10 +42,19 @@ const Space = styled.div`
     }
 `
 
-const Leadership = (props) => {
+const Header = styled.h1`
+    display: none;
+    @media (max-width: ${SMALL}px) {
+        display: inherit;
+        margin-left: 10px;
+        color: ${props => props.theme.textSecondary};
+    }
+`
+
+const Leadership = ({ theme }) => {
   return (
       <div>
-          <Space/>
+          <Space><Header theme={theme}>Leadership</Header></Space>
         <Grid  className="projects">
             <LeadershipItem
                 title="OKIA"

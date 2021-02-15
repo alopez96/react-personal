@@ -69,8 +69,8 @@ function App() {
           }
           <Route exact path="/" render={(props) => <Home {...props} theme={theme}/>} />
           <Route path="/contact" render={(props) => <Contact {...props} theme={theme}/>} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/leadership" component={Leadership} />
+          <Route path="/projects" render={(props) => <Projects {...props} theme={theme}/>}  />
+          <Route path="/leadership" render={(props) => <Leadership {...props} theme={theme}/>}  />
         </div>
       </Router>
     </AppDiv>

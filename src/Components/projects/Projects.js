@@ -42,10 +42,20 @@ const Space = styled.div`
     }
 `
 
-const Projects = (props) => {
+const Header = styled.h1`
+    display: none;
+    @media (max-width: ${SMALL}px) {
+        display: inherit;
+        margin-left: 10px;
+        color: ${props => props.theme.textSecondary};
+    }
+`
+
+
+const Projects = ({ theme }) => {
   return (
-      <div>
-          <Space/>
+      <div> 
+          <Space><Header theme={theme}>Experience</Header></Space>
         <Grid  className="projects">
             <ProjectItem
                 title="Software Developer @ Accenture"
