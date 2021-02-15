@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
-import Toggle from './toogle/Toggle';
+import Toggle from './Toggle';
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -84,7 +84,7 @@ function NavBar ({ theme, updateTheme }) {
             <ListItem theme={theme}>Contact</ListItem>
           </StyleLink>
           <ListItem>
-            <Toggle/>
+            <Toggle theme={theme} updateTheme={updateTheme}/>
           </ListItem>
         </List>
       </div>

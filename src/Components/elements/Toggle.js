@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SMALL } from '../../../variables/ScreenSizes';
+import { SMALL } from '../../variables/ScreenSizes';
 
 const Toogle = styled.div`
   top: 1rem;
