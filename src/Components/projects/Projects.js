@@ -38,7 +38,8 @@ const Space = styled.div`
     width: 100%;
     height: 100px;
     @media (max-width: ${SMALL}px) {
-        height: 50px;
+        height: 5px;
+        margin-bottom: 45px;
     }
 `
 
