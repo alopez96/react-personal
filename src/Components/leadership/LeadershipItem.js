@@ -125,6 +125,7 @@ const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, github}
 
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
+    console.log('tech list', tech)
 
 
     return (
@@ -132,15 +133,14 @@ const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, github}
             <Title>{title}</Title>
             <Body>{body}</Body>
             <TechList>{tech_split}</TechList>
-            <Container>
+            {/* <Container>
                 {url.length === 0 ?
                 <PdfBtn onClick={openLink()} color={color}>View resume</PdfBtn>
                 :
                 <PdfBtn onClick={openLink(url)} color={color}>View website</PdfBtn>
                 // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
                 }
-                {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
-            </Container>
+            </Container> */}
         </Bubble>
     )
 }

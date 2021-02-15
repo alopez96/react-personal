@@ -54,8 +54,7 @@ const Leadership = (props) => {
                 gridArea="lt0"
                 url=""
                 // github="https://github.com/alopez96/react-robofriends"
-                // tech="Business Website for Allies Pro Services."
-                tech=""
+                tech="Developing a software application to help students get financial aid."
                 />
             <LeadershipItem
                 title="Workers' Dinner"
@@ -64,7 +63,7 @@ const Leadership = (props) => {
                 gridArea="rt"
                 url=""
                 // github="https://github.com/alopez96/workers-dinner"
-                tech=""
+                tech="Coordinated a day of giving back to the college campus labor community."
                 />
             <LeadershipItem
                 title="TXT Volunteering"
@@ -73,16 +72,7 @@ const Leadership = (props) => {
                 gridArea="lm"
                 url="https://arturocreates.com/"
                 // github="https://github.com/alopez96/workers-dinner"
-                tech=""
-                />
-            <LeadershipItem
-                title="SHPE"
-                size={20}
-                color={{from: "#3FC8FA", to: "#4040F4"}}
-                gridArea="rm0"
-                url="https://www.asherhousewellness.com/"
-                // github="https://github.com/alopez96/startpage"
-                tech=""
+                tech="Supporting black and brown youth from inner city LA."
                 />
             <LeadershipItem
                 title="Mentors United"
@@ -91,8 +81,17 @@ const Leadership = (props) => {
                 gridArea="mm"
                 url="https://www.alliesproservices.com/"
                 // github="https://github.com/alopez96/jumpn"
-                tech=""
-            />
+                tech="Organized and a connected with local high school to create a Mentorship program."
+                />
+            <LeadershipItem
+                title="SHPE"
+                size={20}
+                color={{from: "#3FC8FA", to: "#4040F4"}}
+                gridArea="rm0"
+                url="https://www.asherhousewellness.com/"
+                // github="https://github.com/alopez96/startpage"
+                tech="Volunteered & supported as the Regional Webmaster for SHPE [Society of Hispanic Professional Engineers]"
+                />
         </Grid>
         </div>
   )
