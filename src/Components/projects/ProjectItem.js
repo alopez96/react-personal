@@ -15,6 +15,7 @@ const Bubble = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1px;
     &:before {
         content: "";
         position: absolute;

@@ -1,2 +1,2 @@
 // export const SMALL = 800;
-export const SMALL = 480;
+export const SMALL = 500;

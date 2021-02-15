@@ -2,7 +2,8 @@ import React, { Component, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../variables/ScreenSizes';
-import burgerGray from '../Assests/burger.svg';
+import burger from '../Assests/burger.svg';
+import burgerWhite from '../Assests/burger-white.svg';
 
 const Toogle = styled.div`
   top: 1rem;
@@ -79,49 +80,59 @@ function MobileNav ({ theme, updateTheme }) {
 
     const [isNavOpen, setisNavOpen] = useState(false)
 
-    const toogleNav = (value) => { setisNavOpen(!value) }
+    const toogleNav = (value) => { 
+        console.log('pressed toogle', value)
+        setisNavOpen(!value) 
+    }
 
     return (
       <div>
-        <Toogle>
-          <ListItem>
-          <div class="ui toggle checkbox">
-          <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-          <label style={{color:theme.textPrimary}}>Dark Mode</label>
-          </div>
-          </ListItem>
-        </Toogle>
         {isNavOpen?
         <div className='full-page'>
         <List>
-            <StyleLink to="/" >
-            <ListItem theme={theme}>Home</ListItem>
+            <ListItem>
+                <div class="ui toggle checkbox">
+                <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
+                <label style={{color:theme.textPrimary}}>Dark Mode</label>
+                </div>
+            </ListItem>
+            <StyleLink to="/">
+                <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Home</ListItem>
             </StyleLink>
             <StyleLink to="/projects" >
-            <ListItem theme={theme}>Experience</ListItem>
+            <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Experience</ListItem>
             </StyleLink>
             <StyleLink to="/projects" >
-            <ListItem theme={theme}>Leadership</ListItem>
+            <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Leadership</ListItem>
             </StyleLink>
             <StyleLink to="/contact" >
-            <ListItem theme={theme}>Contact</ListItem>
+            <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Contact</ListItem>
             </StyleLink>
         </List>
         </div>
-        : <Burger toogleNav={toogleNav}/>
+        : <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
         }
       </div>
     )
 }
 
 
-function Burger({isNavOpen, toogleNav}) {
+function Burger({isNavOpen, toogleNav, theme}) {
 
-    return(
-    <div className='open-btn' onClick={()=>toogleNav(isNavOpen)}>
-            <img src={burgerGray} alt='nav icon'/>
-        </div>
-    )
+    if(theme.dark === true){
+        return(
+            <div className='open-btn' onClick={()=>toogleNav(isNavOpen)}>
+                    <img src={burgerWhite} alt='nav icon'/>
+                </div>
+            )
+    }
+    else{
+        return(
+            <div className='open-btn' onClick={()=>toogleNav(isNavOpen)}>
+                    <img src={burger} alt='nav icon'/>
+                </div>
+            )
+    }
 }
 
 
