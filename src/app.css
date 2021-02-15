@@ -34,18 +34,6 @@
   position: fixed;
 }
 
-.full-page{
-  /* background-color: white;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: fixed;
-  z-index: 4; */
-}
-
 @media (max-width: 500px) {
   .home-section{
     height: 400px;

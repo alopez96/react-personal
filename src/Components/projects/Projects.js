@@ -26,87 +26,93 @@ const Grid = styled.div`
         overflow: auto;
     }
     @media (max-width: ${SMALL}px) {
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         padding: 0px;
+        margin: 0;
         overflow: auto;
+    }
+`
+const Space = styled.div`
+    width: 100%;
+    height: 10vh;
+    @media (max-width: ${SMALL}px) {
+        height: 6vh;
     }
 `
 
 const Projects = (props) => {
   return (
-        <div>
-            <Grid  className="projects">
-                <ProjectItem
-                    title="Software Developer @ Accenture"
-                    size={20}
-                    color={{from: "#4040F4", to: "#713FFA"}}
-                    gridArea="lt0"
-                    url=""
-                    // github="https://github.com/alopez96/react-robofriends"
-                    // tech="Business Website for Allies Pro Services."
-                    tech="Developed Data Engineering logic with PySpark"
-                    />
-                {/* <ProjectItem
-                    title="Brendas' Jumpies"
-                    size={13}
-                    color={{from: "#F44040", to: "#713FFA"}}
-                    gridArea="lb0"
-                    url="https://brendasjumpies.com/"
-                    // github="https://github.com/alopez96/jumpn"
-                    tech="Business website for Brendas' Jumpies."
-                /> */}
-                <ProjectItem
-                    title="Analytics Tester @ Accenture"
-                    size={20}
-                    color={{from: "#3FFA87", to: "#4040F4"}}
-                    gridArea="rt"
-                    url=""
-                    // github="https://github.com/alopez96/workers-dinner"
-                    tech="Co-Lead; SQL Testing and Automation"
-                    />
-                <ProjectItem
-                    title="Arturo Creates Business"
-                    size={20}
-                    color={{from: "#8967E8", to: "#612DB5"}}
-                    gridArea="lm"
-                    url="https://arturocreates.com/"
-                    // github="https://github.com/alopez96/workers-dinner"
-                    tech="Web and Mobile Freelancing; Design, Develop, Test, Launch Software applications"
-                    />
-                {/* <ProjectItem
-                    title="Personal Website"
-                    size={13}
-                    color={{from: "#40AFF4", to: "#3FFA87"}}
-                    gridArea="rb"
-                    url="https://arturolopez.me/"
-                    // github="https://github.com/alopez96/arturo-personal"
-                    tech="Second website to showcase experience and skills."
-                    /> */}
-                <ProjectItem
-                    title="The Asher House Website"
-                    size={20}
-                    color={{from: "#3FC8FA", to: "#4040F4"}}
-                    gridArea="rm0"
-                    url="https://www.asherhousewellness.com/"
-                    // github="https://github.com/alopez96/startpage"
-                    tech="Web Consulting Project; Tech stack: Liquid, HTML, CSS, JavaScript"
-                    />
-                <ProjectItem
-                    title="Allies Pro Services Website"
-                    size={20}
-                    color={{from: "#F44040", to: "#4040F4"}}
-                    gridArea="mm"
-                    url="https://www.alliesproservices.com/"
-                    // github="https://github.com/alopez96/jumpn"
-                    tech="Web Consulting Project; Tech stack: React, Node, Express, SQL, Stripe API"
+        <Grid  className="projects">
+            <Space/>
+            <ProjectItem
+                title="Software Developer @ Accenture"
+                size={20}
+                color={{from: "#4040F4", to: "#713FFA"}}
+                gridArea="lt0"
+                url=""
+                // github="https://github.com/alopez96/react-robofriends"
+                // tech="Business Website for Allies Pro Services."
+                tech="Developed Data Engineering logic with PySpark"
                 />
-            </Grid>
-
-        </div>
+            {/* <ProjectItem
+                title="Brendas' Jumpies"
+                size={13}
+                color={{from: "#F44040", to: "#713FFA"}}
+                gridArea="lb0"
+                url="https://brendasjumpies.com/"
+                // github="https://github.com/alopez96/jumpn"
+                tech="Business website for Brendas' Jumpies."
+            /> */}
+            <ProjectItem
+                title="Analytics Tester @ Accenture"
+                size={20}
+                color={{from: "#3FFA87", to: "#4040F4"}}
+                gridArea="rt"
+                url=""
+                // github="https://github.com/alopez96/workers-dinner"
+                tech="Co-Lead; SQL Testing and Automation"
+                />
+            <ProjectItem
+                title="Arturo Creates Business"
+                size={20}
+                color={{from: "#8967E8", to: "#612DB5"}}
+                gridArea="lm"
+                url="https://arturocreates.com/"
+                // github="https://github.com/alopez96/workers-dinner"
+                tech="Web and Mobile Freelancing; Design, Develop, Test, Launch Software applications"
+                />
+            {/* <ProjectItem
+                title="Personal Website"
+                size={13}
+                color={{from: "#40AFF4", to: "#3FFA87"}}
+                gridArea="rb"
+                url="https://arturolopez.me/"
+                // github="https://github.com/alopez96/arturo-personal"
+                tech="Second website to showcase experience and skills."
+                /> */}
+            <ProjectItem
+                title="The Asher House Website"
+                size={20}
+                color={{from: "#3FC8FA", to: "#4040F4"}}
+                gridArea="rm0"
+                url="https://www.asherhousewellness.com/"
+                // github="https://github.com/alopez96/startpage"
+                tech="Web Consulting Project; Tech stack: Liquid, HTML, CSS, JavaScript"
+                />
+            <ProjectItem
+                title="Allies Pro Services Website"
+                size={20}
+                color={{from: "#F44040", to: "#4040F4"}}
+                gridArea="mm"
+                url="https://www.alliesproservices.com/"
+                // github="https://github.com/alopez96/jumpn"
+                tech="Web Consulting Project; Tech stack: React, Node, Express, SQL, Stripe API"
+            />
+        </Grid>
   )
 }
 
