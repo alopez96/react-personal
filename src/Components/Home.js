@@ -40,6 +40,11 @@ const Image = styled.img`
     object-fit: contain;
     border-radius: 50%;
     border: 5px solid rgb(61, 61, 61);
+    @media (max-width: ${SMALL}px) {
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
 `
 
 
