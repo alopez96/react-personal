@@ -62,6 +62,7 @@ const Leadership = ({ theme }) => {
                 color={{from: "#4040F4", to: "#713FFA"}}
                 gridArea="lt0"
                 url=""
+                theme={theme}
                 // github="https://github.com/alopez96/react-robofriends"
                 tech="Developing a software application to help students get financial aid."
                 />
@@ -71,6 +72,7 @@ const Leadership = ({ theme }) => {
                 color={{from: "#3FFA87", to: "#4040F4"}}
                 gridArea="rt"
                 url=""
+                theme={theme}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Coordinated a day of giving back to the college campus labor community."
                 />
@@ -80,6 +82,7 @@ const Leadership = ({ theme }) => {
                 color={{from: "#8967E8", to: "#612DB5"}}
                 gridArea="lm"
                 url="https://arturocreates.com/"
+                theme={theme}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Supporting black and brown youth from inner city LA."
                 />
@@ -88,6 +91,7 @@ const Leadership = ({ theme }) => {
                 size={20}
                 color={{from: "#F44040", to: "#4040F4"}}
                 gridArea="mm"
+                theme={theme}
                 url="https://www.alliesproservices.com/"
                 // github="https://github.com/alopez96/jumpn"
                 tech="Organized and a connected with local high school to create a Mentorship program."
@@ -97,6 +101,7 @@ const Leadership = ({ theme }) => {
                 size={20}
                 color={{from: "#3FC8FA", to: "#4040F4"}}
                 gridArea="rm0"
+                theme={theme}
                 url="https://www.asherhousewellness.com/"
                 // github="https://github.com/alopez96/startpage"
                 tech="Volunteered & supported as the Regional Webmaster for SHPE [Society of Hispanic Professional Engineers]"

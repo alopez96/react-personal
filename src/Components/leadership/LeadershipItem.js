@@ -4,18 +4,20 @@ import Open from '../logos/open.png'
 import { SMALL } from '../../variables/ScreenSizes'
 
 
+
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
     height: ${props => `${props.size}vw`};
     border-radius: 5%;
-    background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+    // background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     position: relative;
     grid-area: ${props => props.gridArea};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 1px;
+    box-shadow: 4px 4px 8px 0 ${props => props.theme.shadow};
     &:before {
         content: "";
         position: absolute;
@@ -42,22 +44,31 @@ const Bubble = styled.div`
         }
     }
     @media (max-width: ${SMALL}px) {
-        width: 100%;
+        width: 95%;
         height: 200px;
-        min-height: 50px;
         border-radius: 5px;
-        grid-area: none;
-        flex-direction: row;
         margin: 10px 0;
-        justify-content: space-between;
         &:before {
             display: none;
         }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 0 1px;
+        text-align: left;
+    }
+    border: 1px #ccc;
+    border-style: ${props => props.theme.border};
+    color: ${props => props.theme.textSecondary};
+    :hover{
+        background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+        color: white;
     }
 `
 
 const Title = styled.h3`
-    color: white;
+    // color: ${props => props.theme.textSecondary};
     font-size: 16px;
     font-weight: bold;
     @media (max-width: 1200px) {
@@ -67,7 +78,7 @@ const Title = styled.h3`
 `
 
 const Body = styled.h6`
-    color: white;
+    // color: ${props => props.theme.textSecondary};
     font-size: 12px;
     @media (max-width: 1200px) {
         margin-left: 10px;
@@ -76,10 +87,29 @@ const Body = styled.h6`
 `
 
 const TechList = styled.p`
-    color: white;
+    // color: ${props => props.theme.textSecondary};
     font-size: 14px;
     @media (max-width: ${SMALL}px) {
         margin: 1rem;
+    }
+`
+
+const Button = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 23px;
+    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .5s, transform .5s;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 3px 6px rgba(0,0,0,.16);
     }
 `
 
@@ -96,13 +126,14 @@ const PdfBtn = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 15px;
+    color: white;
     transition: box-shadow .5s, transform .5s;
     &:hover {
         transform: scale(1.1);
         box-shadow: 0 3px 6px rgba(0,0,0,.16);
     }
     @media (max-width: ${SMALL}px) {
-        width: 120px;
+        width: 100px;
     }
 `
 
@@ -112,7 +143,7 @@ const Container = styled.div`
     @media (max-width: 1200px) {
         margin-top: 0;
         margin-left: auto;
-        margin-right: 10px;
+        margin-right: auto;
     }
 `
 
@@ -121,7 +152,7 @@ const openLink = (url) => () => {
     window.open(url, '_blank');
 }
 
-const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, github}) => {
+const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, theme}) => {
 
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
@@ -129,8 +160,8 @@ const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, github}
 
 
     return (
-        <Bubble size={size} color={color} gridArea={gridArea}>
-            <Title>{title}</Title>
+        <Bubble size={size} color={color} theme={theme} gridArea={gridArea}>
+            <Title theme={theme}>{title}</Title>
             <Body>{body}</Body>
             <TechList>{tech_split}</TechList>
             {/* <Container>
