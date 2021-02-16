@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Home from './Components/Home';
+import Home from './Components/home/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/projects/Projects';
 import Leadership from './Components/leadership/Leadership';
-import Contact from './Components/Contact';
+import Contact from './Components/contact/Contact';
 import NavBar from './Components/elements/NavBar';
 import MobileNav from './Components/elements/MobileNav';
 import styled from 'styled-components';

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SMALL } from '../variables/ScreenSizes'
-import about from '../variables/Text'
-import arturo from './../assets/arturo-circle.png'
+import { SMALL } from '../../variables/ScreenSizes'
+import about from '../../variables/Text'
+import arturo from '../../assets/arturo-circle.png'
 import { Link } from 'react-router-dom';
 
 // split the about string for new line characters

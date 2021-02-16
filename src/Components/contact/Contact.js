@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 
-import { SMALL } from '../variables/ScreenSizes'
+import { SMALL } from '../../variables/ScreenSizes'
 
 const Center = styled.div`
     width: 100vw;
@@ -92,7 +92,7 @@ const openLink = (url) => () => {
     if(url.charAt(0) !== "h"){
         window.location = `mailto:${url}`;
     }else{
-        window.open(url, '_blank');
+        window.open(url);
     }
 }
 
