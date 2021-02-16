@@ -124,7 +124,7 @@ const Projects = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
-                date={'June 2020'}
+                date={'Graduated June 2020'}
                 // github="https://github.com/alopez96/jumpn"
                 tech="University of California, Santa Cruz"
             />

@@ -76,7 +76,7 @@ const Leadership = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
-                date={'Feb 2019'}
+                date={'Nov 2018 - Feb 2019'}
                 tech="Coordinated a day of giving back to the college campus labor community."
                 />
             <Card
