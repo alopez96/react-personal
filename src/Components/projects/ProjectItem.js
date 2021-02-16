@@ -79,11 +79,11 @@ const Title = styled.h3`
 `
 
 const Body = styled.h6`
-    // color: ${props => props.theme.textSecondary};
+    font-weight: 400;
     font-size: 12px;
+    font-style: italic;
     @media (max-width: 1200px) {
-        margin-left: 10px;
-        font-size: 1em;
+        font-size: 12px;
     }
 `
 
@@ -156,7 +156,7 @@ const openLink = (url) => () => {
     return false;
 }
 
-const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme, noBtn}) => {
+const ProjectItem = ({ size, color, gridArea, title, date, tech, url, theme, noBtn}) => {
 
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
@@ -165,8 +165,8 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme, noB
     return (
         <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
             <Title theme={theme}>{title}</Title>
-            <Body theme={theme}>{body}</Body>
             <TechList theme={theme}>{tech_split}</TechList>
+            <Body theme={theme}>{date}</Body>
             <Container>
                 {noBtn? null
                 :<PdfBtn onClick={openLink(url)} color={theme.contactGradient}>

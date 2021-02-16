@@ -66,6 +66,7 @@ const Projects = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
+                date={'Nov 2020 - Present'}
                 // github="https://github.com/alopez96/react-robofriends"
                 // tech="Business Website for Allies Pro Services."
                 tech="Data Engineer & PySpark developer"
@@ -88,6 +89,7 @@ const Projects = ({ theme }) => {
                 url=""
                 noBtn={true}
                 theme={theme}
+                date={'Nov 2019 - Oct 2020'}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Co-Lead | SQL Testing & Automation"
                 />
@@ -100,6 +102,7 @@ const Projects = ({ theme }) => {
                 url="https://arturocreates.com/"
                 theme={theme}
                 noBtn={true}
+                date={'Aug 2020 - Present'}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Design, Develop, Test, Launch Software applications"
                 />
@@ -121,6 +124,7 @@ const Projects = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
+                date={'June 2020'}
                 // github="https://github.com/alopez96/jumpn"
                 tech="University of California, Santa Cruz"
             />
@@ -133,6 +137,7 @@ const Projects = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
+                date={'Oct 2018 - Nov 2018'}
                 // github="https://github.com/alopez96/startpage"
                 tech="React and Android developer"
                 />

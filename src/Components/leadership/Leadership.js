@@ -65,6 +65,7 @@ const Leadership = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
+                date={'Jan 2021 - Present'}
                 tech="Developing a software application to help students get financial aid."
                 />
             <Card
@@ -75,6 +76,7 @@ const Leadership = ({ theme }) => {
                 url=""
                 theme={theme}
                 noBtn={true}
+                date={'Feb 2019'}
                 tech="Coordinated a day of giving back to the college campus labor community."
                 />
             <Card
@@ -85,6 +87,7 @@ const Leadership = ({ theme }) => {
                 url="https://arturocreates.com/"
                 theme={theme}
                 noBtn={true}
+                date={'2019 - Present'}
                 tech="Supporting black and brown youth from inner city LA."
                 />
             <Card
@@ -94,6 +97,7 @@ const Leadership = ({ theme }) => {
                 gridArea="mm"
                 theme={theme}
                 noBtn={true}
+                date={'Jan 2019 - March 2019'}
                 url="https://www.alliesproservices.com/"
                 tech="Organized and connected with local high school to create a Mentorship program."
                 />
@@ -104,6 +108,7 @@ const Leadership = ({ theme }) => {
                 gridArea="rm0"
                 theme={theme}
                 noBtn={true}
+                date={'Sep 2018 - Jan 2020'}
                 url="https://www.asherhousewellness.com/"
                 tech="Volunteered & supported as the Regional Webmaster for SHPE [Society of Hispanic Professional Engineers]"
                 />
