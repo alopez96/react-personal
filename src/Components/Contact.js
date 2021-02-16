@@ -45,11 +45,12 @@ const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 100px 200px;
     @media (max-width: ${SMALL}px) {
         transform: skew(10deg) rotate(10deg);
         width: 100%;
         margin: 0;
+        padding: 100px;
     }
 `
 
@@ -69,6 +70,15 @@ const P = styled.a`
     cursor: pointer;
 `
 
+const MainHeader = styled.h1`
+    display: none;
+    @media (max-width: ${SMALL}px) {
+        display: inherit;
+        margin-left: 10px;
+        color: ${props => props.theme.textSecondary};
+    }
+`
+
 const openLink = (url) => () => {
     if(url.charAt(0) !== "h"){
         window.location = `mailto:${url}`;
@@ -80,6 +90,7 @@ const openLink = (url) => () => {
 function Contact ({ theme }) {
   return (
       <div>
+        <MainHeader theme={theme}>Contact</MainHeader>
         <Center>
             <Rect>
                 <Content color={theme.contactGradient}>
