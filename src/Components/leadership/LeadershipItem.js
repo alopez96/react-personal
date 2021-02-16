@@ -160,7 +160,7 @@ const LeadershipItem = ({ size, color, gridArea, title, body, tech, url, theme})
 
 
     return (
-        <Bubble size={size} color={color} theme={theme} gridArea={gridArea}>
+        <Bubble size={size} color={theme.contactGradient} theme={theme} gridArea={gridArea}>
             <Title theme={theme}>{title}</Title>
             <Body>{body}</Body>
             <TechList>{tech_split}</TechList>

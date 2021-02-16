@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Open from '../logos/open.png'
 import { SMALL } from '../../variables/ScreenSizes'
 import resume from '../../pdf/resume.pdf'
 
@@ -154,7 +153,7 @@ const openLink = (url) => () => {
     return false;
 }
 
-const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme}) => {
+const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme, noBtn}) => {
 
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
@@ -168,13 +167,13 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme}) =>
             <Body theme={theme}>{body}</Body>
             <TechList theme={theme}>{tech_split}</TechList>
             <Container>
-                {url.length === 0 ?
-                <PdfBtn onClick={openLink(resume)} color={theme.contactGradient}>Resume</PdfBtn>
+                {noBtn? null
                 :
-                <PdfBtn onClick={openLink(url)} color={theme.contactGradient}>Website</PdfBtn>
-                // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
+                url.length === 0 ?
+                    <PdfBtn onClick={openLink(resume)} color={theme.contactGradient}>Resume</PdfBtn>
+                    :
+                    <PdfBtn onClick={openLink(url)} color={theme.contactGradient}>Website</PdfBtn>   
                 }
-                {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
             </Container>
         </Bubble>
     )
