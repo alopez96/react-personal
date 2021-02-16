@@ -59,9 +59,13 @@ const Bubble = styled.div`
     border: 1px #ccc;
     border-style: ${props => props.theme.border};
     color: ${props => props.theme.textSecondary};
-    :hover{
-        background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-        color: white;
+
+    // this will prevent the touch on mobile device to react to :hover definition
+    @media (hover: hover) {
+        :hover {
+            background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+            color: white;
+        }
     }
 `
 
