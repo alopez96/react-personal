@@ -13,6 +13,8 @@ const lightTheme = {
     backgroundColor: "#DEF2F1",
     btnColor: 'black',
     toogleColor: 'black',
+    shadow: 'rgb(0 0 0 / 20%)',
+    border: 'none'
 }
   
 const darkTheme = {
@@ -30,6 +32,8 @@ const darkTheme = {
     backgroundColor: "#12100E",
     btnColor: 'white',
     toogleColor: 'white',
+    shadow: 'none',
+    border: 'solid'
 }
 
 

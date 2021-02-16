@@ -63,6 +63,7 @@ const Projects = ({ theme }) => {
                 color={{from: "#4040F4", to: "#713FFA"}}
                 gridArea="lt0"
                 url=""
+                theme={theme}
                 // github="https://github.com/alopez96/react-robofriends"
                 // tech="Business Website for Allies Pro Services."
                 tech="Data Engineer & PySpark developer"
@@ -79,18 +80,22 @@ const Projects = ({ theme }) => {
             <ProjectItem
                 title="Analytics Tester @ Accenture"
                 size={20}
-                color={{from: "#3FFA87", to: "#4040F4"}}
+                color={{from: "#4040F4", to: "#713FFA"}}
+                // color={{from: "#3FFA87", to: "#4040F4"}}
                 gridArea="rt"
                 url=""
+                theme={theme}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Co-Lead | SQL Testing & Automation"
                 />
             <ProjectItem
                 title="Web and Mobile Freelance"
                 size={20}
-                color={{from: "#8967E8", to: "#612DB5"}}
+                color={{from: "#4040F4", to: "#713FFA"}}
+                // color={{from: "#8967E8", to: "#612DB5"}}
                 gridArea="lm"
                 url="https://arturocreates.com/"
+                theme={theme}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Design, Develop, Test, Launch Software applications"
                 />
@@ -106,18 +111,22 @@ const Projects = ({ theme }) => {
             <ProjectItem
                 title="Computer Science BS"
                 size={20}
-                color={{from: "#F44040", to: "#4040F4"}}
+                color={{from: "#4040F4", to: "#713FFA"}}
+                // color={{from: "#F44040", to: "#4040F4"}}
                 gridArea="mm"
                 url=""
+                theme={theme}
                 // github="https://github.com/alopez96/jumpn"
                 tech="University of California, Santa Cruz"
             />
             <ProjectItem
                 title="Software Developer @ Realtime"
                 size={20}
-                color={{from: "#3FC8FA", to: "#4040F4"}}
+                color={{from: "#4040F4", to: "#713FFA"}}
+                // color={{from: "#3FC8FA", to: "#4040F4"}}
                 gridArea="rm0"
                 url=""
+                theme={theme}
                 // github="https://github.com/alopez96/startpage"
                 tech="React and Android developer"
                 />

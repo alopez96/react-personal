@@ -8,7 +8,7 @@ const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
     height: ${props => `${props.size}vw`};
     border-radius: 5%;
-    background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+    // background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     position: relative;
     grid-area: ${props => props.gridArea};
     display: flex;
@@ -16,6 +16,7 @@ const Bubble = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 1px;
+    box-shadow: 4px 4px 8px 0 ${props => props.theme.shadow};
     &:before {
         content: "";
         position: absolute;
@@ -42,7 +43,7 @@ const Bubble = styled.div`
         }
     }
     @media (max-width: ${SMALL}px) {
-        width: 100%;
+        width: 95%;
         height: 200px;
         min-height: 50px;
         border-radius: 5px;
@@ -54,10 +55,17 @@ const Bubble = styled.div`
             display: none;
         }
     }
+    border: 2px rgb(167, 167, 167);
+    border-style: ${props => props.theme.border};
+    color: ${props => props.theme.textSecondary};
+    :hover{
+        background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+        color: white;
+    }
 `
 
 const Title = styled.h3`
-    color: white;
+    // color: ${props => props.theme.textSecondary};
     font-size: 16px;
     font-weight: bold;
     @media (max-width: 1200px) {
@@ -67,7 +75,7 @@ const Title = styled.h3`
 `
 
 const Body = styled.h6`
-    color: white;
+    // color: ${props => props.theme.textSecondary};
     font-size: 12px;
     @media (max-width: 1200px) {
         margin-left: 10px;
@@ -76,7 +84,7 @@ const Body = styled.h6`
 `
 
 const TechList = styled.p`
-    color: white;
+    // color: ${props => props.theme.textSecondary};
     font-size: 14px;
     @media (max-width: ${SMALL}px) {
         margin: 1rem;
@@ -115,13 +123,14 @@ const PdfBtn = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 15px;
+    color: white;
     transition: box-shadow .5s, transform .5s;
     &:hover {
         transform: scale(1.1);
         box-shadow: 0 3px 6px rgba(0,0,0,.16);
     }
     @media (max-width: ${SMALL}px) {
-        width: 120px;
+        width: 100px;
     }
 `
 
@@ -143,7 +152,7 @@ const openLink = (url) => () => {
     return false;
 }
 
-const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) => {
+const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme}) => {
 
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
@@ -152,13 +161,13 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, github}) =
 
 
     return (
-        <Bubble size={size} color={color} gridArea={gridArea}>
-            <Title>{title}</Title>
-            <Body>{body}</Body>
-            <TechList>{tech_split}</TechList>
+        <Bubble size={size} color={color} gridArea={gridArea} theme={theme}>
+            <Title theme={theme}>{title}</Title>
+            <Body theme={theme}>{body}</Body>
+            <TechList theme={theme}>{tech_split}</TechList>
             <Container>
                 {url.length === 0 ?
-                <PdfBtn onClick={openLink(resume)} color={color}>View resume</PdfBtn>
+                <PdfBtn onClick={openLink(resume)} color={color}>Resume</PdfBtn>
                 :
                 <PdfBtn onClick={openLink(url)} color={color}>View website</PdfBtn>
                 // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
