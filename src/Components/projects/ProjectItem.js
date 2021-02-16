@@ -88,7 +88,7 @@ const TechList = styled.p`
     // color: ${props => props.theme.textSecondary};
     font-size: 16px;
     @media (max-width: ${SMALL}px) {
-        margin: 1rem;
+        margin: 0 2px 14px 2px;
     }
 `
 

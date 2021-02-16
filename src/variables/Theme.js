@@ -12,7 +12,7 @@ const lightTheme = {
     textSecondary: "rgb(61, 61, 61)",
     backgroundColor: "#DEF2F1",
     btnColor: 'black',
-    toogleColor: 'black',
+    toogleColor: 'rgb(61, 61, 61)',
     shadow: 'rgb(0 0 0 / 20%)',
     border: 'none'
 }

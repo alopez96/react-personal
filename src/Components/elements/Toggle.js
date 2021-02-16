@@ -18,7 +18,6 @@ const Label = styled.label`
         margin: auto;
         margin: 10px;
         font-size: 20px;
-        font-weight: bolder;
         text-transform: uppercase;
     }
     &:hover {
