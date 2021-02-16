@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Open from '../logos/open.png'
 import { SMALL } from '../../variables/ScreenSizes'
-import resume from '../../assets/resume-new.pdf'
+import resume from '../../pdf/resume.pdf'
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
