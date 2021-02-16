@@ -45,17 +45,19 @@ const Bubble = styled.div`
     @media (max-width: ${SMALL}px) {
         width: 95%;
         height: 200px;
-        min-height: 50px;
         border-radius: 5px;
-        grid-area: none;
-        flex-direction: row;
         margin: 10px 0;
-        justify-content: space-between;
         &:before {
             display: none;
         }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 0 1px;
+        text-align: left;
     }
-    border: 2px rgb(167, 167, 167);
+    border: 1px #ccc;
     border-style: ${props => props.theme.border};
     color: ${props => props.theme.textSecondary};
     :hover{
@@ -140,7 +142,7 @@ const Container = styled.div`
     @media (max-width: 1200px) {
         margin-top: 0;
         margin-left: auto;
-        margin-right: 10px;
+        margin-right: auto;
     }
 `
 
@@ -169,7 +171,7 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme}) =>
                 {url.length === 0 ?
                 <PdfBtn onClick={openLink(resume)} color={color}>Resume</PdfBtn>
                 :
-                <PdfBtn onClick={openLink(url)} color={color}>View website</PdfBtn>
+                <PdfBtn onClick={openLink(url)} color={color}>Website</PdfBtn>
                 // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
                 }
                 {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}
