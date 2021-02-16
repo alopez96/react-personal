@@ -45,6 +45,7 @@ const Btn = styled.button`
     :hover{
         color: white;
         text-decoration: none;
+        cursor: pointer;
     }
 `
 
@@ -76,6 +77,7 @@ const StyleLink = styled(Link)`
     :hover{
         color: white;
         text-decoration: none;
+        cursor: pointer;
     }
 `
 
