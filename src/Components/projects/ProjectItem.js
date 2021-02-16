@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
-import resume from '../../assets/pdf/resume.pdf'
 
 const Bubble = styled.div`
     width: ${props => `${props.size}vw`};
@@ -162,8 +161,6 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme, noB
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
 
-    console.log('resume', resume)
-
 
     return (
         <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
@@ -172,11 +169,9 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme, noB
             <TechList theme={theme}>{tech_split}</TechList>
             <Container>
                 {noBtn? null
-                :
-                url.length === 0 ?
-                    <PdfBtn onClick={openLink(resume)} color={theme.contactGradient}>Resume</PdfBtn>
-                    :
-                    <PdfBtn onClick={openLink(url)} color={theme.contactGradient}>Website</PdfBtn>   
+                :<PdfBtn onClick={openLink(url)} color={theme.contactGradient}>
+                    Website
+                </PdfBtn>
                 }
             </Container>
         </Bubble>

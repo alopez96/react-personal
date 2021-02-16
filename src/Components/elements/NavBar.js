@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
 import Toggle from './Toggle';
-import resume from '../../assets/pdf/resume.pdf'
+import resume from '../../assets/pdf/arturo_resume.pdf'
 
 const List = styled.div`
     transition: opacity 500ms;

@@ -5,7 +5,7 @@ import { SMALL } from '../../variables/ScreenSizes';
 import burger from '../../assets/burger.svg';
 import burgerWhite from '../../assets/burger-white.svg';
 import Toggle from './Toggle';
-import resume from '../../assets/pdf/resume.pdf'
+import resume from '../../assets/pdf/arturo_resume.pdf'
 
 
 const List = styled.div`
