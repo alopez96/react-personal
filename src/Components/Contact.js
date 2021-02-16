@@ -54,14 +54,31 @@ const Content = styled.div`
     }
 `
 
-
-const ListItem = styled.div`
+const List = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     font-size: 32px;
+    @media (max-width: ${SMALL}px) {
+        flex-direction: column;
+    }
+`
+
+const ListItem = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 32px;
+    :hover {
+        cursor: pointer;
+    }
+    @media (max-width: ${SMALL}px) {
+        margin: 10px 0;
+    }
 `
 
 const P = styled.a`
@@ -95,10 +112,7 @@ function Contact ({ theme }) {
             <Rect>
                 <Content color={theme.contactGradient}>
                 <Header>Contact</Header>
-                {/* <ListItem onClick={openLink('alopez96gucsc.edu')}>
-                        <img width="30" src={Gmail}/>
-                        <P></P>
-                    </ListItem> */}
+                <List>
                     <ListItem onClick={openLink('https://github.com/alopez96')}>
                         <Icon name='github' />
                         {/* <P>alopez96</P> */}
@@ -111,10 +125,7 @@ function Contact ({ theme }) {
                     <ListItem onClick={openLink('https://arturocreates.com/#contact')}>
                         <Icon name='mail' />
                     </ListItem>
-                    
-                                        
-                    {/* <Button color={theme.contactGradient}>Send</Button> */}
-                
+                    </List>                
                 </Content>
             </Rect>
         </Center>
