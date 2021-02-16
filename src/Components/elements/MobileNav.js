@@ -5,6 +5,7 @@ import { SMALL } from '../../variables/ScreenSizes';
 import burger from '../../assets/burger.svg';
 import burgerWhite from '../../assets/burger-white.svg';
 import Toggle from './Toggle';
+import resume from '../../assets/pdf/resume.pdf'
 
 
 const List = styled.div`
@@ -124,6 +125,15 @@ function MobileNav ({ theme, updateTheme }) {
         setisNavOpen(!value)
     }
 
+
+    const openLink = (url) => () => {
+        console.log("clicked", url)
+        window.open(url, '_blank');
+        // return false was recommended by stackoverflow
+        // it means, do not take the default option
+        return false;
+      }
+
     return (
       <div>
         {isNavOpen?
@@ -138,9 +148,9 @@ function MobileNav ({ theme, updateTheme }) {
             <StyleLink to="/projects" >
             <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Experience</ListItem>
             </StyleLink>
-            <StyleLink to="/leadership" >
-            <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Leadership</ListItem>
-            </StyleLink>
+            <ListItem theme={theme} onClick={openLink(resume)}>
+                Resume
+            </ListItem>
             <StyleLink to="/contact" >
             <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Contact</ListItem>
             </StyleLink>

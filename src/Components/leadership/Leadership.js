@@ -35,7 +35,8 @@ const Grid = styled.div`
 `
 const Space = styled.div`
     width: 100%;
-    height: 100px;
+    height: 1px;
+    margin-top: -50px;
     @media (max-width: ${SMALL}px) {
         height: 1px;
         margin-bottom: 60px;
@@ -54,7 +55,7 @@ const Header = styled.h1`
 const Leadership = ({ theme }) => {
   return (
       <div>
-          <Space><Header theme={theme}>Leadership</Header></Space>
+        <Space></Space>
         <Grid  className="projects">
             <Card
                 title="OKIA"

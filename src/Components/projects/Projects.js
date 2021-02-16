@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectItem from './ProjectItem'
 import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
+import Leadership from './../leadership/Leadership'
 
 const Grid = styled.div`
     display: grid;
@@ -64,6 +65,7 @@ const Projects = ({ theme }) => {
                 gridArea="lt0"
                 url=""
                 theme={theme}
+                noBtn={true}
                 // github="https://github.com/alopez96/react-robofriends"
                 // tech="Business Website for Allies Pro Services."
                 tech="Data Engineer & PySpark developer"
@@ -84,6 +86,7 @@ const Projects = ({ theme }) => {
                 // color={{from: "#3FFA87", to: "#4040F4"}}
                 gridArea="rt"
                 url=""
+                noBtn={true}
                 theme={theme}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Co-Lead | SQL Testing & Automation"
@@ -96,6 +99,7 @@ const Projects = ({ theme }) => {
                 gridArea="lm"
                 url="https://arturocreates.com/"
                 theme={theme}
+                noBtn={true}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Design, Develop, Test, Launch Software applications"
                 />
@@ -116,6 +120,7 @@ const Projects = ({ theme }) => {
                 gridArea="mm"
                 url=""
                 theme={theme}
+                noBtn={true}
                 // github="https://github.com/alopez96/jumpn"
                 tech="University of California, Santa Cruz"
             />
@@ -127,6 +132,7 @@ const Projects = ({ theme }) => {
                 gridArea="rm0"
                 url=""
                 theme={theme}
+                noBtn={true}
                 // github="https://github.com/alopez96/startpage"
                 tech="React and Android developer"
                 />
@@ -140,6 +146,7 @@ const Projects = ({ theme }) => {
                 tech="Web Consulting Project; Tech stack: React, Node, Express, SQL, Stripe API"
             /> */}
         </Grid>
+        <Leadership theme={theme}/>
         </div>
   )
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
 import Toggle from './Toggle';
+import resume from '../../assets/pdf/resume.pdf'
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -13,7 +14,7 @@ const List = styled.div`
     color: #dcdcdc;
     padding-top: 1rem;
     display: flex;
-    position: fixed;
+    position: absolute;
     @media (max-width: ${SMALL}px) {
       flex-direction: column;
       align-items: center;
@@ -59,32 +60,14 @@ const StyleLink = styled(Link)`
     color: inherit; 
 `
 
-const Label = styled.label`
-  color: ${(props) => props.theme.toogleColor};
-  font-size: 16px;
-  margin-left: -20px;
-  margin-top: 5px;
-    cursor: pointer;
-    margin-right: 1rem;
-    text-decoration: none;
-    position: relative;
-    &:before {
-        width: ${props => props.index ? "100%" : "0%"};
-    }
-    @media (max-width: ${SMALL}px) {
-        margin: auto;
-        margin: 10px 0;
-        font-size: 1.25em;
-        font-weight: bolder;
-        text-transform: uppercase;
-    }
-    &:hover {
-      color: ${props => props.theme.btnColor};
-      &:before {
-          width: 100%;
-      }
-    }
-` 
+
+const openLink = (url) => () => {
+  console.log("clicked", url)
+  window.open(url, '_blank');
+  // return false was recommended by stackoverflow
+  // it means, do not take the default option
+  return false;
+}
 
 function NavBar ({ theme, updateTheme }) {
     return (
@@ -96,9 +79,9 @@ function NavBar ({ theme, updateTheme }) {
           <StyleLink to="/projects" >
             <ListItem theme={theme}>Experience</ListItem>
           </StyleLink>
-          <StyleLink to="/leadership" >
-            <ListItem theme={theme}>Leadership</ListItem>
-          </StyleLink>
+          <ListItem theme={theme} onClick={openLink(resume)}>
+            Resume
+            </ListItem>
           <StyleLink to="/contact" >
             <ListItem theme={theme}>Contact</ListItem>
           </StyleLink>
