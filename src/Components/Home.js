@@ -32,7 +32,8 @@ const SubHeader = styled.p`
 const Btn = styled.button` 
     width: 50%;
     border: none;
-    background-color: #8650FF;
+    // background-color: #8650FF;
+    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     color: #fff;
     font-size: 20px;
     padding: 10px 5px;
@@ -48,7 +49,8 @@ const Btn = styled.button`
 `
 
 const Image = styled.img` 
-    background-color: #8650FF;
+    // background-color: #8650FF;
+    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
     width: 300px;
     height: 300px;
     object-fit: contain;
@@ -77,23 +79,17 @@ const StyleLink = styled(Link)`
     }
 `
 
-
-const goContact = () => {
-    console.log('contact')
-}
-
 function Home ({ theme }) {
-    console.log('props theme', theme.btnColor)
     return (
       <div className='home-pic'>
           <div className='home-section'>
             <div className='home-text'>
             <Header theme={theme}>{about.header}</Header>
             <SubHeader theme={theme}>{sub_header_split}</SubHeader>
-            <Btn onClick={() => goContact()}> <StyleLink to="/projects" >See my work</StyleLink></Btn>
+            <StyleLink to="/projects" ><Btn color={theme.contactGradient}>See my work </Btn></StyleLink>
           </div>
           </div>
-          <Image src={arturo}/>
+          <Image color={theme.contactGradient} src={arturo}/>
         </div>
     )
 }

@@ -163,15 +163,15 @@ const ProjectItem = ({ size, color, gridArea, title, body, tech, url, theme}) =>
 
 
     return (
-        <Bubble size={size} color={color} gridArea={gridArea} theme={theme}>
+        <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
             <Title theme={theme}>{title}</Title>
             <Body theme={theme}>{body}</Body>
             <TechList theme={theme}>{tech_split}</TechList>
             <Container>
                 {url.length === 0 ?
-                <PdfBtn onClick={openLink(resume)} color={color}>Resume</PdfBtn>
+                <PdfBtn onClick={openLink(resume)} color={theme.contactGradient}>Resume</PdfBtn>
                 :
-                <PdfBtn onClick={openLink(url)} color={color}>Website</PdfBtn>
+                <PdfBtn onClick={openLink(url)} color={theme.contactGradient}>Website</PdfBtn>
                 // <Button color={color}><img width="20" src={Open} onClick={openLink(url)}></img></Button>
                 }
                 {/* <Button color={color}><img width="20" src={Github} onClick={openLink(github)}></img></Button> */}

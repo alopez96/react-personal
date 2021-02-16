@@ -8,14 +8,6 @@ import NavBar from './Components/elements/NavBar';
 import MobileNav from './Components/elements/MobileNav';
 import styled from 'styled-components';
 import { lightTheme, darkTheme } from './variables/Theme';
-import LeadershipItem from './Components/leadership/LeadershipItem';
-
-const AppDiv = styled.div`
-  background-color: ${props => props.theme.backgroundColor};
-  font-size: calc(10px + 2vmin);
-  color: white;
-  min-height: 100vh;
-`
 
 
 function App() {
@@ -77,6 +69,12 @@ function App() {
     );
 }
 
+const AppDiv = styled.div`
+  background-color: ${props => props.theme.backgroundColor};
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+`
 
 
 export default withRouter(App);

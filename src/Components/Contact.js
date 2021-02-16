@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Github from './logos/github.png';
-import Twitter from './logos/twitter.png';
 import { Icon } from 'semantic-ui-react'
 
 import { SMALL } from '../variables/ScreenSizes'
@@ -81,12 +79,6 @@ const ListItem = styled.div`
     }
 `
 
-const P = styled.a`
-    margin-left: 10px;
-    font-size: 20px;
-    cursor: pointer;
-`
-
 const MainHeader = styled.h1`
     display: none;
     @media (max-width: ${SMALL}px) {
@@ -115,7 +107,6 @@ function Contact ({ theme }) {
                 <List>
                     <ListItem onClick={openLink('https://github.com/alopez96')}>
                         <Icon name='github' />
-                        {/* <P>alopez96</P> */}
                     </ListItem>
 
                     <ListItem onClick={openLink('https://www.linkedin.com/in/rturolopez/')}>
