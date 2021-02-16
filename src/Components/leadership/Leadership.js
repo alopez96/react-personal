@@ -94,7 +94,7 @@ const Leadership = ({ theme }) => {
                 theme={theme}
                 noBtn={true}
                 url="https://www.alliesproservices.com/"
-                tech="Organized and a connected with local high school to create a Mentorship program."
+                tech="Organized and connected with local high school to create a Mentorship program."
                 />
             <Card
                 title="SHPE"

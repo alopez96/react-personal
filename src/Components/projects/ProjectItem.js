@@ -86,7 +86,7 @@ const Body = styled.h6`
 
 const TechList = styled.p`
     // color: ${props => props.theme.textSecondary};
-    font-size: 14px;
+    font-size: 16px;
     @media (max-width: ${SMALL}px) {
         margin: 1rem;
     }
