@@ -3,8 +3,8 @@ import Home from './Components/home/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/projects/Projects';
 import Contact from './Components/contact/Contact';
-import NavBar from './Components/elements/nav/NavBar';
-import MobileNav from './Components/elements/nav/MobileNav';
+import NavBar from './Components/nav/NavBar';
+import MobileNav from './Components/nav/MobileNav';
 import styled from 'styled-components';
 import { lightTheme, darkTheme } from './variables/Theme';
 

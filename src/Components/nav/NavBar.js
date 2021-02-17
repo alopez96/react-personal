@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SMALL } from '../../../variables/ScreenSizes';
-import Toggle from '../Toggle';
-import resume from '../../../assets/pdf/arturo_resume.pdf';
+import { SMALL } from '../../variables/ScreenSizes';
+import Toggle from './../elements/Toggle';
+import resume from '../../assets/pdf/arturo_resume.pdf';
 import navList from './NavList';
-import openLink from './../openLink';
+import openLink from '../elements/openLink';
 
 const List = styled.div`
     transition: opacity 500ms;
