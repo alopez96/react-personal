@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { SMALL } from '../../variables/ScreenSizes'
+import AboutCard from './AboutCard'
+import about from './../../variables/AboutText'
 
 const MainHeader = styled.h1`
     display: none;
@@ -12,13 +14,35 @@ const MainHeader = styled.h1`
     }
 `
 
-function Contact ({ theme }) {
+const Section = styled.h1`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    @media (max-width: ${SMALL}px) {
+        
+    }
+`
+
+function About ({ theme }) {
   return (
       <div>
-        <MainHeader theme={theme}>Contact</MainHeader>
-        
+        <MainHeader theme={theme}>About</MainHeader>
+        <Section>
+        <AboutCard
+                title={about.about_header}
+                size={20}
+                color={{from: "#4040F4", to: "#713FFA"}}
+                gridArea="lt0"
+                url=""
+                theme={theme}
+                noBtn={true}
+                // date={'Nov 2020 - Present'}
+                tech={about.about_p}
+                />
+        </Section>
       </div>
   )
 }
 
-export default Contact
+export default About

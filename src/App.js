@@ -3,6 +3,7 @@ import Home from './Components/home/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/projects/Projects';
 import Contact from './Components/contact/Contact';
+import About from './Components/about/About';
 import NavBar from './Components/nav/NavBar';
 import MobileNav from './Components/nav/MobileNav';
 import styled from 'styled-components';
@@ -61,6 +62,7 @@ function App() {
           <Route exact path="/" render={(props) => <Home {...props} theme={theme}/>} />
           <Route path="/contact" render={(props) => <Contact {...props} theme={theme}/>} />
           <Route path="/projects" render={(props) => <Projects {...props} theme={theme}/>}  />
+          <Route path="/about" render={(props) => <About {...props} theme={theme}/>}  />
         </div>
       </Router>
     </AppDiv>

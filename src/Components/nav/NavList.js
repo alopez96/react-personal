@@ -4,6 +4,10 @@ const navList = [
       title: 'Home'
     },
     {
+      route: '/about',
+      title: 'About'
+    },
+    {
       route: '/projects',
       title: 'Experience'
     },

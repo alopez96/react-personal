@@ -1,40 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
+import openLink from './../elements/openLink'
 
 const Bubble = styled.div`
-    width: ${props => `${props.size}vw`};
-    height: ${props => `${props.size}vw`};
-    border-radius: 5%;
-    // background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    position: relative;
+    width: 90%;
+    height: 500px;
+    border-radius: 0px;
     grid-area: ${props => props.gridArea};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1px;
+    padding: 0 50px;
     box-shadow: 4px 4px 8px 0 ${props => props.theme.shadow};
-    &:before {
-        content: "";
-        position: absolute;
-        left: -.5vw;
-        top: -.5vw;
-        width: ${props => `${props.size + 1}vw`};
-        height: ${props => `${props.size + 1}vw`};
-        border-radius: 10%;
-        background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-        z-index: -2;
-        opacity: .2;
-    }
      @media (max-width: 1200px) {
-        width: 70%;
-        height: 200px;
-        min-height: 50px;
-        border-radius: 5px;
+        width: 90%;
+        height: 400px;
+        min-height: 50%;
         grid-area: none;
-        flex-direction: row;
-        justify-content: start;
+        justify-content: center;
         margin: 10px;
         &:before {
             display: none;
@@ -42,8 +27,7 @@ const Bubble = styled.div`
     }
     @media (max-width: ${SMALL}px) {
         width: 95%;
-        height: 200px;
-        border-radius: 5px;
+        height: 100%;
         margin: 10px 0;
         &:before {
             display: none;
@@ -58,24 +42,15 @@ const Bubble = styled.div`
     border: 1px #ccc;
     border-style: ${props => props.theme.border};
     color: ${props => props.theme.textSecondary};
-
+    background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+    color: white;
     // this will prevent the touch on mobile device to react to :hover definition
-    @media (hover: hover) {
-        :hover {
-            background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-            color: white;
-        }
-    }
-`
-
-const Title = styled.h3`
-    // color: ${props => props.theme.textSecondary};
-    font-size: 16px;
-    font-weight: bold;
-    @media (max-width: 1200px) {
-        margin-left: 0.5rem;
-        font-size: 1em;
-    }
+    // @media (hover: hover) {
+    //     :hover {
+    //         background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+    //         color: white;
+    //     }
+    // }
 `
 
 const Body = styled.h6`
@@ -89,13 +64,16 @@ const Body = styled.h6`
 
 const TechList = styled.p`
     // color: ${props => props.theme.textSecondary};
-    font-size: 16px;
+    font-size: 18px;
+    width: 55%;
     @media (max-width: ${SMALL}px) {
-        margin: 0 2px 14px 2px;
+        width: 90%;
+        font-size: 16px;
+        padding: 20px 2px;
     }
 `
 
-const PdfBtn = styled.div`
+const Button = styled.div`
     width: 150px;
     height: 36px;
     border-radius: 23px;
@@ -119,44 +97,24 @@ const PdfBtn = styled.div`
     }
 `
 
-const Container = styled.div`
-    margin-top: 10px;
-    display: flex;
-    @media (max-width: 1200px) {
-        margin-top: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-`
-
-const openLink = (url) => () => {
-    console.log("clicked", url)
-    window.open(url, '_blank');
-    // return false was recommended by stackoverflow
-    // it means, do not take the default option
-    return false;
-}
-
-const ProjectItem = ({ size, color, gridArea, title, date, tech, url, theme, noBtn}) => {
+const AboutCard = ({ size, color, gridArea, title, date, tech, url, theme, noBtn}) => {
 
     // split the about string for new line characters
-    const tech_split = tech.split(';').map(str => <p>{str}</p>);
+    const tech_split = tech.split('\n').map(str => <p>{str}</p>);
 
 
     return (
         <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
-            <Title theme={theme}>{title}</Title>
+            {/* <Title theme={theme}>{title}</Title> */}
             <TechList theme={theme}>{tech_split}</TechList>
             <Body theme={theme}>{date}</Body>
-            <Container>
-                {noBtn? null
-                :<PdfBtn onClick={openLink(url)} color={theme.contactGradient}>
+            {noBtn? null
+                :<Button onClick={openLink(url)} color={theme.contactGradient}>
                     Website
-                </PdfBtn>
+                </Button>
                 }
-            </Container>
         </Bubble>
     )
 }
 
-export default ProjectItem
+export default AboutCard

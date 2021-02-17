@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
 import about from '../../variables/AboutText'
 import arturo from '../../assets/arturo-circle.png'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 // split the about string for new line characters
 const sub_header_split = about.subheader.split('\n').map(str => <p>{str}</p>);
