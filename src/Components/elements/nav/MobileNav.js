@@ -1,11 +1,10 @@
 import React, { Component, useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SMALL } from '../../variables/ScreenSizes';
-import burger from '../../assets/burger.svg';
-import burgerWhite from '../../assets/burger-white.svg';
-import Toggle from './Toggle';
-import resume from '../../assets/pdf/arturo_resume.pdf'
+import { SMALL } from '../../../variables/ScreenSizes';
+import { Icon } from 'semantic-ui-react'
+import Toggle from '../Toggle';
+import resume from '../../../assets/pdf/arturo_resume.pdf'
 
 
 const List = styled.div`
@@ -164,22 +163,20 @@ function MobileNav ({ theme, updateTheme }) {
 }
 
 
-function Burger({isNavOpen, toogleNav, theme}) {
+const BurgerIcon = styled.div`
+    top: 2px;
+    right: 12px;
+    position: fixed;
+    font-size: 30px;
+    color: ${props => props.theme.textSecondary};
+`
 
-    if(theme.dark === true){
-        return(
-            <div className='open-btn' onClick={()=>toogleNav(isNavOpen)}>
-                    <img src={burgerWhite} alt='nav icon'/>
-                </div>
-            )
-    }
-    else{
-        return(
-            <div className='open-btn' onClick={()=>toogleNav(isNavOpen)}>
-                    <img src={burger} alt='nav icon'/>
-                </div>
-            )
-    }
+function Burger({isNavOpen, toogleNav, theme}) {
+    return(
+        <BurgerIcon theme={theme} onClick={()=>toogleNav(isNavOpen)}>
+                <Icon name='bars'/>
+            </BurgerIcon>
+        )
 }
 
 

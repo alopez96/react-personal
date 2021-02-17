@@ -26,12 +26,6 @@
   align-content: center;
 }
 
-.open-btn{
-  top: 12px;
-  right: 12px;
-  position: fixed;
-}
-
 @media (max-width: 500px) {
   .home-section{
     height: 400px;
