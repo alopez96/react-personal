@@ -20,7 +20,7 @@ const Section = styled.h1`
     align-items: center;
     min-height: 100vh;
     @media (max-width: ${SMALL}px) {
-        
+        min-height: 80vh;
     }
 `
 

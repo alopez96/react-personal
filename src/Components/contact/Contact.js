@@ -13,7 +13,7 @@ const Center = styled.div`
     @media (max-width: ${SMALL}px) {
         justify-content: center;
         align-content: center;
-        height: 100vh;
+        min-height: 80vh;
         width: 100vw;
     }
 `
