@@ -99,7 +99,6 @@ function MobileNav ({ theme, updateTheme }) {
     const [isNavOpen, setisNavOpen] = useState(false)
 
     const toogleNav = (value) => { 
-        console.log('pressed toogle', value)
         setisNavOpen(!value)
     } 
 

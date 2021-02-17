@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { SMALL } from '../../variables/ScreenSizes'
+import openLink from '../elements/openLink'
 
 const Center = styled.div`
     width: 100vw;
@@ -86,14 +87,6 @@ const MainHeader = styled.h1`
         color: ${props => props.theme.textSecondary};
     }
 `
-
-const openLink = (url) => () => {
-    if(url.charAt(0) !== "h"){
-        window.location = `mailto:${url}`;
-    }else{
-        window.open(url);
-    }
-}
 
 function Contact ({ theme }) {
   return (
