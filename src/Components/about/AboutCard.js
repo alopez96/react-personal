@@ -110,7 +110,7 @@ const AboutCard = ({ size, color, gridArea, title, date, tech, url, theme, noBtn
             <Body theme={theme}>{date}</Body>
             {noBtn? null
                 :<Button onClick={openLink(url)} color={theme.contactGradient}>
-                    Website
+                    
                 </Button>
                 }
         </Bubble>
