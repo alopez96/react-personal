@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
-
 import { SMALL } from '../../variables/ScreenSizes'
 
 const Center = styled.div`

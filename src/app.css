@@ -120,3 +120,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+#close-btn{
+  color: rgb(61, 61, 61);
+}

@@ -79,7 +79,11 @@ const CloseBtn = styled.div`
     color: ${props => props.theme.textSecondary};
     font-weight: 600;
     @media (max-width: ${SMALL}px) {
-        
+        position: absolute;
+        top: 5px;
+        right: 12px;
+        position: fixed;
+        font-size: 30px;
     }
     &:hover {
       color: ${props => props.theme.btnColor};
@@ -111,11 +115,10 @@ function MobileNav ({ theme, updateTheme }) {
       <div>
         {isNavOpen?
         <NavPage theme={theme}>
+        <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} >
+            x 
+        </CloseBtn> 
         <List>
-            <ListItem>
-                <Toggle theme={theme} updateTheme={updateTheme}/>
-            </ListItem>
-
             {navList.map((item) => {
             if(item.route === 'resume-link'){
               return(
@@ -131,8 +134,11 @@ function MobileNav ({ theme, updateTheme }) {
               )
             }
           })}
+
+        <ListItem>
+            <Toggle theme={theme} updateTheme={updateTheme}/>
+        </ListItem>
         
-        <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} className='pointer'>X</CloseBtn> 
         </List>
         </NavPage>
         : <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
@@ -145,7 +151,7 @@ function MobileNav ({ theme, updateTheme }) {
 const BurgerIcon = styled.div`
     top: 2px;
     right: 12px;
-    position: fixed;
+    position: absolute;
     font-size: 30px;
     color: ${props => props.theme.textSecondary};
 `
