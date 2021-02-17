@@ -6,6 +6,7 @@ import { Icon } from 'semantic-ui-react'
 import Toggle from '../Toggle';
 import resume from '../../../assets/pdf/arturo_resume.pdf';
 import navList from './NavList';
+import openLink from './../openLink';
 
 
 const List = styled.div`
@@ -100,16 +101,7 @@ function MobileNav ({ theme, updateTheme }) {
     const toogleNav = (value) => { 
         console.log('pressed toogle', value)
         setisNavOpen(!value)
-    }
-
-
-    const openLink = (url) => () => {
-        console.log("clicked", url)
-        window.open(url, '_blank');
-        // return false was recommended by stackoverflow
-        // it means, do not take the default option
-        return false;
-      }
+    } 
 
     return (
       <div>

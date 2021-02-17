@@ -5,6 +5,7 @@ import { SMALL } from '../../../variables/ScreenSizes';
 import Toggle from '../Toggle';
 import resume from '../../../assets/pdf/arturo_resume.pdf';
 import navList from './NavList';
+import openLink from './../openLink';
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -60,15 +61,6 @@ const StyleLink = styled(Link)`
     text-decoration: none;
     color: inherit; 
 `
-
-
-const openLink = (url) => () => {
-  console.log("clicked", url)
-  window.open(url, '_blank');
-  // return false was recommended by stackoverflow
-  // it means, do not take the default option
-  return false;
-}
 
 
 function NavBar ({ theme, updateTheme }) {
