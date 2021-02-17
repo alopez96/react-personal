@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SMALL } from '../../variables/ScreenSizes';
-import Toggle from './Toggle';
-import resume from '../../assets/pdf/arturo_resume.pdf'
+import { SMALL } from '../../../variables/ScreenSizes';
+import Toggle from '../Toggle';
+import resume from '../../../assets/pdf/arturo_resume.pdf';
+import navList from './NavList';
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -69,22 +70,26 @@ const openLink = (url) => () => {
   return false;
 }
 
+
 function NavBar ({ theme, updateTheme }) {
     return (
       <div>
         <List>
-          <StyleLink to="/" >
-            <ListItem theme={theme}>Home</ListItem>
-          </StyleLink>
-          <StyleLink to="/projects" >
-            <ListItem theme={theme}>Experience</ListItem>
-          </StyleLink>
-          <ListItem theme={theme} onClick={openLink(resume)}>
-            Resume
-            </ListItem>
-          <StyleLink to="/contact" >
-            <ListItem theme={theme}>Contact</ListItem>
-          </StyleLink>
+          {navList.map((item) => {
+            if(item.route === 'resume-link'){
+              return(
+                <ListItem theme={theme} onClick={openLink(resume)}>
+                  Resume
+                </ListItem>
+              )
+            } else{
+              return(
+                <StyleLink to={item.route}>
+                <ListItem theme={theme}>{item.title}</ListItem>
+                </StyleLink>
+              )
+            }
+          })}
           <ListItem>
             <Toggle theme={theme} updateTheme={updateTheme}/>
           </ListItem>

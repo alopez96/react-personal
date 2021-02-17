@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { SMALL } from '../../../variables/ScreenSizes';
 import { Icon } from 'semantic-ui-react'
 import Toggle from '../Toggle';
-import resume from '../../../assets/pdf/arturo_resume.pdf'
+import resume from '../../../assets/pdf/arturo_resume.pdf';
+import navList from './NavList';
 
 
 const List = styled.div`
@@ -74,33 +75,6 @@ const NavPage = styled.div`
     z-index: 4;
 `
 
-const Label = styled.label`
-  color: ${(props) => props.theme.toogleColor};
-  font-size: 16px;
-  margin-left: -20px;
-  margin-top: 5px;
-    cursor: pointer;
-    margin-right: 1rem;
-    text-decoration: none;
-    position: relative;
-    &:before {
-        width: ${props => props.index ? "100%" : "0%"};
-    }
-    @media (max-width: ${SMALL}px) {
-        margin: auto;
-        margin: 10px 0;
-        font-size: 1.25em;
-        font-weight: bolder;
-        text-transform: uppercase;
-    }
-    &:hover {
-      color: ${props => props.theme.btnColor};
-      &:before {
-          width: 100%;
-      }
-    }
-` 
-
 const CloseBtn = styled.div`
     color: ${props => props.theme.textSecondary};
     font-weight: 600;
@@ -141,19 +115,24 @@ function MobileNav ({ theme, updateTheme }) {
             <ListItem>
                 <Toggle theme={theme} updateTheme={updateTheme}/>
             </ListItem>
-            <StyleLink to="/">
-                <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Home</ListItem>
-            </StyleLink>
-            <StyleLink to="/projects" >
-            <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Experience</ListItem>
-            </StyleLink>
-            <ListItem theme={theme} onClick={openLink(resume)}>
-                Resume
-            </ListItem>
-            <StyleLink to="/contact" >
-            <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>Contact</ListItem>
-            </StyleLink>
-            <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} className='pointer'>X</CloseBtn> 
+
+            {navList.map((item) => {
+            if(item.route === 'resume-link'){
+              return(
+                <ListItem theme={theme} onClick={openLink(resume)}>
+                  Resume
+                </ListItem>
+              )
+            } else{
+              return(
+                <StyleLink to={item.route}>
+                <ListItem onClick={()=>toogleNav(isNavOpen)} theme={theme}>{item.title}</ListItem>
+                </StyleLink>
+              )
+            }
+          })}
+        
+        <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} className='pointer'>X</CloseBtn> 
         </List>
         </NavPage>
         : <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
