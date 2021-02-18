@@ -20,7 +20,7 @@ const Header = styled.h1`
 `
 
 const SubHeader = styled.p`
-    color: ${props => props.theme.textSecondary};
+    color: ${props => props.theme.textPrimary};
     margin-top: 20px;
     @media (max-width: ${SMALL}px) {
         width: 90%;

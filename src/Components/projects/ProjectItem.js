@@ -55,9 +55,9 @@ const Bubble = styled.div`
         padding: 0 1px;
         text-align: left;
     }
-    border: 1px #ccc;
+    border: 1px #8650FF;
     border-style: ${props => props.theme.border};
-    color: ${props => props.theme.textSecondary};
+    color: ${props => props.theme.textPrimary};
 
     // this will prevent the touch on mobile device to react to :hover definition
     @media (hover: hover) {
