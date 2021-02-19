@@ -17,7 +17,7 @@ const Label = styled.label`
     @media (max-width: ${SMALL}px) {
         margin: auto;
         margin: 10px;
-        font-size: 20px;
+        font-size: 15px;
         text-transform: uppercase;
     }
     &:hover {
@@ -26,7 +26,13 @@ const Label = styled.label`
           width: 100%;
       }
     }
-` 
+`
+
+const Content = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 5px;
+`
 
 function Toggle ({ theme, updateTheme }) {
     return (
@@ -34,15 +40,15 @@ function Toggle ({ theme, updateTheme }) {
         // <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
         // <label style={{color:theme.toogleColor}}>Dark Mode</label>
         // </div>
-        <div>
+        <Content>
           <label class="switch">
-          <input type="checkbox" onClick={() => {updateTheme()}}/>
-          <span class="slider round"></span>
-        </label>
+            <input type="checkbox" onClick={() => {updateTheme()}}/>
+            <span class="slider round"></span>
+          </label>
         <Label theme={theme}>
-          Dark Mode
+          Dark mode
         </Label>
-        </div>
+        </Content>
     )
 }
 

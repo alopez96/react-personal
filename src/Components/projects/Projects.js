@@ -39,7 +39,7 @@ const Space = styled.div`
     height: 100px;
     @media (max-width: ${SMALL}px) {
         height: 1px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 `
 
@@ -49,6 +49,8 @@ const Header = styled.h1`
         display: inherit;
         margin-left: 10px;
         color: ${props => props.theme.textSecondary};
+        font-size: 30px;
+        font-weight: 300;
     }
 `
 
@@ -57,7 +59,7 @@ const Projects = ({ theme }) => {
   return (
       <div> 
           <Space><Header theme={theme}>Experience</Header></Space>
-        <Grid  className="projects">
+            <Grid  className="projects">
             <ProjectItem
                 title="Software Developer @ Accenture"
                 size={20}

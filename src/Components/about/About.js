@@ -27,7 +27,6 @@ const Section = styled.h1`
 function About ({ theme }) {
   return (
       <div>
-        <MainHeader theme={theme}>About</MainHeader>
         <Section>
         <AboutCard
                 title={about.about_header}

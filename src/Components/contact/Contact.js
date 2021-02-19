@@ -91,7 +91,7 @@ const MainHeader = styled.h1`
 function Contact ({ theme }) {
   return (
       <div>
-        <MainHeader theme={theme}>Contact</MainHeader>
+        {/* <MainHeader theme={theme}>Contact</MainHeader> */}
         <Center>
             <Rect>
                 <Content color={theme.contactGradient}>

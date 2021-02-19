@@ -70,6 +70,7 @@ const TechList = styled.p`
         width: 90%;
         font-size: 16px;
         padding: 20px 2px;
+        font-weight: 400;
     }
 `
 
@@ -97,6 +98,18 @@ const Button = styled.div`
     }
 `
 
+const MainHeader = styled.h1`
+    display: none;
+    @media (max-width: ${SMALL}px) {
+        display: inherit;
+        width: 90%;
+        margin: 0px;
+        padding-top: 10px;
+        font-size: 30px;
+        font-weight: 300;
+    }
+`
+
 const AboutCard = ({ size, color, gridArea, title, date, tech, url, theme, noBtn}) => {
 
     // split the about string for new line characters
@@ -105,7 +118,7 @@ const AboutCard = ({ size, color, gridArea, title, date, tech, url, theme, noBtn
 
     return (
         <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
-            {/* <Title theme={theme}>{title}</Title> */}
+            <MainHeader theme={theme}>About me</MainHeader>
             <TechList theme={theme}>{tech_split}</TechList>
             <Body theme={theme}>{date}</Body>
             {noBtn? null

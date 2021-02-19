@@ -94,6 +94,11 @@ const CloseBtn = styled.div`
     }
 `
 
+const BurgerAndToggle = styled.div`
+    margin-left: 5px;
+    justify-content: center;
+`
+
 function MobileNav ({ theme, updateTheme }) {
 
     const [isNavOpen, setisNavOpen] = useState(false)
@@ -104,6 +109,7 @@ function MobileNav ({ theme, updateTheme }) {
 
     return (
       <div>
+        <Toggle theme={theme} updateTheme={updateTheme}/>
         {isNavOpen?
         <NavPage theme={theme}>
         <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} >
@@ -124,15 +130,12 @@ function MobileNav ({ theme, updateTheme }) {
                 </StyleLink>
               )
             }
-          })}
-
-        <ListItem>
-            <Toggle theme={theme} updateTheme={updateTheme}/>
-        </ListItem>
-        
+          })}        
         </List>
         </NavPage>
-        : <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
+        :<BurgerAndToggle>
+            <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
+          </BurgerAndToggle>
         }
       </div>
     )
