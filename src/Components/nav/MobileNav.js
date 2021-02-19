@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
@@ -16,9 +16,7 @@ const List = styled.div`
     right: 2rem;
     opacity: 1;
     color: #dcdcdc;
-    padding-top: 1rem;
     display: flex;
-    position: fixed;
     @media (max-width: ${SMALL}px) {
       flex-direction: column;
       align-items: center;
@@ -70,7 +68,8 @@ const NavPage = styled.div`
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding-top: 100px;
     overflow: hidden;
     position: fixed;
     z-index: 4;
@@ -108,11 +107,15 @@ function MobileNav ({ theme, updateTheme, isNavOpen, setisNavOpen }) {
     return (
       <div>
         <Toggle theme={theme} updateTheme={updateTheme}/>
+
         {isNavOpen?
+        // when nav is open, display Nav Page content
+        // which includes close btn, and nav options list
         <NavPage theme={theme}>
         <CloseBtn theme={theme} onClick={()=>toogleNav(isNavOpen)} >
             x 
-        </CloseBtn> 
+        </CloseBtn>
+        
         <List>
             {navList.map((item) => {
             if(item.route === 'resume-link'){
@@ -131,7 +134,10 @@ function MobileNav ({ theme, updateTheme, isNavOpen, setisNavOpen }) {
           })}        
         </List>
         </NavPage>
-        :<BurgerAndToggle>
+        // end Nav Page content
+
+        : // when nav is closed, display Burger menu btn
+        <BurgerAndToggle>
             <Burger isNavOpen={isNavOpen} toogleNav={toogleNav} theme={theme}/>
           </BurgerAndToggle>
         }
@@ -140,6 +146,7 @@ function MobileNav ({ theme, updateTheme, isNavOpen, setisNavOpen }) {
 }
 
 
+// define styling on burger icon
 const BurgerIcon = styled.div`
     top: 2px;
     right: 12px;
