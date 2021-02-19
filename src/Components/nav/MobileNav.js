@@ -99,9 +99,7 @@ const BurgerAndToggle = styled.div`
     justify-content: center;
 `
 
-function MobileNav ({ theme, updateTheme }) {
-
-    const [isNavOpen, setisNavOpen] = useState(false)
+function MobileNav ({ theme, updateTheme, isNavOpen, setisNavOpen }) {
 
     const toogleNav = (value) => { 
         setisNavOpen(!value)

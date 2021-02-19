@@ -15,6 +15,7 @@ function App() {
   const [theme, setTheme] = useState(lightTheme)
   const [width, setWidth] = useState(window.innerWidth)
   const [isMobile, setisMobile] = useState(window.innerWidth < 500)
+  const [isNavOpen, setisNavOpen] = useState(false)
 
   //like component did mount
   useEffect(() => {
@@ -49,13 +50,22 @@ function App() {
   useEffect(()=>{
     console.log('theme updated', theme)
   }, [theme])
+
+  // handle update on state: isNavOpen
+  useEffect(()=>{
+    // if nav is open, do not allow for scroll
+    isNavOpen
+      ? document.body.style.overflow = "hidden"
+      : document.body.style.overflow = "visible"
+  }, [isNavOpen])
   
+
     return (
       <AppDiv theme={theme}>
         <Router>
         <div>
           {isMobile?
-          <MobileNav index="0" theme={theme} updateTheme={updateTheme}/>
+          <MobileNav index="0" isNavOpen={isNavOpen} setisNavOpen={setisNavOpen} theme={theme} updateTheme={updateTheme}/>
           :
           <NavBar index="0" theme={theme} updateTheme={updateTheme}/>
           }
