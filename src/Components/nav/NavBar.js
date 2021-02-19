@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
 import Toggle from './../elements/Toggle';
-import resume from '../../assets/pdf/arturo_resume.pdf';
+// import resume from '../../assets/pdf/arturo_resume.pdf';
 import navList from './NavList';
 import openLink from '../elements/openLink';
 
@@ -69,10 +69,10 @@ function NavBar ({ theme, updateTheme }) {
         <List>
           {navList.map((item) => {
             if(item.route === 'resume-link'){
-              return(
-                <ListItem theme={theme} onClick={openLink(resume)}>
-                  Resume
-                </ListItem>
+              return( null
+                // <ListItem theme={theme} onClick={openLink(resume)}>
+                //   Resume
+                // </ListItem>
               )
             } else{
               return(
