@@ -1,19 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
-import openLink from './../elements/openLink'
+import { Link } from 'react-router-dom'
 
 const Bubble = styled.div`
     width: 90%;
     height: 500px;
     border-radius: 0px;
-    grid-area: ${props => props.gridArea};
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 50px;
-    box-shadow: 4px 4px 8px 0 ${props => props.theme.shadow};
      @media (max-width: 1200px) {
         width: 90%;
         height: 400px;
@@ -62,7 +60,7 @@ const Body = styled.h6`
     }
 `
 
-const TechList = styled.p`
+const MainText = styled.p`
     // color: ${props => props.theme.textSecondary};
     font-size: 18px;
     width: 55%;
@@ -77,17 +75,13 @@ const TechList = styled.p`
 const Button = styled.div`
     width: 150px;
     height: 36px;
-    border-radius: 23px;
-    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    color: white;
+    color: black;
     transition: box-shadow .5s, transform .5s;
     &:hover {
         transform: scale(1.1);
@@ -95,6 +89,9 @@ const Button = styled.div`
     }
     @media (max-width: ${SMALL}px) {
         width: 100px;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: 20px;
     }
 `
 
@@ -110,20 +107,30 @@ const MainHeader = styled.h1`
     }
 `
 
-const AboutCard = ({ size, color, gridArea, title, date, tech, url, theme, noBtn}) => {
+const StyleLink = styled(Link)`
+    text-decoration: none;
+    color: inherit;
+    :hover{
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+`
+
+const AboutCard = ({ size, title, date, about, url, theme, noBtn}) => {
 
     // split the about string for new line characters
-    const tech_split = tech.split('\n').map(str => <p>{str}</p>);
-
+    const about_split = about.split('\n').map(str => <p>{str}</p>)
 
     return (
-        <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
-            <MainHeader theme={theme}>About me</MainHeader>
-            <TechList theme={theme}>{tech_split}</TechList>
+        <Bubble size={size} color={theme.contactGradient} theme={theme}>
+            <MainHeader theme={theme}>{title}</MainHeader>
+            <MainText theme={theme}>{about_split}</MainText>
             <Body theme={theme}>{date}</Body>
-            {noBtn? null
-                :<Button onClick={openLink(url)} color={theme.contactGradient}>
-                    
+            { noBtn ? null // if noBtn is passed down from props, do not display
+                :
+                <Button color={theme.contactGradient}>
+                    <StyleLink to='/contact'>Contact</StyleLink>
                 </Button>
                 }
         </Bubble>
