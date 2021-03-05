@@ -4,14 +4,14 @@ import { SMALL } from '../../variables/ScreenSizes'
 import { Link } from 'react-router-dom'
 
 const Bubble = styled.div`
-    width: 90%;
+    width: 70%;
     height: 500px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 20px;
      @media (max-width: 1200px) {
         width: 90%;
         height: 400px;
@@ -63,7 +63,7 @@ const Body = styled.h6`
 const MainText = styled.p`
     // color: ${props => props.theme.textSecondary};
     font-size: 18px;
-    width: 55%;
+    width: 90%;
     @media (max-width: ${SMALL}px) {
         width: 90%;
         font-size: 16px;
@@ -123,7 +123,7 @@ const AboutCard = ({ size, title, date, about, url, theme, noBtn}) => {
     const about_split = about.split('\n').map(str => <p>{str}</p>)
 
     return (
-        <Bubble size={size} color={theme.contactGradient} theme={theme}>
+        <Bubble size={size} color={theme.gradient} theme={theme}>
             <MainHeader theme={theme}>{title}</MainHeader>
             <MainText theme={theme}>{about_split}</MainText>
             <Body theme={theme}>{date}</Body>
