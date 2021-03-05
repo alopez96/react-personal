@@ -27,9 +27,9 @@ const darkTheme = {
         to: "#8650FF",
         from: "#33249D"
     },
-    textPrimary: "#FFFFFF",
+    textPrimary: "#FAFAFA",
     textSecondary: "#8650FF",
-    backgroundColor: "#12100E",
+    backgroundColor: "#000",
     btnColor: 'white',
     toogleColor: 'white',
     shadow: 'none',
