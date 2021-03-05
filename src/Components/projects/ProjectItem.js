@@ -13,7 +13,7 @@ const Bubble = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1px;
+    padding: 0 4px;
     box-shadow: 4px 4px 8px 0 ${props => props.theme.shadow};
     &:before {
         content: "";
@@ -53,7 +53,7 @@ const Bubble = styled.div`
         justify-content: center;
         align-items: left;
         padding: 0 1px;
-        text-align: left;
+        text-align: center;
     }
     border: 1px #8650FF;
     border-style: ${props => props.theme.border};
