@@ -12,10 +12,6 @@ const navList = [
       title: 'Experience'
     },
     {
-      route: 'portfolio',
-      title: 'Portfolio'
-    },
-    {
       route: '/contact',
       title: 'Contact'
     },
