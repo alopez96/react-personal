@@ -125,3 +125,20 @@ input:checked + .slider:before {
 #close-btn{
   color: rgb(61, 61, 61);
 }
+
+
+.center{
+  justify-content: center;
+  align-items: center;
+  background-color: #DEF2F1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .center{
+    width: auto;
+    height: auto;
+  }
+}

@@ -8,6 +8,7 @@ import NavBar from './Components/nav/NavBar';
 import MobileNav from './Components/nav/MobileNav';
 import styled from 'styled-components';
 import { lightTheme, darkTheme } from './variables/Theme';
+import Auth from './Components/auth/Auth';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   const [width, setWidth] = useState(window.innerWidth)
   const [isMobile, setisMobile] = useState(window.innerWidth < 500)
   const [isNavOpen, setisNavOpen] = useState(false)
+  const [isAuth, setisAuth] = useState(false)
 
   //like component did mount
   useEffect(() => {
@@ -58,11 +60,28 @@ function App() {
       ? document.body.style.overflow = "hidden"
       : document.body.style.overflow = "visible"
   }, [isNavOpen])
+
+
+  const handlePassword = (pass) => {
+    console.log('password', pass)
+  }
   
 
     return (
+      <div>
       <AppDiv theme={theme}>
-        <Router>
+      
+      {!isAuth
+      
+      // if user is not authorized, display Auth screen
+      ?
+      <div className='center'>
+        <Auth handlePassword={handlePassword}/>
+      </div>
+
+      :
+      // display all content when user has entered correct password
+      <Router>
         <div>
           {isMobile?
           <MobileNav index="0" isNavOpen={isNavOpen} setisNavOpen={setisNavOpen} theme={theme} updateTheme={updateTheme}/>
@@ -75,7 +94,9 @@ function App() {
           <Route path="/about" render={(props) => <About {...props} theme={theme}/>}  />
         </div>
       </Router>
+      }
     </AppDiv>
+    </div>
     );
 }
 
