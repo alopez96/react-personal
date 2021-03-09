@@ -63,7 +63,13 @@ function App() {
 
 
   const handlePassword = (pass) => {
-    console.log('password', pass)
+    if(pass === process.env.REACT_APP_PASSWORD){
+      console.log('loged in')
+      setisAuth(true)
+    } else {
+      console.log('error')
+      setisAuth(false)
+    }
   }
   
 
