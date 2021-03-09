@@ -18,6 +18,8 @@ function App() {
   const [isMobile, setisMobile] = useState(window.innerWidth < 500)
   const [isNavOpen, setisNavOpen] = useState(false)
   const [isAuth, setisAuth] = useState(false)
+  const [errorText, setErrorText] = useState('')
+  const [password, setPassword] = useState('')
 
   //like component did mount
   useEffect(() => {
@@ -64,11 +66,11 @@ function App() {
 
   const handlePassword = (pass) => {
     if(pass === process.env.REACT_APP_PASSWORD){
-      console.log('loged in')
       setisAuth(true)
     } else {
-      console.log('error')
+      setPassword('')
       setisAuth(false)
+      setErrorText('Wrong Password')
     }
   }
   
@@ -82,7 +84,10 @@ function App() {
       // if user is not authorized, display Auth screen
       ?
       <div className='center'>
-        <Auth handlePassword={handlePassword}/>
+        <Auth
+        password={password}
+        setPassword={setPassword}
+        handlePassword={handlePassword} errorText={errorText}/>
       </div>
 
       :

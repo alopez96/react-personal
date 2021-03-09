@@ -2,21 +2,19 @@ import React, { useState } from 'react'
 import { Icon } from 'semantic-ui-react'
 
 
-function Auth({ handlePassword }){
-
-    const [password, setPassword] = useState('')
+function Auth({ password, setPassword, handlePassword, errorText }){
 
     return(
         <div className='pa4'>
             <main className="pa4 black-80">
-            <form className="measure center">
+            <form className="measure">
             <legend className="f4 fw6 ph0 mh0">Sign In</legend>
             <div className="mv3">
                 <label className="db fw6 lh-copy f6" for="password">
                     Password
                 </label>
                 
-                <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                <input className="b pa2 input-reset ba bg-transparent hover-bg-black w-100"
                 type="password" name="password"  id="password"
                 onChange={(e)=>{ setPassword(e.target.value) }}
                 value={password}
@@ -28,6 +26,8 @@ function Auth({ handlePassword }){
             </div>
             </form>
             </main>
+
+            <p className='pa4 fw6 f6 red'>{errorText}</p>
         </div>
     )
 }
