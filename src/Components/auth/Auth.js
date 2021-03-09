@@ -7,11 +7,11 @@ function Auth({ password, setPassword, handlePassword, errorText }){
     return(
         <div className='pa4'>
             <main className="pa4 black-80">
-            <form className="measure">
-            <legend className="f4 fw6 ph0 mh0">Sign In</legend>
+            <form className="measure" onSubmit={ (e)=> e.preventDefault() }>
+            <legend className="f4 fw6 ph0 mh0">Arturo Lopez Portfolio</legend>
             <div className="mv3">
                 <label className="db fw6 lh-copy f6" for="password">
-                    Password
+                    Enter Password
                 </label>
                 
                 <input className="b pa2 input-reset ba bg-transparent hover-bg-black w-100"
@@ -21,7 +21,7 @@ function Auth({ password, setPassword, handlePassword, errorText }){
                 />
                 
                 <Icon className='pt4' disabled name='arrow right' size='big'
-                onClick={()=>{handlePassword(password)}}/>
+                onClick={ ()=>{handlePassword(password)}  }/>
 
             </div>
             </form>
