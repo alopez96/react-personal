@@ -106,7 +106,7 @@ const Projects = ({ theme }) => {
                 noBtn={true}
                 date={'Aug 2020 - Present'}
                 // github="https://github.com/alopez96/workers-dinner"
-                tech="Design, Develop, Test, Launch Software applications"
+                tech="Design, Develop, Test, Launch Software applications; See arturocreates.com"
                 />
             {/* <ProjectItem
                 title="Personal Website"

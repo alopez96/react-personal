@@ -68,10 +68,10 @@ function NavBar ({ theme, updateTheme }) {
       <div>
         <List>
           {navList.map((item) => {
-            if(item.route === 'resume-link'){
+            if(item.route === 'portfolio'){
               return( null
-                // <ListItem theme={theme} onClick={openLink(resume)}>
-                //   Resume
+                // <ListItem theme={theme} onClick={openLink('https://arturocreates.com/#portfolio')}>
+                //   {item.title}
                 // </ListItem>
               )
             } else{

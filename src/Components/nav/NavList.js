@@ -12,8 +12,8 @@ const navList = [
       title: 'Experience'
     },
     {
-      route: 'resume-link',
-      title: 'Resume'
+      route: 'portfolio',
+      title: 'Portfolio'
     },
     {
       route: '/contact',

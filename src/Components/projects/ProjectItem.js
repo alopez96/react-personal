@@ -142,9 +142,12 @@ const ProjectItem = ({ size, color, gridArea, title, date, tech, url, theme, noB
     // split the about string for new line characters
     const tech_split = tech.split(';').map(str => <p>{str}</p>);
 
+    console.log('tech', tech)
 
     return (
-        <Bubble size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
+        <Bubble
+        onClick={ tech.includes('arturocreates') ? () => {window.open('https://arturocreates.com/', '_blank')} : null}
+        size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
             <Title theme={theme}>{title}</Title>
             <TechList theme={theme}>{tech_split}</TechList>
             <Body theme={theme}>{date}</Body>

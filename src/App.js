@@ -17,7 +17,7 @@ function App() {
   const [width, setWidth] = useState(window.innerWidth)
   const [isMobile, setisMobile] = useState(window.innerWidth < 500)
   const [isNavOpen, setisNavOpen] = useState(false)
-  const [isAuth, setisAuth] = useState(false)
+  const [isAuth, setisAuth] = useState(true)
   const [errorText, setErrorText] = useState('')
   const [password, setPassword] = useState('')
 
