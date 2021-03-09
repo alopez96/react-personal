@@ -146,7 +146,12 @@ const ProjectItem = ({ size, color, gridArea, title, date, tech, url, theme, noB
 
     return (
         <Bubble
-        onClick={ tech.includes('arturocreates') ? () => {window.open('https://arturocreates.com/', '_blank')} : null}
+        onClick={ // if the descrpition contains arturocreates.com
+            // make the bubble clickable, otherwise don't
+            tech.includes('arturocreates.com')
+            ? () => {window.open('https://arturocreates.com/', '_blank')} 
+            : null
+        }
         size={size} color={theme.contactGradient} gridArea={gridArea} theme={theme}>
             <Title theme={theme}>{title}</Title>
             <TechList theme={theme}>{tech_split}</TechList>
