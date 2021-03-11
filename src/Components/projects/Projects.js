@@ -103,7 +103,6 @@ const Projects = ({ theme }) => {
                 gridArea="lm"
                 url="https://arturocreates.com/"
                 theme={theme}
-                noBtn={true}
                 date={'Aug 2020 - Present'}
                 // github="https://github.com/alopez96/workers-dinner"
                 tech="Design, Develop, Test, Launch Software applications; See arturocreates.com"

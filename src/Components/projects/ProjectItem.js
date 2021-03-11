@@ -157,11 +157,14 @@ const ProjectItem = ({ size, color, gridArea, title, date, tech, url, theme, noB
             <TechList theme={theme}>{tech_split}</TechList>
             <Body theme={theme}>{date}</Body>
             <Container>
-                {noBtn? null
+                
+                {
+                noBtn ? null
                 :<PdfBtn onClick={openLink(url)} color={theme.contactGradient}>
                     Website
                 </PdfBtn>
                 }
+
             </Container>
         </Bubble>
     )
