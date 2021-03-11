@@ -20,7 +20,7 @@ function Auth({ password, setPassword, handlePassword, errorText }){
                 value={password}
                 />
                 
-                <Icon className='pt4' disabled name='arrow right' size='big'
+                <Icon className='pt4 grow' disabled name='arrow right' size='big'
                 onClick={ ()=>{handlePassword(password)}  }/>
 
             </div>
