@@ -142,3 +142,26 @@ input:checked + .slider:before {
     height: auto;
   }
 }
+
+
+
+/*-------- circle cursor with blend mode ----------*/
+body{
+  /* cursor: none; */
+}
+
+.cursor {
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+
+circle {
+  fill: #f7f8fa;
+}

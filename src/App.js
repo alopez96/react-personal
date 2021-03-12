@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Home from './Components/home/Home';
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import Projects from './Components/projects/Projects';
@@ -9,6 +9,7 @@ import MobileNav from './Components/nav/MobileNav';
 import styled from 'styled-components';
 import { lightTheme, darkTheme } from './variables/Theme';
 import Auth from './Components/auth/Auth';
+import Cursor from './Components/Cursor';
 
 
 function App() {
@@ -51,10 +52,6 @@ function App() {
     }
   }
 
-  useEffect(()=>{
-    console.log('theme updated', theme)
-  }, [theme])
-
   // handle update on state: isNavOpen
   useEffect(()=>{
     // if nav is open, do not allow for scroll
@@ -77,6 +74,7 @@ function App() {
 
     return (
       <div>
+      <Cursor theme={theme}/>
       <AppDiv theme={theme}>
       
       {!isAuth
@@ -91,7 +89,7 @@ function App() {
       </div>
 
       :
-      // display all content when user has entered correct password
+      /* display all content when user has entered correct password */
       <Router>
         <div>
           {isMobile?
@@ -105,6 +103,7 @@ function App() {
           <Route path="/about" render={(props) => <About {...props} theme={theme}/>}  />
         </div>
       </Router>
+      
       }
     </AppDiv>
     </div>
