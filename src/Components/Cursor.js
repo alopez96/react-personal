@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 // import './animate.js'
 
 
-function Cursor({ theme }) {
+function Cursor({ theme, width }) {
 
   // gsap animation
   let bigBall  = useRef(null)
@@ -45,7 +45,7 @@ function Cursor({ theme }) {
       })
     }
   
-  }, [theme])
+  }, [theme, width])
 
     return (
         <div>
