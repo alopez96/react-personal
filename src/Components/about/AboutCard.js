@@ -129,9 +129,11 @@ const AboutCard = ({ size, title, date, about, url, theme, noBtn}) => {
             <Body theme={theme}>{date}</Body>
             { noBtn ? null // if noBtn is passed down from props, do not display
                 :
-                <Button color={theme.contactGradient}>
-                    <StyleLink to='/contact'>Contact</StyleLink>
+                <StyleLink to='/contact'>
+                    <Button color={theme.contactGradient}>
+                    Contact
                 </Button>
+                </StyleLink>
                 }
         </Bubble>
     )
