@@ -51,6 +51,7 @@ const ListItem = styled.div`
     }
     &:hover {
       color: ${props => props.theme.btnColor};
+      cursor: none;
       &:before {
           width: 100%;
       }

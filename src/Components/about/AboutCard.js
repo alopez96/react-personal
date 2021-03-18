@@ -7,16 +7,15 @@ import PrimaryButton from './../elements/PrimaryButton'
 
 const Bubble = styled.div`
     width: 70%;
-    height: 500px;
+    min-height: 500px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px;
      @media (max-width: 1200px) {
         width: 90%;
-        height: 400px;
         min-height: 50%;
         grid-area: none;
         justify-content: center;
@@ -26,18 +25,12 @@ const Bubble = styled.div`
         }
     }
     @media (max-width: ${SMALL}px) {
-        width: 95%;
-        height: 100%;
-        margin: 10px 0;
         &:before {
             display: none;
         }
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: left;
-        padding: 0 1px;
-        text-align: left;
+        padding: 10px 5px;
+        width: 95%;
+        margin: 10px 0;
     }
     border: 1px #ccc;
     // border-style: ${props => props.theme.border};
@@ -57,6 +50,7 @@ const Body = styled.h6`
     font-weight: 400;
     font-size: 12px;
     font-style: italic;
+    margin: 100px;
     @media (max-width: 1200px) {
         font-size: 12px;
     }
@@ -71,29 +65,6 @@ const MainText = styled.p`
         font-size: 16px;
         padding: 20px 2px;
         font-weight: 400;
-    }
-`
-
-const Button = styled.div`
-    width: 150px;
-    height: 36px;
-    background: white;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    color: black;
-    transition: box-shadow .5s, transform .5s;
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 3px 6px rgba(0,0,0,.16);
-    }
-    @media (max-width: ${SMALL}px) {
-        width: 100px;
-        margin-bottom: 30px;
-        margin-right: auto;
-        margin-left: 20px;
     }
 `
 
@@ -119,7 +90,7 @@ const StyleLink = styled(Link)`
     }
 `
 
-const AboutCard = ({ size, title, date, about, url, theme, noBtn}) => {
+const AboutCard = ({ size, title, about, theme, noBtn}) => {
 
     // split the about string for new line characters
     const about_split = about.split('\n').map(str => <p>{str}</p>)
@@ -128,8 +99,9 @@ const AboutCard = ({ size, title, date, about, url, theme, noBtn}) => {
         <Bubble size={size} color={theme.gradient} theme={theme}>
             <MainHeader theme={theme}>{title}</MainHeader>
             <MainText theme={theme}>{about_split}</MainText>
-            <Body theme={theme}>{date}</Body>
-            { noBtn ? null // if noBtn is passed down from props, do not display
+            { 
+            // if noBtn is passed down from props, do not display
+                noBtn ? null
                 :
                 <StyleLink to='/contact'>
                     <PrimaryButton
