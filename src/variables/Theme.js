@@ -1,8 +1,8 @@
 const lightTheme = {
     dark: false,
     gradient: {
-        to: "#2B7A78",
-        from: "#17252A"
+        to: "rgb(59, 59, 59)",
+        from: "rgb(34, 34, 34)"
     },
     contactGradient: {
         to: "#2B7A78",

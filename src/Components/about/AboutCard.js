@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { SMALL } from '../../variables/ScreenSizes'
 import { Link } from 'react-router-dom'
+import PrimaryButton from './../elements/PrimaryButton'
+
 
 const Bubble = styled.div`
     width: 70%;
@@ -130,9 +132,10 @@ const AboutCard = ({ size, title, date, about, url, theme, noBtn}) => {
             { noBtn ? null // if noBtn is passed down from props, do not display
                 :
                 <StyleLink to='/contact'>
-                    <Button color={theme.contactGradient}>
-                    Contact
-                </Button>
+                    <PrimaryButton
+                    theme={theme}
+                    cta='Contact'
+                    />
                 </StyleLink>
                 }
         </Bubble>

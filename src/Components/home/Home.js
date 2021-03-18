@@ -4,6 +4,8 @@ import { SMALL } from '../../variables/ScreenSizes'
 import about from '../../variables/AboutText'
 import arturo from '../../assets/arturo-circle.png'
 import { Link } from 'react-router-dom'
+import PrimaryButton from './../elements/PrimaryButton'
+
 
 // split the about string for new line characters
 const sub_header_split = about.subheader.split('\n').map(str => <p>{str}</p>);
@@ -29,25 +31,6 @@ const SubHeader = styled.p`
     }
 `
 
-const Btn = styled.button` 
-    width: 50%;
-    border: none;
-    // background-color: #8650FF;
-    background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    color: #fff;
-    font-size: 20px;
-    padding: 10px 5px;
-    @media (max-width: ${SMALL}px) {
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    :hover{
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-    }
-`
 
 const Image = styled.img` 
     // background-color: #8650FF;
@@ -89,7 +72,11 @@ function Home ({ theme, hoverable }) {
             <Header theme={theme}>{about.header}</Header>
             <SubHeader theme={theme}>{sub_header_split}</SubHeader>
             <StyleLink to="/projects" >
-                <Btn ref={el => hoverable = el} color={theme.contactGradient}>See my work </Btn>
+                <PrimaryButton
+                hoverable={hoverable}
+                theme={theme}
+                cta='See my work'
+                />
             </StyleLink>
           </div>
           </div>
