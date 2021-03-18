@@ -73,15 +73,6 @@ const Projects = ({ theme }) => {
                 // tech="Business Website for Allies Pro Services."
                 tech="Data Engineer & PySpark developer"
                 />
-            {/* <ProjectItem
-                title="Brendas' Jumpies"
-                size={13}
-                color={{from: "#F44040", to: "#713FFA"}}
-                gridArea="lb0"
-                url="https://brendasjumpies.com/"
-                // github="https://github.com/alopez96/jumpn"
-                tech="Business website for Brendas' Jumpies."
-            /> */}
             <ProjectItem
                 title="Analytics Tester @ Accenture"
                 size={20}
@@ -152,7 +143,7 @@ const Projects = ({ theme }) => {
                 tech="Web Consulting Project; Tech stack: React, Node, Express, SQL, Stripe API"
             /> */}
         </Grid>
-        <Leadership theme={theme}/>
+        {/* <Leadership theme={theme}/> */}
         </div>
   )
 }

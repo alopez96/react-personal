@@ -146,9 +146,9 @@ input:checked + .slider:before {
 
 
 /*-------- circle cursor with blend mode ----------*/
-/* body{
+body{
   cursor: none;
-} */
+}
 
 .cursor {
   pointer-events: none;
