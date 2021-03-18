@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { SMALL } from '../../variables/ScreenSizes';
 
 const Label = styled.label`
   color: ${(props) => props.theme.toogleColor};
-  font-size: 16px;
+  font-size: 14px;
+  // text-transform: uppercase;
   margin-left: 5px;
-  margin-top: 5px;
-    cursor: pointer;
-    margin-right: 1rem;
-    text-decoration: none;
-    position: relative;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  position: relative;
     &:before {
         width: ${props => props.index ? "100%" : "0%"};
     }
@@ -35,11 +35,7 @@ const Content = styled.div`
 `
 
 function Toggle ({ theme, updateTheme }) {
-    return (
-        // <div className="ui toggle checkbox">
-        // <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
-        // <label style={{color:theme.toogleColor}}>Dark Mode</label>
-        // </div>
+    return ( 
         <Content>
           <label className="switch">
             <input type="checkbox" onClick={() => {updateTheme()}}/>

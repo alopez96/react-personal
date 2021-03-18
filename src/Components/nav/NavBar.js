@@ -10,8 +10,8 @@ import openLink from '../elements/openLink';
 const List = styled.div`
     transition: opacity 500ms;
     visibility: visible;
-    top: 1rem;
-    right: 2rem;
+    top: 12px;
+    right: 12px;
     opacity: 1;
     color: #dcdcdc;
     padding-top: 1rem;
@@ -33,6 +33,7 @@ const ListItem = styled.div`
     text-decoration: none;
     position: relative;
     color: ${props => props.theme.textSecondary};
+    font-size: 20px;
     &:before {
         // content: "";
         position: absolute;
@@ -40,6 +41,16 @@ const ListItem = styled.div`
         width: ${props => props.index ? "100%" : "0%"};
         height: 3px;
         transition: width 500ms;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: ${props => props.theme.textSecondary};
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
     }
     @media (max-width: ${SMALL}px) {
         // float: none;
@@ -54,6 +65,8 @@ const ListItem = styled.div`
       cursor: none;
       &:before {
           width: 100%;
+          visibility: visible;
+          transform: scaleX(1);
       }
     }
 `
@@ -78,7 +91,7 @@ function NavBar ({ theme, updateTheme, hoverable }) {
             } else{
               return(
                 <StyleLink to={item.route} ref={el => hoverable = el}>
-                <ListItem theme={theme}>{item.title}</ListItem>
+                  <ListItem theme={theme}>{item.title}</ListItem>
                 </StyleLink>
               )
             }
