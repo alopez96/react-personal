@@ -74,7 +74,7 @@ function App() {
 
     return (
       <div>
-      <Cursor theme={theme} width={width}/>
+      <Cursor theme={theme} width={width} isMobile={isMobile}/>
       <AppDiv theme={theme}>
       
       {!isAuth

@@ -165,3 +165,9 @@ body{
 circle {
   fill: #f7f8fa;
 }
+
+@media (max-width: 500px) {
+  body{
+    cursor: default;
+  }
+}
