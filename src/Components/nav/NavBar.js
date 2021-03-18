@@ -63,7 +63,7 @@ const StyleLink = styled(Link)`
 `
 
 
-function NavBar ({ theme, updateTheme }) {
+function NavBar ({ theme, updateTheme, hoverable }) {
     return (
       <div>
         <List>
@@ -76,7 +76,7 @@ function NavBar ({ theme, updateTheme }) {
               )
             } else{
               return(
-                <StyleLink to={item.route}>
+                <StyleLink to={item.route} ref={el => hoverable = el}>
                 <ListItem theme={theme}>{item.title}</ListItem>
                 </StyleLink>
               )

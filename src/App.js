@@ -22,8 +22,12 @@ function App() {
   const [errorText, setErrorText] = useState('')
   const [password, setPassword] = useState('')
 
+  // ref for detecting hover on ball cursor
+  let hoverable = useRef(null)
+
   //like component did mount
   useEffect(() => {
+    console.log('hoverable', hoverable)
     window.addEventListener('resize', () => { updateWidth() });
 
     //returned function will be called on component unmount 
@@ -74,11 +78,12 @@ function App() {
 
     return (
       <div>
-      <Cursor theme={theme} width={width} isMobile={isMobile}/>
+      <Cursor theme={theme} width={width}
+        isMobile={isMobile} hoverable={hoverable}/>
+      
       <AppDiv theme={theme}>
       
       {!isAuth
-      
       // if user is not authorized, display Auth screen
       ?
       <div className='center'>
@@ -95,12 +100,17 @@ function App() {
           {isMobile?
           <MobileNav index="0" isNavOpen={isNavOpen} setisNavOpen={setisNavOpen} theme={theme} updateTheme={updateTheme}/>
           :
-          <NavBar index="0" theme={theme} updateTheme={updateTheme}/>
+          <NavBar index="0" theme={theme}
+            updateTheme={updateTheme} hoverable={hoverable}/>
           }
-          <Route exact path="/" render={(props) => <Home {...props} theme={theme}/>} />
-          <Route path="/contact" render={(props) => <Contact {...props} theme={theme}/>} />
-          <Route path="/projects" render={(props) => <Projects {...props} theme={theme}/>}  />
-          <Route path="/about" render={(props) => <About {...props} theme={theme}/>}  />
+          <Route exact path="/" 
+            render={(props) => <Home {...props} theme={theme} hoverable={hoverable} />} />
+          <Route path="/contact"
+            render={(props) => <Contact {...props} theme={theme}/>} />
+          <Route path="/projects"
+            render={(props) => <Projects {...props} theme={theme}/>}  />
+          <Route path="/about"
+            render={(props) => <About {...props} theme={theme}/>}  />
         </div>
       </Router>
       

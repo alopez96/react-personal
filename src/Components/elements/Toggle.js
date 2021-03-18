@@ -36,14 +36,14 @@ const Content = styled.div`
 
 function Toggle ({ theme, updateTheme }) {
     return (
-        // <div class="ui toggle checkbox">
+        // <div className="ui toggle checkbox">
         // <input type="checkbox" name="public" onClick={() => {updateTheme()}}/>
         // <label style={{color:theme.toogleColor}}>Dark Mode</label>
         // </div>
         <Content>
-          <label class="switch">
+          <label className="switch">
             <input type="checkbox" onClick={() => {updateTheme()}}/>
-            <span class="slider round"></span>
+            <span className="slider round"></span>
           </label>
         <Label theme={theme}>
           Dark mode

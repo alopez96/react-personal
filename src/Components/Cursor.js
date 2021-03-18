@@ -3,12 +3,11 @@ import { gsap } from 'gsap';
 // import './animate.js'
 
 
-function Cursor({ theme, width, isMobile }) {
+function Cursor({ theme, width, isMobile, hoverable }) {
 
   // gsap animation
   let bigBall  = useRef(null)
   let smallBall  = useRef(null)
-  let hoverable = useRef(null)
   
   useEffect(()=>{
     console.log('bigBall', bigBall)
@@ -55,7 +54,7 @@ function Cursor({ theme, width, isMobile }) {
         className="cursor__ball cursor__ball--big" 
         ref={el => bigBall = el}>
           <svg height="30" width="30">
-            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            <circle cx="15" cy="15" r="12" strokeWidth="0"></circle>
           </svg>
         </div>
         
@@ -63,7 +62,7 @@ function Cursor({ theme, width, isMobile }) {
         className="cursor__ball cursor__ball--small"
         ref={el => smallBall = el}>
           <svg height="10" width="10">
-            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            <circle cx="5" cy="5" r="4" strokeWidth="0"></circle>
           </svg>
         </div>
       </div>

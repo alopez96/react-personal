@@ -81,14 +81,16 @@ const StyleLink = styled(Link)`
     }
 `
 
-function Home ({ theme }) {
+function Home ({ theme, hoverable }) {
     return (
       <div className='home-pic'>
           <div className='home-section'>
             <div className='home-text'>
             <Header theme={theme}>{about.header}</Header>
             <SubHeader theme={theme}>{sub_header_split}</SubHeader>
-            <StyleLink to="/projects" ><Btn color={theme.contactGradient}>See my work </Btn></StyleLink>
+            <StyleLink to="/projects" >
+                <Btn ref={el => hoverable = el} color={theme.contactGradient}>See my work </Btn>
+            </StyleLink>
           </div>
           </div>
           <Image color={theme.contactGradient} src={arturo}/>
