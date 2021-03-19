@@ -73,7 +73,6 @@ function Home ({ theme, hoverable }) {
             <Header theme={theme}>{about.header}</Header>
             <SubHeader theme={theme}>{sub_header_split}</SubHeader>
             <StyleLink to="/projects" >
-                {/* <LinkText theme={theme} cta='See my work'/> */}
                 <PrimaryButton
                 hoverable={hoverable}
                 theme={theme}

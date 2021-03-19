@@ -45,6 +45,7 @@
 
   .home-text{
     width: 80vw;
+    align-items: center;
   }
   .projects{
     padding-top: 0rem;
