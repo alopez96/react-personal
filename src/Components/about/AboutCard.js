@@ -8,22 +8,12 @@ import PrimaryButton from './../elements/PrimaryButton'
 const Bubble = styled.div`
     width: 70%;
     min-height: 500px;
-    border-radius: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-     @media (max-width: 1200px) {
-        width: 90%;
-        min-height: 50%;
-        grid-area: none;
-        justify-content: center;
-        margin: 10px;
-        &:before {
-            display: none;
-        }
-    }
+    border-radius: 40px;
     @media (max-width: ${SMALL}px) {
         &:before {
             display: none;
@@ -32,32 +22,13 @@ const Bubble = styled.div`
         width: 95%;
         margin: 10px 0;
     }
-    border: 1px #ccc;
-    // border-style: ${props => props.theme.border};
-    background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    // color: ${props => props.theme.textPrimary};
-    color: white;
-    // this will prevent the touch on mobile device to react to :hover definition
-    // @media (hover: hover) {
-    //     :hover {
-    //         background-image: ${props => `linear-gradient(-45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
-    //         color: white;
-    //     }
-    // }
-`
-
-const Body = styled.h6`
-    font-weight: 400;
-    font-size: 12px;
-    font-style: italic;
-    margin: 100px;
-    @media (max-width: 1200px) {
-        font-size: 12px;
-    }
+    border: 1px #8650FF;
+    color: ${props => props.theme.textPrimary};
+    box-shadow: 4px 4px 8px 0 ${props => props.theme.shadow};
+    border-style: ${props => props.theme.border};
 `
 
 const MainText = styled.p`
-    // color: ${props => props.theme.textSecondary};
     font-size: 18px;
     width: 90%;
     @media (max-width: ${SMALL}px) {
@@ -82,11 +53,9 @@ const MainHeader = styled.h1`
 
 const StyleLink = styled(Link)`
     text-decoration: none;
-    color: inherit;
     :hover{
-        color: black;
         text-decoration: none;
-        cursor: pointer;
+        cursor: none;
     }
 `
 

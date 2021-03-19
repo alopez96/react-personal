@@ -11,6 +11,7 @@ background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${p
 color: #fff;
 font-size: 20px;
 padding: 10px 5px;
+border-radius: 50px;
 @media (max-width: ${SMALL}px) {
     width: 200px;
     margin-right: auto;
