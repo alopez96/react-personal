@@ -9,7 +9,7 @@ import MobileNav from './Components/nav/MobileNav';
 import styled from 'styled-components';
 import { lightTheme, darkTheme } from './variables/Theme';
 import Auth from './Components/auth/Auth';
-import Cursor from './Components/Cursor';
+import Cursor from './Components/elements/Cursor';
 
 
 function App() {

@@ -13,8 +13,10 @@ function Cursor({ theme, width, isMobile, hoverable }) {
     console.log('bigBall', bigBall)
     console.log('smallBall', smallBall)
 
-    // Listeners
+    // event listener for mouse move
     document.body.addEventListener('mousemove', onMouseMove);
+
+    // event listener for hover
     for (let i = 0; i < hoverable.length; i++) {
       hoverable[i].addEventListener('mouseenter', onMouseHover);
       hoverable[i].addEventListener('mouseleave', onMouseHoverOut);
