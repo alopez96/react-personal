@@ -39,7 +39,7 @@ function NavBar ({ theme, updateTheme, hoverable }) {
           {navList.map((item) => {
             return(
               <StyleLink to={item.route} ref={el => hoverable = el}>
-                <LinkText theme={theme} item={item}/>
+                <LinkText theme={theme} cta={item.title} isNav={true}/>
               </StyleLink>
             )
           })}

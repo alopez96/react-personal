@@ -31,7 +31,6 @@ font-size: 20px;
     transition: all 0.3s ease-in-out 0s;
 }
 @media (max-width: ${SMALL}px) {
-    // float: none;
     margin: auto;
     margin: 10px 0;
     font-size: 1.25em;
@@ -49,10 +48,66 @@ font-size: 20px;
 }
 `
 
-function LinkText ({ theme, item }){
-    return(
-        <ListItem theme={theme}>{item.title}</ListItem>
-    )
+
+
+const ATag = styled.div`
+cursor: pointer;
+text-decoration: none;
+position: relative;
+color: ${props => props.color.to};
+// background-image: ${props => `linear-gradient(45deg, ${props.color.from} 0%, ${props.color.to} 100%)`};
+font-size: 20px;
+text-align:center;
+width: 160px;
+&:before {
+    position: absolute;
+    left: 0;
+    height: 3px;
+    transition: width 500ms;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: ${props => props.color.to};
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+@media (max-width: ${SMALL}px) {
+    margin: auto;
+    margin: 10px 0;
+    font-size: 1.25em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+&:hover {
+  color: ${props => props.theme.btnColor};
+  cursor: none;
+  &:before {
+      width: 160px;
+      visibility: visible;
+      transform: scaleX(1);
+  }
+}
+`
+
+function LinkText ({ theme, cta, isNav }){
+    if(isNav){
+        return(
+            <ListItem theme={theme}>{cta}</ListItem>
+        )
+    } else {
+        return(
+            <ATag 
+            theme={theme}
+            color={theme.contactGradient}>
+                {cta}
+            </ATag>
+        )
+    }
+    
 }
 
 export default LinkText;
