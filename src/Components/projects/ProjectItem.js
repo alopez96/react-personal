@@ -103,7 +103,6 @@ const PdfBtn = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

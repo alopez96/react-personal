@@ -28,7 +28,6 @@ const List = styled.div`
 
 const ListItem = styled.div`
     float: right;
-    cursor: pointer;
     margin-right: 2rem;
     text-decoration: none;
     position: relative;

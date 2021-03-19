@@ -20,7 +20,7 @@ border-radius: 50px;
 :hover{
     color: white;
     text-decoration: none;
-    cursor: pointer;
+    cursor: none;
 }
 `
 

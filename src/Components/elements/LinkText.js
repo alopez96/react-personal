@@ -6,7 +6,6 @@ import { SMALL } from '../../variables/ScreenSizes';
 
 const ListItem = styled.div`
 float: right;
-cursor: pointer;
 margin-right: 2rem;
 text-decoration: none;
 position: relative;
@@ -51,7 +50,6 @@ font-size: 20px;
 
 
 const ATag = styled.div`
-cursor: pointer;
 text-decoration: none;
 position: relative;
 color: ${props => props.color.to};

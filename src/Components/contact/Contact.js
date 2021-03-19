@@ -72,7 +72,7 @@ const ListItem = styled.div`
     margin: 0 10px;
     font-size: 32px;
     :hover {
-        cursor: pointer;
+        // cursor: pointer;
     }
     @media (max-width: ${SMALL}px) {
         margin: 10px 0;

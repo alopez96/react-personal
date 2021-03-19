@@ -5,9 +5,7 @@ import { SMALL } from '../../variables/ScreenSizes';
 const Label = styled.label`
   color: ${(props) => props.theme.toogleColor};
   font-size: 14px;
-  // text-transform: uppercase;
   margin-left: 5px;
-  cursor: pointer;
   margin-right: 1rem;
   text-decoration: none;
   position: relative;

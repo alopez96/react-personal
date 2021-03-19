@@ -61,7 +61,7 @@ const StyleLink = styled(Link)`
     :hover{
         color: white;
         text-decoration: none;
-        cursor: pointer;
+        cursor: none;
     }
 `
 
