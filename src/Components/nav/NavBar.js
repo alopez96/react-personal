@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { SMALL } from '../../variables/ScreenSizes';
 import Toggle from './../elements/Toggle';
-// import resume from '../../assets/pdf/arturo_resume.pdf';
 import navList from './NavList';
-import openLink from '../elements/openLink';
+import LinkText from './../elements/LinkText';
+
 
 const List = styled.div`
     transition: opacity 500ms;
@@ -26,51 +26,6 @@ const List = styled.div`
   }
 `
 
-const ListItem = styled.div`
-    float: right;
-    cursor: pointer;
-    margin-right: 2rem;
-    text-decoration: none;
-    position: relative;
-    color: ${props => props.theme.textSecondary};
-    font-size: 20px;
-    &:before {
-        // content: "";
-        position: absolute;
-        left: 0;
-        width: ${props => props.index ? "100%" : "0%"};
-        height: 3px;
-        transition: width 500ms;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: ${props => props.theme.textSecondary};
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.3s ease-in-out 0s;
-    }
-    @media (max-width: ${SMALL}px) {
-        // float: none;
-        margin: auto;
-        margin: 10px 0;
-        font-size: 1.25em;
-        font-weight: bolder;
-        text-transform: uppercase;
-    }
-    &:hover {
-      color: ${props => props.theme.btnColor};
-      cursor: none;
-      &:before {
-          width: 100%;
-          visibility: visible;
-          transform: scaleX(1);
-      }
-    }
-`
-
 const StyleLink = styled(Link)`
     text-decoration: none;
     color: inherit; 
@@ -82,23 +37,13 @@ function NavBar ({ theme, updateTheme, hoverable }) {
       <div>
         <List>
           {navList.map((item) => {
-            if(item.route === 'portfolio'){
-              return( null
-                // <ListItem theme={theme} onClick={openLink('https://arturocreates.com/#portfolio')}>
-                //   {item.title}
-                // </ListItem>
-              )
-            } else{
-              return(
-                <StyleLink to={item.route} ref={el => hoverable = el}>
-                  <ListItem theme={theme}>{item.title}</ListItem>
-                </StyleLink>
-              )
-            }
+            return(
+              <StyleLink to={item.route} ref={el => hoverable = el}>
+                <LinkText theme={theme} item={item}/>
+              </StyleLink>
+            )
           })}
-          <ListItem>
-            <Toggle theme={theme} updateTheme={updateTheme}/>
-          </ListItem>
+          <Toggle theme={theme} updateTheme={updateTheme}/>
         </List>
       </div>
     )
