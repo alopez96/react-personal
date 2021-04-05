@@ -2,7 +2,7 @@ const about = {
     // header and sub_header will be used in home page
     header: 'Hi, I’m Arturo Lopez.',
     subheader: 'I am a Software Engineer, Tech analyst at Accenture. 👨🏾‍💻\n '+
-        'I also do freelancing as a Mobile and Web developer. 📱',
+        'I also help small business launch their website or mobile app. 📱',
     // the following will be used in about section
     about_p: 'Grew up with a curious mind around engineering and technology. I was interested in learning how things were built, and how I could be one those creators. ' +
     'I am passionate about Tech, Education, and Software. \n' + 
